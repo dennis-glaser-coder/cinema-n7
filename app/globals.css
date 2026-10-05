@@ -4715,8 +4715,9 @@ body {
 }
 
 .home-models-room {
+  container-type: inline-size;
   position: relative;
-  height: clamp(470px, 40vw, 610px);
+  height: clamp(500px, 42vw, 640px);
   overflow: hidden;
   background:
     radial-gradient(circle at 58% 48%, rgba(120,88,58,.10), transparent 34%),
@@ -4736,10 +4737,10 @@ body {
 
 .home-models-person {
   position: absolute;
-  left: 9%;
+  left: 12%;
   bottom: 10%;
-  width: clamp(78px, 7vw, 108px);
-  aspect-ratio: .66;
+  width: min(14.5cqw, 220px);
+  height: min(32.1cqw, 475px);
   background:
     url("https://raw.githubusercontent.com/dennis-glaser-coder/cinema-n7/main/Person.png")
     center bottom / contain no-repeat;
@@ -4749,9 +4750,9 @@ body {
 
 .home-models-wall {
   position: absolute;
-  left: 59%;
+  left: 62%;
   bottom: 10%;
-  width: min(72%, 1040px);
+  width: min(66cqw, 980px);
   aspect-ratio: 16 / 9;
   transform: translateX(-50%);
   overflow: hidden;
@@ -4796,12 +4797,18 @@ body {
 
 @media (max-width: 1050px) and (min-width: 821px) {
   .home-models-room {
-    height: clamp(440px, 48vw, 540px);
+    height: clamp(470px, 50vw, 560px);
   }
 
   .home-models-wall {
-    left: 61%;
-    width: 75%;
+    left: 63%;
+    width: 68cqw;
+  }
+
+  .home-models-person {
+    left: 9%;
+    width: 15cqw;
+    height: 33cqw;
   }
 }
 
@@ -4820,15 +4827,16 @@ body {
   }
 
   .home-models-person {
-    left: 6%;
+    left: 5%;
     bottom: 8%;
-    width: clamp(58px, 15vw, 76px);
+    width: 16.5cqw;
+    height: 38.4cqw;
   }
 
   .home-models-wall {
-    left: 62%;
+    left: 64%;
     bottom: 8%;
-    width: 79%;
+    width: 79cqw;
   }
 
   .home-models-room::before {
