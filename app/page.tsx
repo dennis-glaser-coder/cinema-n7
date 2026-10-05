@@ -4,36 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const formats = [
-  {
-    name: "N°7 3.6",
-    size: "3,60 × 2,03 m",
-    inches: '163"',
-    resolution: "2880 × 1620",
-    cabinets: "36 Cabinets",
-  },
-  {
-    name: "N°7 4.2",
-    size: "4,20 × 2,36 m",
-    inches: '190"',
-    resolution: "3360 × 1890",
-    cabinets: "49 Cabinets",
-  },
-  {
-    name: "N°7 4.8",
-    size: "4,80 × 2,70 m",
-    inches: '217"',
-    resolution: "3840 × 2160",
-    cabinets: "64 Cabinets",
-    featured: "NATIVE 4K",
-  },
-];
-
 const delivery = [
-  ["01", "Konfiguration", "Bildgröße, Pixelpitch und native Auflösung."],
-  ["02", "LED-System", "Cabinets, Processing, Signal und Strom."],
-  ["03", "Installation", "Mechanik, Aufbau und Inbetriebnahme."],
-  ["04", "Kalibrierung", "Farbe, Helligkeit und Gleichmäßigkeit."],
+  ["01", "Konfiguration", "Bildgröße und passendes LED-System."],
+  ["02", "Integration", "Mechanik, Processing, Signal und Strom."],
+  ["03", "Installation", "Aufbau und Inbetriebnahme vor Ort."],
+  ["04", "Kalibrierung", "Das fertige Bild wird präzise abgestimmt."],
 ];
 
 export default function Home() {
@@ -44,52 +19,111 @@ export default function Home() {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        ".hero-content > *",
-        { opacity: 0, y: 22 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          stagger: 0.09,
-          ease: "power3.out",
-          delay: 0.12,
-        }
-      );
+      const intro = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      gsap.fromTo(
-        ".hero-product",
-        { opacity: 0, scale: 0.965 },
-        { opacity: 1, scale: 1, duration: 1.35, ease: "power3.out", delay: 0.28 }
-      );
-
-      gsap.utils.toArray<HTMLElement>(".reveal").forEach((element) => {
-        gsap.fromTo(
-          element,
-          { opacity: 0, y: 28 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.9,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: element,
-              start: "top 88%",
-              once: true,
-            },
-          }
+      intro
+        .fromTo(".nav-v5", { opacity: 0 }, { opacity: 1, duration: 0.8 })
+        .fromTo(
+          ".hero-content > *",
+          { opacity: 0, y: 26 },
+          { opacity: 1, y: 0, duration: 1, stagger: 0.09 },
+          "-=.35"
+        )
+        .fromTo(
+          ".hero-product",
+          { opacity: 0, scale: 0.94, y: 18 },
+          { opacity: 1, scale: 1, y: 0, duration: 1.35 },
+          "-=1"
         );
-      });
 
       gsap.to(".hero-product-screen", {
+        scale: 1.08,
         yPercent: 3,
-        scale: 1.025,
         ease: "none",
         scrollTrigger: {
           trigger: ".hero-v5",
           start: "top top",
           end: "bottom top",
           scrub: 1.2,
+        },
+      });
+
+      gsap.to(".hero-product", {
+        yPercent: 6,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-v5",
+          start: "top top",
+          end: "bottom top",
+          scrub: 1.4,
+        },
+      });
+
+      gsap.to(".hero-content", {
+        yPercent: -7,
+        opacity: 0.25,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-v5",
+          start: "40% top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+
+      gsap.utils.toArray<HTMLElement>(".reveal").forEach((element) => {
+        gsap.fromTo(
+          element,
+          { opacity: 0, y: 34 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: element,
+              start: "top 86%",
+              once: true,
+            },
+          }
+        );
+      });
+
+      gsap.fromTo(
+        ".delivery-row",
+        { opacity: 0.25, x: 18 },
+        {
+          opacity: 1,
+          x: 0,
+          stagger: 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".delivery-list",
+            start: "top 82%",
+            once: true,
+          },
+        }
+      );
+
+      gsap.to(".system-visual-v6", {
+        scale: 1.035,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".system-v6",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.2,
+        },
+      });
+
+      gsap.to(".contact-mark", {
+        xPercent: -5,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".contact-v5",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.4,
         },
       });
     }, root);
@@ -124,7 +158,7 @@ export default function Home() {
           </a>
           <nav aria-label="Hauptnavigation">
             <a href="#system">Bildsystem</a>
-            <a href="#formats">Größen</a>
+            <a href="/produkte">Modelle</a>
             <a href="#delivery">Leistung</a>
           </nav>
           <a className="nav-cta-v5" href="#contact">
@@ -141,15 +175,10 @@ export default function Home() {
               LED-Heimkinos
             </h1>
             <p className="hero-sub">
-              Fine-Pitch LED-Bildsysteme ab 3,60 Meter Bildbreite.
+              Großformatige LED-Bildsysteme für private Heimkinos.
             </p>
-            <div className="hero-facts">
-              <span>P1.25</span>
-              <span>16:9</span>
-              <span>Native 4K ab 4,80 m</span>
-            </div>
-            <a className="text-link-v5" href="#formats">
-              Größen ansehen <span>↘</span>
+            <a className="text-link-v5" href="/produkte">
+              Modelle entdecken <span>↗</span>
             </a>
           </div>
 
@@ -158,78 +187,36 @@ export default function Home() {
               <div className="hero-product-screen" />
             </div>
             <div className="hero-product-meta">
-              <span>FINE-PITCH LED</span>
-              <span>MODULAR / 16:9</span>
+              <span>CINEMA N°7</span>
+              <span>LED BILDSYSTEM</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="system-v5" id="system">
-        <div className="section-head-v5 reveal">
-          <p className="overline-v5">DAS BILDSYSTEM</p>
-          <h2>LED statt Projektion.</h2>
-          <p>
-            Die Bildfläche besteht aus modularen LED-Cabinets. Kein Projektor,
-            kein Objektiv, kein separater Lichtweg.
-          </p>
+      <section className="system-v6" id="system">
+        <div className="system-visual-v6 reveal" aria-hidden="true">
+          <div className="system-screen-v6" />
         </div>
 
-        <div className="system-layout">
-          <div className="system-visual reveal" aria-hidden="true">
-            <div className="matrix-v5" />
-          </div>
-
-          <div className="system-specs reveal">
-            <article>
-              <span>01</span>
-              <strong>600 × 337,5 mm</strong>
-              <p>Cabinet-Format</p>
-            </article>
-            <article>
-              <span>02</span>
-              <strong>480 × 270</strong>
-              <p>Pixel pro Cabinet</p>
-            </article>
-            <article>
-              <span>03</span>
-              <strong>1,25 mm</strong>
-              <p>Pixelpitch</p>
-            </article>
-          </div>
+        <div className="system-copy-v6 reveal">
+          <p className="overline-v5">DAS BILD</p>
+          <h2>LED statt Projektion.</h2>
+          <p>
+            Eine großformatige Bildfläche, die selbst leuchtet. Modular aufgebaut,
+            als vollständiges System geliefert und präzise kalibriert.
+          </p>
+          <a href="/produkte" className="text-link-v5">
+            Modelle ansehen <span>↗</span>
+          </a>
         </div>
       </section>
 
-      <section className="formats-v5" id="formats">
-        <div className="formats-title-v5 reveal">
-          <div>
-            <p className="overline-v5">P1.25</p>
-            <h2>Drei Größen. Eine klare Linie.</h2>
-          </div>
-          <p>
-            Der Einstieg beginnt bewusst bei 3,60 Meter Bildbreite. Ab 4,80
-            Metern erreicht die Bildfläche native 4K UHD.
-          </p>
-        </div>
-
-        <div className="format-grid-v5">
-          {formats.map((format) => (
-            <article
-              className={`format-v5 reveal ${format.featured ? "is-featured" : ""}`}
-              key={format.name}
-            >
-              <div className="format-top-v5">
-                <span>{format.name}</span>
-                {format.featured && <strong>{format.featured}</strong>}
-              </div>
-              <div className="format-size-v5">{format.size}</div>
-              <div className="format-data-v5">
-                <span>{format.inches}</span>
-                <span>{format.resolution}</span>
-                <span>{format.cabinets}</span>
-              </div>
-            </article>
-          ))}
+      <section className="brand-interlude-v6" aria-label="CINEMA N°7">
+        <div className="brand-interlude-art" aria-hidden="true" />
+        <div className="brand-interlude-copy reveal">
+          <span>CINEMA</span>
+          <strong>N°7</strong>
         </div>
       </section>
 
@@ -241,12 +228,12 @@ export default function Home() {
         <div className="delivery-content">
           <div className="section-head-v5 reveal">
             <p className="overline-v5">WAS WIR LIEFERN</p>
-            <h2>Vom Cabinet zum fertigen Bild.</h2>
+            <h2>Vom System zum fertigen Bild.</h2>
           </div>
 
           <div className="delivery-list">
             {delivery.map(([number, title, description]) => (
-              <article className="delivery-row reveal" key={number}>
+              <article className="delivery-row" key={number}>
                 <span>{number}</span>
                 <strong>{title}</strong>
                 <p>{description}</p>
@@ -264,19 +251,25 @@ export default function Home() {
           <p className="overline-v5">PRIVATE BERATUNG</p>
           <h2>Ihr LED-Heimkino.</h2>
           <p>
-            3,60 m. 4,20 m. 4,80 m. Oder größer. Wir klären Bildgröße,
-            Auflösung und Einbausituation persönlich.
+            Wählen Sie zunächst Ihre gewünschte Bildschirmdiagonale oder sprechen
+            Sie direkt mit uns über Ihr Projekt.
           </p>
-          <div className="contact-action-v5">
-            <span>Projekt besprechen</span>
-            <span>↗</span>
+          <div className="contact-links-v6">
+            <a className="contact-action-v5" href="/produkte">
+              <span>Modelle entdecken</span>
+              <span>↗</span>
+            </a>
+            <a className="contact-action-v5" href="#contact">
+              <span>Projekt besprechen</span>
+              <span>↗</span>
+            </a>
           </div>
         </div>
       </section>
 
       <footer className="footer-v5">
         <span>CINEMA N°7</span>
-        <span>FINE-PITCH LED</span>
+        <span>LED-HEIMKINOS</span>
         <span>DEUTSCHLAND / EUROPA</span>
         <span>© 2026</span>
       </footer>
