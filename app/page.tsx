@@ -5,14 +5,14 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const steps = [
-  ["01", "Raum", "Architektur, Geometrie und Betrachtungsabstand."],
-  ["02", "Entwurf", "Bild, Akustik, Licht und Materialien."],
-  ["03", "Engineering", "LED-System, Audiotechnik, Steuerung und Infrastruktur."],
-  ["04", "Integration", "Präzise Installation und architektonische Einbindung."],
-  ["05", "Kalibrierung", "Bild und Klang werden im fertigen Raum abgestimmt."],
+  ["01", "Anforderung", "Bildgröße, Betrachtungsabstand und Einbausituation."],
+  ["02", "Konfiguration", "Pixelpitch, native Auflösung und Cabinet-Raster."],
+  ["03", "Engineering", "Mechanik, Strom, Signal und Processing."],
+  ["04", "Installation", "Aufbau, Verkabelung und Inbetriebnahme."],
+  ["05", "Kalibrierung", "Farbe, Helligkeit, Gleichmäßigkeit und Signalweg."],
 ];
 
-const disciplines = ["BILD", "KLANG", "AKUSTIK", "LICHT", "STEUERUNG"];
+const disciplines = ["LED-FLÄCHE", "PROCESSING", "MECHANIK", "STEUERUNG", "KALIBRIERUNG"];
 
 export default function Home() {
   const root = useRef<HTMLElement | null>(null);
@@ -294,7 +294,7 @@ export default function Home() {
             CINEMA N°7
           </a>
           <nav className="nav-links" aria-label="Hauptnavigation">
-            <a href="#experience">Raum</a>
+            <a href="#experience">Bild</a>
             <a href="#technology">Technologie</a>
             <a href="#commission">Projekt</a>
           </nav>
@@ -316,9 +316,9 @@ export default function Home() {
 
           <div className="hero-meta">
             <p>
-              Direct View LED. Raumakustik. Licht. Steuerung.
+              Direct View LED für private Heimkinos.
               <br />
-              Als Teil der Architektur geplant.
+              Großformatig. Modular. Präzise kalibriert.
             </p>
 
             <a className="hero-enter" href="#experience">
@@ -345,10 +345,10 @@ export default function Home() {
           <span className="axis axis-h axis-h-a" />
           <span className="axis axis-h axis-h-b" />
           <span className="grid-index grid-index-a">01</span>
-          <span className="grid-index grid-index-b">RAUM</span>
+          <span className="grid-index grid-index-b">BILD</span>
         </div>
 
-        <p className="eyebrow reveal">DER RAUM</p>
+        <p className="eyebrow reveal">DAS BILD</p>
 
         <h2 className="display manifesto-title reveal">
           Alles beginnt
@@ -357,10 +357,10 @@ export default function Home() {
         </h2>
 
         <div className="manifesto-graphic reveal" aria-hidden="true">
-          <div className="architecture-art" />
+          <div className="display-matrix-art" />
           <div className="manifesto-coordinates">
-            <span>BILD / KLANG / LICHT</span>
-            <span>ARCHITEKTUR / 001</span>
+            <span>DIRECT VIEW / LED</span>
+            <span>16:9 / CABINET MATRIX</span>
           </div>
         </div>
 
@@ -448,7 +448,7 @@ export default function Home() {
 
         <div className="room-copy reveal">
           <div className="room-copy-top">
-            <p className="eyebrow">DAS SYSTEM</p>
+            <p className="eyebrow">DAS BILDSYSTEM</p>
             <span className="room-index">03 / 07</span>
           </div>
 
@@ -513,7 +513,7 @@ export default function Home() {
           <div className="commission-close-copy">
             <span className="commission-close-index">PRIVAT / INDIVIDUELL / N°7</span>
             <p>
-              Erzählen Sie uns von dem Raum. Alles Weitere beginnt dort.
+              Nennen Sie uns gewünschte Bildgröße und Einbausituation.\n              Wir konfigurieren das passende LED-System.
             </p>
           </div>
 
