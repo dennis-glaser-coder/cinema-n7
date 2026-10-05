@@ -351,9 +351,9 @@ export default function Home() {
         <p className="eyebrow reveal">DAS BILD</p>
 
         <h2 className="display manifesto-title reveal">
-          Alles beginnt
+          Direkt.
           <br />
-          <em>mit dem Raum.</em>
+          <em>Pixel für Pixel.</em>
         </h2>
 
         <div className="manifesto-graphic reveal" aria-hidden="true">
@@ -367,8 +367,8 @@ export default function Home() {
         <div className="manifesto-foot reveal">
           <span>01</span>
           <p>
-            Proportionen, Betrachtungsabstand, Akustik und Licht bestimmen das
-            System. Nicht umgekehrt.
+            Kein Projektor, kein Objektiv, kein Lichtweg. Das Bild entsteht
+            direkt auf der LED-Fläche.
           </p>
         </div>
       </section>
@@ -405,8 +405,8 @@ export default function Home() {
           <div className="technology-foot reveal">
             <span>1.2 / 1.9</span>
             <p>
-              Fine-Pitch Direct View LED wird für den jeweiligen Raum dimensioniert —
-              nach Bildbreite, Betrachtungsabstand und gewünschter Auflösung.
+              Pixelpitch, Bildbreite und Betrachtungsabstand werden gemeinsam festgelegt.
+              Daraus ergibt sich die native Auflösung der Bildfläche.
             </p>
           </div>
         </div>
@@ -453,9 +453,9 @@ export default function Home() {
           </div>
 
           <h2 className="display">
-            Ein Raum.
+            Vom Modul
             <br />
-            Ein System.
+            zum fertigen Bild.
           </h2>
 
           <div className="room-disciplines">
@@ -489,9 +489,9 @@ export default function Home() {
         <div className="commission-head">
           <p className="eyebrow reveal">DAS PROJEKT</p>
           <h2 className="display reveal">
-            Jedes N°7 wird
+            Jede Bildfläche wird
             <br />
-            für einen Raum entworfen.
+            individuell konfiguriert.
           </h2>
         </div>
 
