@@ -3223,3 +3223,16 @@ a {
       linear-gradient(90deg, rgba(0,0,0,.4), rgba(0,0,0,.08));
   }
 }
+
+
+/* V8 supporting cinema image */
+.system-screen-v6 {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.08)),
+    url("https://raw.githubusercontent.com/dennis-glaser-coder/cinema-n7/main/Luxuri%C3%B6ses%20Heimkino%20mit%20Bergpanorama.png") center/cover no-repeat;
+  filter: saturate(.96) contrast(1.03) brightness(.94);
+}
+
+.system-visual-v6 {
+  box-shadow: 0 28px 90px rgba(0,0,0,.34);
+}
