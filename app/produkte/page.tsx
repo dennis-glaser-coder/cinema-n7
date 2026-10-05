@@ -54,7 +54,7 @@ export default function ProductsPage() {
           <h1>Ihre Bildgröße.</h1>
         </div>
         <p>
-          Wählen Sie die Bildschirmdiagonale in Zoll. Die exakten Maße der
+          Wählen Sie die Bildgröße für Ihren Raum. Die exakten Maße der
           16:9-Bildfläche werden direkt angezeigt.
         </p>
       </section>
