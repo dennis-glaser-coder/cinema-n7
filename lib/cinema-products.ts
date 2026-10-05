@@ -6,6 +6,8 @@ export const cabinet = {
   pixelsY: 270,
 } as const;
 
+export const PANEL_PRICE_EUR = 650;
+
 const cabinetCounts = [4, 5, 6, 7, 8, 9, 10];
 
 export const cinemaModels = cabinetCounts.map((count) => {
@@ -23,6 +25,7 @@ export const cinemaModels = cabinetCounts.map((count) => {
     cabinets: count * count,
     cabinetsWide: count,
     cabinetsHigh: count,
+    panelCostEur: count * count * PANEL_PRICE_EUR,
   };
 });
 
@@ -30,5 +33,14 @@ export function formatMeters(value: number) {
   return value.toLocaleString("de-DE", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
+  });
+}
+
+
+export function formatEuro(value: number) {
+  return value.toLocaleString("de-DE", {
+    style: "currency",
+    currency: "EUR",
+    maximumFractionDigits: 0,
   });
 }
