@@ -17,6 +17,10 @@ export default function Home() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
     const ctx = gsap.context(() => {
       const isMobile = window.matchMedia("(max-width: 820px)").matches;
       const intro = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -126,34 +130,6 @@ export default function Home() {
         }
       );
 
-      gsap.to(".brand-interlude-art", {
-        scale: isMobile ? 1.045 : 1.12,
-        rotate: isMobile ? 0.3 : 1.2,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".brand-interlude-v6",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1.1,
-        },
-      });
-
-      gsap.fromTo(
-        ".delivery-visual",
-        { scale: isMobile ? 0.99 : 0.97, yPercent: isMobile ? 2 : 5 },
-        {
-          scale: isMobile ? 1.01 : 1.035,
-          yPercent: isMobile ? -1 : -3,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".delivery-v5",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1.15,
-          },
-        }
-      );
-
       gsap.to(".contact-mark", {
         xPercent: isMobile ? -1.5 : -5,
         ease: "none",
@@ -193,7 +169,6 @@ export default function Home() {
 
         <div className="hero-layout">
           <div className="hero-content">
-            <p className="overline-v5">CINEMA N°7</p>
             <h1>
               Exklusive
               <br />
@@ -219,43 +194,26 @@ export default function Home() {
         <div className="system-copy-v6 reveal">
           <p className="overline-v5">DAS BILD</p>
           <h2>LED statt Projektion.</h2>
-          <p>
-            Eine großformatige Bildfläche, die selbst leuchtet. Modular aufgebaut,
-            als vollständiges System geliefert und präzise kalibriert.
-          </p>
+          <p>Eine großformatige Bildfläche, die selbst leuchtet.</p>
           <a href="/produkte" className="text-link-v5">
             Modelle ansehen
           </a>
         </div>
       </section>
 
-      <section className="brand-interlude-v6" aria-label="CINEMA N°7">
-        <div className="brand-interlude-art" aria-hidden="true" />
-        <div className="brand-interlude-copy reveal">
-          <span>CINEMA</span>
-          <strong>N°7</strong>
-        </div>
-      </section>
-
-      <section className="delivery-v5" id="delivery">
-        <div className="delivery-visual reveal" aria-hidden="true">
-          <div className="delivery-screen" />
+      <section className="delivery-v5 delivery-v7" id="delivery">
+        <div className="section-head-v5 reveal">
+          <p className="overline-v5">WAS WIR LIEFERN</p>
+          <h2>Vom System zum fertigen Bild.</h2>
         </div>
 
-        <div className="delivery-content">
-          <div className="section-head-v5 reveal">
-            <p className="overline-v5">WAS WIR LIEFERN</p>
-            <h2>Vom System zum fertigen Bild.</h2>
-          </div>
-
-          <div className="delivery-list">
-            {delivery.map(([title, description]) => (
-              <article className="delivery-row" key={title}>
-                <strong>{title}</strong>
-                <p>{description}</p>
-              </article>
-            ))}
-          </div>
+        <div className="delivery-list">
+          {delivery.map(([title, description]) => (
+            <article className="delivery-row" key={title}>
+              <strong>{title}</strong>
+              <p>{description}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -266,10 +224,6 @@ export default function Home() {
         <div className="contact-copy reveal">
           <p className="overline-v5">PRIVATE BERATUNG</p>
           <h2>Ihr LED-Heimkino.</h2>
-          <p>
-            Wählen Sie zunächst Ihre gewünschte Bildschirmdiagonale oder sprechen
-            Sie direkt mit uns über Ihr Projekt.
-          </p>
           <div className="contact-links-v6">
             <a className="contact-action-v5" href="/produkte">
               <span>Modelle entdecken</span>
