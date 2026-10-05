@@ -400,8 +400,8 @@ export default function Home() {
         <div className="manifesto-foot reveal">
           <span>01</span>
           <p>
-            CINEMA N°7 creates private theatres where image, sound, light and
-            architecture are conceived as one experience.
+            Proportionen, Betrachtungsabstand, Akustik und Licht bestimmen das
+            System. Nicht umgekehrt.
           </p>
         </div>
       </section>
@@ -438,8 +438,8 @@ export default function Home() {
           <div className="technology-foot reveal">
             <span>1.2 / 1.9</span>
             <p>
-              Fine-pitch LED selected around room scale, architecture and
-              viewing distance — not around a catalogue size.
+              Fine-Pitch Direct View LED wird für den jeweiligen Raum dimensioniert —
+              nach Bildbreite, Betrachtungsabstand und gewünschter Auflösung.
             </p>
           </div>
         </div>
@@ -521,13 +521,12 @@ export default function Home() {
         <div className="n7-copy reveal">
           <span className="n7-mark">N°7 / 04</span>
           <h2 className="display">
-            The
+            Die
             <br />
-            seventh art.
+            siebte Kunst.
           </h2>
           <p>
-            Cinema is traditionally known as the seventh art. N°7 carries that
-            idea into a new kind of private architectural experience.
+            Kino gilt als die siebte Kunst. Daher N°7.
           </p>
         </div>
       </section>
@@ -544,9 +543,9 @@ export default function Home() {
         <div className="commission-head">
           <p className="eyebrow reveal">DAS PROJEKT</p>
           <h2 className="display reveal">
-            Every N°7
+            Jedes N°7 wird
             <br />
-            is commissioned.
+            für einen Raum entworfen.
           </h2>
         </div>
 
