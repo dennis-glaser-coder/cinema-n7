@@ -28,7 +28,7 @@ export default function Home() {
       intro
         .fromTo(".nav", { opacity: 0 }, { opacity: 1, duration: 0.9 })
         .fromTo(
-          ".hero-wordmark, .hero-kicker",
+          ".hero-wordmark",
           { opacity: 0, y: 14 },
           { opacity: 1, y: 0, duration: 0.75, stagger: 0.08 },
           "-=.45"
@@ -305,10 +305,9 @@ export default function Home() {
 
         <div className="hero-copy">
           <p className="hero-wordmark">CINEMA N°7</p>
-          <p className="hero-kicker">PRIVATE THEATRES</p>
-          <h1 className="hero-title" aria-label="Exklusive Heimkinos">
+          <h1 className="hero-title" aria-label="Exklusive LED-Heimkinos">
             <span className="line-wrap">
-              <span className="line">Exklusive Heimkinos</span>
+              <span className="line">Exklusive LED-Heimkinos</span>
             </span>
           </h1>
 
@@ -328,7 +327,7 @@ export default function Home() {
         </div>
 
         <div className="hero-index" aria-hidden="true">
-          <span>PRIVATE THEATRES</span>
+          <span>EXKLUSIVE LED-HEIMKINOS</span>
           <span>01 / 06</span>
           <span>WEITER</span>
         </div>
@@ -526,10 +525,10 @@ export default function Home() {
 
       <footer className="footer">
         <div className="footer-brand">CINEMA N°7</div>
-        <div>PRIVATE THEATRES</div>
+        <div>EXKLUSIVE LED-HEIMKINOS</div>
         <div>DEUTSCHLAND / EUROPA</div>
         <div className="footer-end">
-          <span>PRIVATE THEATRES</span>
+          <span>LED-BILDSYSTEME</span>
           <span>© 2026</span>
         </div>
       </footer>
