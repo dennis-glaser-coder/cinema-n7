@@ -5481,8 +5481,8 @@ body {
   min-height: calc(100svh - 78px);
   padding: clamp(64px, 7vw, 110px) 7vw;
   display: grid;
-  grid-template-columns: minmax(0,.88fr) minmax(420px,1.12fr);
-  gap: clamp(58px, 8vw, 130px);
+  grid-template-columns: minmax(0,1.08fr) minmax(360px,.82fr);
+  gap: clamp(52px, 7vw, 108px);
   align-items: center;
 }
 
@@ -5558,7 +5558,9 @@ body {
 
 .inquiry-photo-wrap {
   position: relative;
-  min-height: min(72svh, 820px);
+  width: min(100%, 620px);
+  min-height: min(60svh, 680px);
+  justify-self: end;
   overflow: hidden;
   background: #080706;
   border: 1px solid rgba(255,255,255,.07);
@@ -5577,16 +5579,20 @@ body {
 .inquiry-photo {
   width: 100%;
   height: 100%;
-  min-height: min(72svh, 820px);
+  min-height: min(60svh, 680px);
   object-fit: cover;
-  object-position: center 28%;
+  object-position: center 24%;
   filter: saturate(.92) contrast(1.02) brightness(.90);
 }
 
 @media (max-width: 1050px) {
   .inquiry-hero {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0,1fr) minmax(340px,.82fr);
     gap: 42px;
+  }
+
+  .inquiry-photo-wrap {
+    width: min(100%, 540px);
   }
 
   .inquiry-contact-link {
@@ -5624,9 +5630,16 @@ body {
     font-size: clamp(20px, 6vw, 28px);
   }
 
-  .inquiry-photo-wrap,
+  .inquiry-photo-wrap {
+    width: 100%;
+    max-width: 560px;
+    justify-self: start;
+    min-height: 460px;
+  }
+
   .inquiry-photo {
-    min-height: 520px;
+    min-height: 460px;
+    object-position: center 22%;
   }
 }
 
@@ -5639,6 +5652,6 @@ body {
 
   .inquiry-photo-wrap,
   .inquiry-photo {
-    min-height: 440px;
+    min-height: 400px;
   }
 }
