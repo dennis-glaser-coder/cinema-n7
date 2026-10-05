@@ -206,13 +206,14 @@ export default function Home() {
 
       <section className="home-models-v7" aria-labelledby="home-models-title">
         <div className="home-models-head reveal">
-          <h2 id="home-models-title">Modelle</h2>
+          <h2 id="home-models-title">LED-Heimkino Modelle</h2>
+          <a href="/produkte">Modelle ansehen</a>
         </div>
 
         <a
           className="home-models-stage reveal"
           href="/produkte"
-          aria-label="Modelle ansehen"
+          aria-label="LED-Heimkino Modelle ansehen"
         >
           <div className="home-models-room" aria-hidden="true">
             <div className="home-models-person" />
