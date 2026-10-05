@@ -25,6 +25,8 @@ export const cinemaModels = cabinetCounts.map((count) => {
     cabinets: count * count,
     cabinetsWide: count,
     cabinetsHigh: count,
+    resolutionX: count * cabinet.pixelsX,
+    resolutionY: count * cabinet.pixelsY,
     panelCostEur: count * count * PANEL_PRICE_EUR,
   };
 });
