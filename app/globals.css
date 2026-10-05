@@ -2572,15 +2572,10 @@ a {
 .delivery-row {
   min-height: 86px;
   display: grid;
-  grid-template-columns: 44px minmax(150px,.65fr) 1fr;
-  gap: 22px;
+  grid-template-columns: minmax(180px,.72fr) 1fr;
+  gap: 28px;
   align-items: center;
   border-bottom: 1px solid rgba(255,255,255,.09);
-}
-
-.delivery-row > span {
-  color: var(--warm);
-  font-size: 9px;
 }
 
 .delivery-row strong {
@@ -2761,13 +2756,13 @@ a {
   }
 
   .delivery-row {
-    grid-template-columns: 36px 1fr;
-    gap: 8px 14px;
+    grid-template-columns: 1fr;
+    gap: 8px;
     padding: 18px 0;
   }
 
   .delivery-row p {
-    grid-column: 2;
+    grid-column: auto;
   }
 
   .contact-v5 {
