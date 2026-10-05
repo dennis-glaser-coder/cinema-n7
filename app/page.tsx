@@ -36,37 +36,37 @@ export default function Home() {
         );
 
       gsap.to(".hero-cinema-image", {
-        scale: 1.07,
-        yPercent: 2,
+        scale: 1.13,
+        yPercent: 4,
         ease: "none",
         scrollTrigger: {
           trigger: ".hero-v5",
           start: "top top",
           end: "bottom top",
-          scrub: 1.2,
+          scrub: 1,
         },
       });
 
       gsap.to(".hero-content", {
-        yPercent: -7,
-        opacity: 0.25,
+        yPercent: -12,
+        opacity: 0.08,
         ease: "none",
         scrollTrigger: {
           trigger: ".hero-v5",
-          start: "40% top",
+          start: "32% top",
           end: "bottom top",
-          scrub: 1,
+          scrub: 0.85,
         },
       });
 
       gsap.utils.toArray<HTMLElement>(".reveal").forEach((element) => {
         gsap.fromTo(
           element,
-          { opacity: 0, y: 34 },
+          { opacity: 0, y: 48 },
           {
             opacity: 1,
             y: 0,
-            duration: 1,
+            duration: 1.1,
             ease: "power3.out",
             scrollTrigger: {
               trigger: element,
@@ -93,16 +93,64 @@ export default function Home() {
         }
       );
 
-      gsap.to(".system-visual-v6", {
-        scale: 1.035,
+      gsap.fromTo(
+        ".system-visual-v6",
+        { scale: 0.965, yPercent: 5 },
+        {
+          scale: 1.025,
+          yPercent: -4,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".system-v6",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".system-screen-v6",
+        { scale: 1.02 },
+        {
+          scale: 1.12,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".system-v6",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1.15,
+          },
+        }
+      );
+
+      gsap.to(".brand-interlude-art", {
+        scale: 1.12,
+        rotate: 1.2,
         ease: "none",
         scrollTrigger: {
-          trigger: ".system-v6",
+          trigger: ".brand-interlude-v6",
           start: "top bottom",
           end: "bottom top",
-          scrub: 1.2,
+          scrub: 1.1,
         },
       });
+
+      gsap.fromTo(
+        ".delivery-visual",
+        { scale: 0.97, yPercent: 5 },
+        {
+          scale: 1.035,
+          yPercent: -3,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".delivery-v5",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1.15,
+          },
+        }
+      );
 
       gsap.to(".contact-mark", {
         xPercent: -5,
