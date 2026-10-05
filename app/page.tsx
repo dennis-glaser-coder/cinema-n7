@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import heroCinemaImage from "../Luxuriöses Heimkino mit Erde im All.png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const delivery = [
@@ -35,8 +37,15 @@ export default function Home() {
         )
         .fromTo(
           ".hero-cinema-image",
-          { opacity: 0, scale: 1.035 },
-          { opacity: 1, scale: 1, duration: 1.5 },
+          {
+            opacity: isMobile ? 1 : 0,
+            scale: isMobile ? 1.01 : 1.035,
+          },
+          {
+            opacity: 1,
+            scale: 1,
+            duration: isMobile ? 0.3 : 1.2,
+          },
           "-=1"
         );
 
@@ -149,7 +158,16 @@ export default function Home() {
     <main ref={root} className="site-v5">
       <section className="hero-v5" id="top">
         <div className="hero-backdrop" aria-hidden="true">
-          <div className="hero-cinema-image" />
+          <div className="hero-cinema-image">
+            <Image
+              className="hero-cinema-media"
+              src={heroCinemaImage}
+              alt=""
+              priority
+              sizes="100vw"
+              quality={82}
+            />
+          </div>
           <div className="hero-cinema-overlay" />
         </div>
 
