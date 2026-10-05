@@ -28,9 +28,9 @@ export default function Home() {
       intro
         .fromTo(".nav", { opacity: 0 }, { opacity: 1, duration: 0.9 })
         .fromTo(
-          ".hero-kicker",
+          ".hero-wordmark, .hero-kicker",
           { opacity: 0, y: 14 },
-          { opacity: 1, y: 0, duration: 0.75 },
+          { opacity: 1, y: 0, duration: 0.75, stagger: 0.08 },
           "-=.45"
         )
         .fromTo(
@@ -304,13 +304,11 @@ export default function Home() {
         </header>
 
         <div className="hero-copy">
+          <p className="hero-wordmark">CINEMA N°7</p>
           <p className="hero-kicker">PRIVATE THEATRES</p>
-          <h1 className="hero-title" aria-label="Kino. Ohne Projektion.">
+          <h1 className="hero-title" aria-label="Exklusive Heimkinos">
             <span className="line-wrap">
-              <span className="line">Kino.</span>
-            </span>
-            <span className="line-wrap">
-              <span className="line">Ohne Projektion.</span>
+              <span className="line">Exklusive Heimkinos</span>
             </span>
           </h1>
 
@@ -513,7 +511,9 @@ export default function Home() {
           <div className="commission-close-copy">
             <span className="commission-close-index">PRIVAT / INDIVIDUELL / N°7</span>
             <p>
-              Nennen Sie uns gewünschte Bildgröße und Einbausituation.\n              Wir konfigurieren das passende LED-System.
+              Nennen Sie uns gewünschte Bildgröße und Einbausituation.
+              <br />
+              Wir konfigurieren das passende LED-System.
             </p>
           </div>
 
