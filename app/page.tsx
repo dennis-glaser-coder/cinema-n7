@@ -186,6 +186,30 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="home-models-v7" aria-labelledby="home-models-title">
+        <div className="home-models-head reveal">
+          <h2 id="home-models-title">Modelle</h2>
+        </div>
+
+        <a
+          className="home-models-stage reveal"
+          href="/produkte"
+          aria-label="Modelle ansehen"
+        >
+          <div className="home-models-room" aria-hidden="true">
+            <div className="home-models-person" />
+            <div className="home-models-wall">
+              <div className="home-models-wall-image" />
+              <div className="home-models-wall-grid">
+                {Array.from({ length: 36 }).map((_, index) => (
+                  <span key={index} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+
       <section className="system-v6" id="system">
         <div className="system-visual-v6 reveal" aria-hidden="true">
           <div className="system-screen-v6" />
