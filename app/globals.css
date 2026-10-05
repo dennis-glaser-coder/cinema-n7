@@ -3923,39 +3923,50 @@ body {
 }
 
 .selected-price-v2 {
-  margin-top: 34px;
-  padding: 28px 0 30px;
+  margin-top: 32px;
+  padding: 30px 0 28px;
   border-top: 1px solid rgba(255,255,255,.09);
   border-bottom: 1px solid rgba(255,255,255,.09);
-}
-
-.selected-price-v2 > span {
-  display: block;
-  color: var(--muted);
-  font-size: 8px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .selected-price-v2 strong {
   display: block;
-  margin-top: 10px;
+  margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(46px, 4.3vw, 64px);
-  line-height: .96;
+  font-size: clamp(44px, 4vw, 58px);
+  line-height: .92;
   font-weight: 400;
   letter-spacing: -.045em;
 }
 
+.selected-price-v2 p {
+  margin: 0;
+  color: rgba(255,255,255,.48);
+  font-size: 9px;
+  line-height: 1;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
 .selected-note-v2 {
-  padding-top: 22px;
+  padding-top: 20px;
+}
+
+.selected-note-v2 > span {
+  color: rgba(255,255,255,.34);
+  font-size: 7px;
+  letter-spacing: .16em;
 }
 
 .selected-note-v2 p {
-  margin: 9px 0 0;
-  color: rgba(255,255,255,.42);
-  font-size: 12px;
-  line-height: 1.5;
+  margin: 8px 0 0;
+  color: rgba(255,255,255,.48);
+  font-size: 11px;
+  line-height: 1.45;
 }
 
 @media (max-width: 1050px) {
@@ -4009,5 +4020,63 @@ body {
 
   .selected-price-v2 strong {
     font-size: clamp(42px, 13vw, 58px);
+  }
+}
+
+
+/* Product detail polish */
+.model-controls-v2 {
+  padding-top: 2px;
+}
+
+.selected-model-v2 {
+  padding-top: 32px;
+}
+
+.selected-model-heading-v2 {
+  padding-bottom: 4px;
+}
+
+.selected-model-heading-v2 h2 {
+  margin-top: 10px;
+}
+
+.selected-dimensions-v2 {
+  margin-top: 38px;
+}
+
+.selected-dimensions-v2 > div {
+  padding: 20px 0 22px;
+}
+
+.selected-dimensions-v2 span {
+  color: rgba(255,255,255,.34);
+  font-size: 7px;
+  letter-spacing: .16em;
+}
+
+.selected-dimensions-v2 strong {
+  margin-top: 9px;
+  font-size: clamp(28px, 2.5vw, 40px);
+  line-height: 1;
+}
+
+@media (max-width: 820px) {
+  .selected-model-v2 {
+    padding-top: 28px;
+  }
+
+  .selected-dimensions-v2 {
+    margin-top: 30px;
+  }
+
+  .selected-price-v2 {
+    margin-top: 26px;
+    padding: 24px 0 24px;
+    gap: 10px;
+  }
+
+  .selected-price-v2 strong {
+    font-size: clamp(38px, 11vw, 52px);
   }
 }
