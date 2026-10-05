@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -13,7 +13,6 @@ const delivery = [
 
 export default function Home() {
   const root = useRef<HTMLElement | null>(null);
-  const [videoReady, setVideoReady] = useState(true);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -30,32 +29,21 @@ export default function Home() {
           "-=.35"
         )
         .fromTo(
-          ".hero-product",
-          { opacity: 0, scale: 0.94, y: 18 },
-          { opacity: 1, scale: 1, y: 0, duration: 1.35 },
+          ".hero-cinema-image",
+          { opacity: 0, scale: 1.035 },
+          { opacity: 1, scale: 1, duration: 1.5 },
           "-=1"
         );
 
-      gsap.to(".hero-product-screen", {
-        scale: 1.08,
-        yPercent: 3,
+      gsap.to(".hero-cinema-image", {
+        scale: 1.07,
+        yPercent: 2,
         ease: "none",
         scrollTrigger: {
           trigger: ".hero-v5",
           start: "top top",
           end: "bottom top",
           scrub: 1.2,
-        },
-      });
-
-      gsap.to(".hero-product", {
-        yPercent: 6,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".hero-v5",
-          start: "top top",
-          end: "bottom top",
-          scrub: 1.4,
         },
       });
 
@@ -135,21 +123,8 @@ export default function Home() {
     <main ref={root} className="site-v5">
       <section className="hero-v5" id="top">
         <div className="hero-backdrop" aria-hidden="true">
-          {videoReady && (
-            <video
-              className="hero-video-v5"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              onError={() => setVideoReady(false)}
-            >
-              <source src="/media/hero.mp4" type="video/mp4" />
-            </video>
-          )}
-          <div className="hero-backdrop-fallback" />
-          <div className="hero-backdrop-grid" />
+          <div className="hero-cinema-image" />
+          <div className="hero-cinema-overlay" />
         </div>
 
         <header className="nav-v5">
@@ -182,15 +157,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="hero-product" aria-hidden="true">
-            <div className="hero-product-frame">
-              <div className="hero-product-screen" />
-            </div>
-            <div className="hero-product-meta">
-              <span>CINEMA N°7</span>
-              <span>LED BILDSYSTEM</span>
-            </div>
-          </div>
+
         </div>
       </section>
 
