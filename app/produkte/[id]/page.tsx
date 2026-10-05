@@ -138,8 +138,8 @@ export default async function ProductDetailPage({
       <section className="product-detail-contact">
         <p className="overline-v5">PRIVATE BERATUNG</p>
         <h2>{model.diagonalInches}&quot; für Ihr Heimkino.</h2>
-        <a href="/#contact" className="product-detail-cta">
-          Projekt besprechen
+        <a href="/anfrage" className="product-detail-cta">
+          Projekt anfragen
         </a>
       </section>
     </main>
