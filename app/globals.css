@@ -5655,3 +5655,44 @@ body {
     min-height: 400px;
   }
 }
+
+
+/* Lock model tiles to identical mobile geometry */
+@media (max-width: 820px) {
+  .model-picker-v2 {
+    grid-auto-rows: 82px;
+    align-items: stretch;
+  }
+
+  .model-picker-v2 button,
+  .model-picker-v2 button:hover,
+  .model-picker-v2 button:focus,
+  .model-picker-v2 button:active,
+  .model-picker-v2 button.is-active {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    height: 82px;
+    min-height: 82px;
+    max-height: 82px;
+    margin: 0;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    transform: none;
+    border-width: 1px;
+  }
+
+  .model-picker-v2 button span,
+  .model-picker-v2 button small {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .model-picker-v2 {
+    grid-auto-rows: 82px;
+  }
+}
