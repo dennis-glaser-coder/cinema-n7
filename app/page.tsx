@@ -5,14 +5,14 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const steps = [
-  ["01", "Space", "Architecture, viewing distance and room conditions."],
-  ["02", "Design", "Image, sound, light and materials conceived as one."],
-  ["03", "Engineering", "Direct View LED, acoustics, control and infrastructure."],
-  ["04", "Installation", "Integrated precisely into the architecture."],
-  ["05", "Calibration", "Image and sound tuned for the finished room."],
+  ["01", "Raum", "Architektur, Geometrie und Betrachtungsabstand."],
+  ["02", "Entwurf", "Bild, Akustik, Licht und Materialien."],
+  ["03", "Engineering", "LED-System, Audiotechnik, Steuerung und Infrastruktur."],
+  ["04", "Integration", "Präzise Installation und architektonische Einbindung."],
+  ["05", "Kalibrierung", "Bild und Klang werden im fertigen Raum abgestimmt."],
 ];
 
-const disciplines = ["IMAGE", "SOUND", "ACOUSTICS", "LIGHT", "CONTROL"];
+const disciplines = ["BILD", "KLANG", "AKUSTIK", "LICHT", "STEUERUNG"];
 
 export default function Home() {
   const root = useRef<HTMLElement | null>(null);
@@ -318,49 +318,49 @@ export default function Home() {
         </div>
 
         <header className="nav">
-          <a className="brand" href="#top" aria-label="Cinema N°7 Home">
+          <a className="brand" href="#top" aria-label="Cinema N°7 Startseite">
             CINEMA N°7
           </a>
-          <nav className="nav-links" aria-label="Primary">
-            <a href="#experience">Experience</a>
-            <a href="#technology">Technology</a>
-            <a href="#commission">Commission</a>
+          <nav className="nav-links" aria-label="Hauptnavigation">
+            <a href="#experience">Raum</a>
+            <a href="#technology">Technologie</a>
+            <a href="#commission">Projekt</a>
           </nav>
           <a className="nav-inquire" href="#commission">
-            Private consultation
+            Private Beratung
           </a>
         </header>
 
         <div className="hero-copy">
           <p className="hero-kicker">PRIVATE THEATRES</p>
-          <h1 className="hero-title" aria-label="Cinema, without projection.">
+          <h1 className="hero-title" aria-label="Kino. Ohne Projektion.">
             <span className="line-wrap">
-              <span className="line">Cinema,</span>
+              <span className="line">Kino.</span>
             </span>
             <span className="line-wrap">
-              <span className="line">without projection.</span>
+              <span className="line">Ohne Projektion.</span>
             </span>
           </h1>
 
           <div className="hero-meta">
             <p>
-              Direct View LED. Immersive sound.
+              Direct View LED. Raumakustik. Licht. Steuerung.
               <br />
-              Architectural integration.
+              Als Teil der Architektur geplant.
             </p>
 
             <a className="hero-enter" href="#experience">
               <span className="hero-enter-index">N°7</span>
-              <span className="hero-enter-label">Enter the experience</span>
+              <span className="hero-enter-label">N°7 entdecken</span>
               <span className="hero-enter-arrow">↘</span>
             </a>
           </div>
         </div>
 
         <div className="hero-index" aria-hidden="true">
-          <span>THE SEVENTH ART</span>
+          <span>DIE SIEBTE KUNST</span>
           <span>01 / 07</span>
-          <span>SCROLL TO ENTER</span>
+          <span>WEITER</span>
         </div>
       </section>
 
@@ -373,15 +373,15 @@ export default function Home() {
           <span className="axis axis-h axis-h-a" />
           <span className="axis axis-h axis-h-b" />
           <span className="grid-index grid-index-a">01</span>
-          <span className="grid-index grid-index-b">EXPERIENCE</span>
+          <span className="grid-index grid-index-b">RAUM</span>
         </div>
 
-        <p className="eyebrow reveal">THE EXPERIENCE</p>
+        <p className="eyebrow reveal">DER RAUM</p>
 
         <h2 className="display manifesto-title reveal">
-          Not a screen.
+          Alles beginnt
           <br />
-          <em>A private cinema.</em>
+          <em>mit dem Raum.</em>
         </h2>
 
         <div className="manifesto-graphic reveal" aria-hidden="true">
@@ -392,8 +392,8 @@ export default function Home() {
             <div className="aperture-core" />
           </div>
           <div className="manifesto-coordinates">
-            <span>IMAGE / SOUND / LIGHT</span>
-            <span>ARCHITECTURE / 001</span>
+            <span>BILD / KLANG / LICHT</span>
+            <span>ARCHITEKTUR / 001</span>
           </div>
         </div>
 
@@ -417,11 +417,11 @@ export default function Home() {
             </div>
             <div className="screen-measure screen-measure-top">
               <span>DIRECT VIEW / 16:9</span>
-              <span>ARCHITECTURAL SCALE</span>
+              <span>RAUMBEZOGENE DIMENSIONIERUNG</span>
             </div>
             <div className="screen-measure screen-measure-bottom">
               <span>FINE PITCH</span>
-              <span>01.2 — 01.9</span>
+              <span>P1.2 — P1.9</span>
             </div>
           </div>
         </div>
@@ -430,9 +430,9 @@ export default function Home() {
           <p className="eyebrow">DIRECT VIEW LED</p>
 
           <div className="statement-lines">
-            <span>NO PROJECTOR.</span>
-            <span>NO SHADOWS.</span>
-            <span>NO COMPROMISE.</span>
+            <span>KEIN PROJEKTOR.</span>
+            <span>DIREKTES LICHT.</span>
+            <span>PRÄZISE KALIBRIERT.</span>
           </div>
 
           <div className="technology-foot reveal">
@@ -445,7 +445,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="room-scene" aria-label="The room">
+      <section className="room-scene" aria-label="Das System">
         <div className="room-frame" aria-hidden="true">
           <div className="room-ceiling">
             <span />
@@ -481,14 +481,14 @@ export default function Home() {
 
         <div className="room-copy reveal">
           <div className="room-copy-top">
-            <p className="eyebrow">THE ROOM</p>
+            <p className="eyebrow">DAS SYSTEM</p>
             <span className="room-index">03 / 07</span>
           </div>
 
           <h2 className="display">
-            One room.
+            Ein Raum.
             <br />
-            One system.
+            Ein System.
           </h2>
 
           <div className="room-disciplines">
@@ -506,7 +506,7 @@ export default function Home() {
         <div className="n7-graphic" aria-hidden="true">
           <div className="seven-outline">7</div>
           <div className="n7-orbit">
-            <span className="n7-orbit-label n7-orbit-label-a">THE SEVENTH ART</span>
+            <span className="n7-orbit-label n7-orbit-label-a">DIE SIEBTE KUNST</span>
             <span className="n7-orbit-label n7-orbit-label-b">CINEMA N°7</span>
           </div>
           <div className="n7-crosshair">
@@ -516,7 +516,7 @@ export default function Home() {
           <div className="n7-monogram">N°7</div>
         </div>
 
-        <p className="eyebrow reveal">THE NAME</p>
+        <p className="eyebrow reveal">DER NAME</p>
 
         <div className="n7-copy reveal">
           <span className="n7-mark">N°7 / 04</span>
@@ -536,13 +536,13 @@ export default function Home() {
         <div className="section-rule" />
 
         <div className="commission-rail" aria-hidden="true">
-          <span className="commission-rail-label">BESPOKE / 05</span>
+          <span className="commission-rail-label">PROJEKT / 05</span>
           <div className="commission-rail-line" />
           <span className="commission-rail-number">N°7</span>
         </div>
 
         <div className="commission-head">
-          <p className="eyebrow reveal">THE COMMISSION</p>
+          <p className="eyebrow reveal">DAS PROJEKT</p>
           <h2 className="display reveal">
             Every N°7
             <br />
@@ -566,14 +566,14 @@ export default function Home() {
 
         <div className="commission-close reveal">
           <div className="commission-close-copy">
-            <span className="commission-close-index">PRIVATE / BESPOKE / N°7</span>
+            <span className="commission-close-index">PRIVAT / INDIVIDUELL / N°7</span>
             <p>
-              A private consultation begins with the room — not with a product.
+              Erzählen Sie uns von dem Raum. Alles Weitere beginnt dort.
             </p>
           </div>
 
           <a className="cta" href="mailto:hello@example.com">
-            <span>Begin your commission</span>
+            <span>Projekt besprechen</span>
             <span className="cta-arrow">↗</span>
           </a>
         </div>
@@ -582,9 +582,9 @@ export default function Home() {
       <footer className="footer">
         <div className="footer-brand">CINEMA N°7</div>
         <div>PRIVATE THEATRES</div>
-        <div>GERMANY / EUROPE</div>
+        <div>DEUTSCHLAND / EUROPA</div>
         <div className="footer-end">
-          <span>THE SEVENTH ART</span>
+          <span>DIE SIEBTE KUNST</span>
           <span>© 2026</span>
         </div>
       </footer>
