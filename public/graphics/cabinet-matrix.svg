@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <radialGradient id="glow" cx="62%" cy="42%" r="42%">
+      <stop offset="0%" stop-color="#c69a73" stop-opacity=".14"/>
+      <stop offset="55%" stop-color="#6a4b36" stop-opacity=".035"/>
+      <stop offset="100%" stop-color="#060606" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#070707"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g fill="none" stroke="#f2efe9" stroke-opacity=".065" vector-effect="non-scaling-stroke">
+    <rect x="32" y="18" width="1536" height="864"/>
+    <path d="M200 18V882M400 18V882M600 18V882M800 18V882M1000 18V882M1200 18V882M1400 18V882"/>
+    <path d="M32 130.5H1568M32 243H1568M32 355.5H1568M32 468H1568M32 580.5H1568M32 693H1568M32 805.5H1568"/>
+  </g>
+  <g fill="none" stroke="#f2efe9" stroke-opacity=".16" vector-effect="non-scaling-stroke">
+    <rect x="800" y="355.5" width="200" height="112.5"/>
+  </g>
+  <g fill="#f2efe9" fill-opacity=".16">
+    <circle cx="32" cy="18" r="2.2"/>
+    <circle cx="1568" cy="18" r="2.2"/>
+    <circle cx="32" cy="882" r="2.2"/>
+    <circle cx="1568" cy="882" r="2.2"/>
+  </g>
+</svg>
