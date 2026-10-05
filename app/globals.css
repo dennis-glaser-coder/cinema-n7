@@ -432,6 +432,15 @@ a {
   will-change: transform, opacity;
 }
 
+.hero-wordmark {
+  margin: 0 0 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(24px, 2.2vw, 38px);
+  line-height: 1;
+  letter-spacing: -.035em;
+  color: var(--text);
+}
+
 .hero-kicker,
 .eyebrow {
   margin: 0 0 22px;
@@ -450,9 +459,9 @@ a {
 }
 
 .hero-title {
-  font-size: clamp(66px, 9.1vw, 154px);
-  line-height: .86;
-  max-width: 1040px;
+  font-size: clamp(64px, 8.3vw, 140px);
+  line-height: .9;
+  max-width: 1160px;
   text-shadow: 0 8px 44px rgba(0,0,0,.35);
 }
 
