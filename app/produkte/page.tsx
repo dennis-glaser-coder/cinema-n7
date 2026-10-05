@@ -2,7 +2,7 @@
 
 import { CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
-import { cinemaModels, formatMeters } from "../../lib/cinema-products";
+import { cinemaModels, formatEuro, formatMeters } from "../../lib/cinema-products";
 
 const PERSON_HEIGHT_M = 1.75;
 const MAX_WALL_WIDTH_M = cinemaModels[cinemaModels.length - 1].widthM;
@@ -133,6 +133,12 @@ export default function ProductsPage() {
                 {selected.cabinetsWide} × {selected.cabinetsHigh} Cabinets ·
                 Referenzperson 1,75 m
               </p>
+            </div>
+
+            <div className="selected-price-v2">
+              <span>Vorläufige Panelkosten</span>
+              <strong>{formatEuro(selected.panelCostEur)}</strong>
+              <p>Berechnet mit 650 € pro Panel. Noch kein finaler Verkaufspreis.</p>
             </div>
           </div>
         </div>
