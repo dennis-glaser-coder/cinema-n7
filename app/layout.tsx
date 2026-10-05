@@ -14,6 +14,10 @@ export const metadata: Metadata = {
       "Cinema, without projection. Bespoke private theatres built around Direct View LED.",
     type: "website",
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
