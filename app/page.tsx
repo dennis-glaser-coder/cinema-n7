@@ -178,23 +178,12 @@ export default function Home() {
         }
       );
 
-      gsap.to(".seven-outline", {
-        yPercent: -10,
-        rotate: -2.2,
+      gsap.to(".brand-field-art", {
+        scale: 1.08,
+        yPercent: -3,
         ease: "none",
         scrollTrigger: {
-          trigger: ".n7-story",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1.4,
-        },
-      });
-
-      gsap.to(".n7-orbit", {
-        rotate: 26,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".n7-story",
+          trigger: ".brand-field",
           start: "top bottom",
           end: "bottom top",
           scrub: 1.4,
@@ -261,18 +250,7 @@ export default function Home() {
             <div className="hero-ambient" />
 
             <div className="hero-architecture">
-              <svg
-                className="hero-architecture-lines"
-                viewBox="0 0 1600 1000"
-                preserveAspectRatio="none"
-              >
-                <path d="M0 820 L800 345 L1600 820" />
-                <path d="M0 930 L800 345 L1600 930" />
-                <path d="M245 0 L800 345 L1355 0" />
-                <path d="M385 0 L800 345 L1215 0" />
-                <line x1="800" y1="0" x2="800" y2="1000" />
-                <line x1="0" y1="710" x2="1600" y2="710" />
-              </svg>
+              <div className="hero-architecture-lines" />
 
               <div className="hero-ceiling">
                 <span />
@@ -285,13 +263,7 @@ export default function Home() {
 
               <div className="hero-screen-shell">
                 <div className="hero-screen-image">
-                  <div className="screen-scene">
-                    <div className="screen-horizon" />
-                    <div className="screen-orb" />
-                    <div className="screen-beam screen-beam-a" />
-                    <div className="screen-beam screen-beam-b" />
-                    <div className="screen-reflection" />
-                  </div>
+                  <div className="screen-scene" />
                   <div className="hero-screen-scan" />
                   <div className="screen-corner screen-corner-a" />
                   <div className="screen-corner screen-corner-b" />
@@ -358,8 +330,8 @@ export default function Home() {
         </div>
 
         <div className="hero-index" aria-hidden="true">
-          <span>DIE SIEBTE KUNST</span>
-          <span>01 / 07</span>
+          <span>PRIVATE THEATRES</span>
+          <span>01 / 06</span>
           <span>WEITER</span>
         </div>
       </section>
@@ -385,12 +357,7 @@ export default function Home() {
         </h2>
 
         <div className="manifesto-graphic reveal" aria-hidden="true">
-          <div className="manifesto-aperture">
-            <span className="aperture-line aperture-line-a" />
-            <span className="aperture-line aperture-line-b" />
-            <span className="aperture-line aperture-line-c" />
-            <div className="aperture-core" />
-          </div>
+          <div className="architecture-art" />
           <div className="manifesto-coordinates">
             <span>BILD / KLANG / LICHT</span>
             <span>ARCHITEKTUR / 001</span>
@@ -502,32 +469,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="n7-story section-lightless">
-        <div className="n7-graphic" aria-hidden="true">
-          <div className="seven-outline">7</div>
-          <div className="n7-orbit">
-            <span className="n7-orbit-label n7-orbit-label-a">DIE SIEBTE KUNST</span>
-            <span className="n7-orbit-label n7-orbit-label-b">CINEMA N°7</span>
-          </div>
-          <div className="n7-crosshair">
-            <span />
-            <span />
-          </div>
-          <div className="n7-monogram">N°7</div>
-        </div>
-
-        <p className="eyebrow reveal">DER NAME</p>
-
-        <div className="n7-copy reveal">
-          <span className="n7-mark">N°7 / 04</span>
-          <h2 className="display">
-            Die
-            <br />
-            siebte Kunst.
-          </h2>
-          <p>
-            Kino gilt als die siebte Kunst. Daher N°7.
-          </p>
+      <section className="brand-field" aria-label="CINEMA N°7">
+        <div className="brand-field-art" aria-hidden="true" />
+        <div className="brand-field-mark reveal">
+          <span>CINEMA</span>
+          <strong>N°7</strong>
         </div>
       </section>
 
@@ -583,7 +529,7 @@ export default function Home() {
         <div>PRIVATE THEATRES</div>
         <div>DEUTSCHLAND / EUROPA</div>
         <div className="footer-end">
-          <span>DIE SIEBTE KUNST</span>
+          <span>PRIVATE THEATRES</span>
           <span>© 2026</span>
         </div>
       </footer>
