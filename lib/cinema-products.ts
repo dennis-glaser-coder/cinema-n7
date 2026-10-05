@@ -6,7 +6,7 @@ export const cabinet = {
   pixelsY: 270,
 } as const;
 
-const cabinetCounts = [6, 7, 8, 9, 10];
+const cabinetCounts = [4, 5, 6, 7, 8, 9, 10];
 
 export const cinemaModels = cabinetCounts.map((count) => {
   const widthM = (cabinet.widthMm * count) / 1000;
