@@ -14,6 +14,34 @@ const steps = [
 
 const disciplines = ["LED-FLÄCHE", "PROCESSING", "SIGNAL", "STEUERUNG", "KALIBRIERUNG"];
 
+const formats = [
+  {
+    name: "N°7 3.6",
+    width: "3,60 m",
+    height: "2,03 m",
+    inches: '163"',
+    resolution: "2880 × 1620",
+    cabinets: "36 Cabinets",
+  },
+  {
+    name: "N°7 4.2",
+    width: "4,20 m",
+    height: "2,36 m",
+    inches: '190"',
+    resolution: "3360 × 1890",
+    cabinets: "49 Cabinets",
+  },
+  {
+    name: "N°7 4.8",
+    width: "4,80 m",
+    height: "2,70 m",
+    inches: '217"',
+    resolution: "3840 × 2160",
+    cabinets: "64 Cabinets",
+    featured: "NATIVE 4K",
+  },
+];
+
 export default function Home() {
   const root = useRef<HTMLElement | null>(null);
   const cursor = useRef<HTMLDivElement | null>(null);
@@ -296,6 +324,7 @@ export default function Home() {
           <nav className="nav-links" aria-label="Hauptnavigation">
             <a href="#experience">Bild</a>
             <a href="#technology">Technologie</a>
+            <a href="#formats">Größen</a>
             <a href="#commission">Projekt</a>
           </nav>
           <a className="nav-inquire" href="#commission">
@@ -403,10 +432,58 @@ export default function Home() {
           <div className="technology-foot reveal">
             <span>16:9</span>
             <p>
-              Bildgröße, Pixelpitch und native Auflösung werden gemeinsam
-              definiert. Daraus entsteht die passende LED-Bildfläche.
+              P1.25 mit 480 × 270 Pixel pro Cabinet. Die native Auflösung
+              wächst mit jedem zusätzlichen 16:9-Cabinet.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="formats" id="formats">
+        <div className="formats-head reveal">
+          <p className="eyebrow">P1.25 / 1,25 MM</p>
+          <h2 className="display">
+            Größen, die
+            <br />
+            nach Kino aussehen.
+          </h2>
+        </div>
+
+        <div className="cabinet-spec reveal">
+          <span>600 × 337,5 MM</span>
+          <span>480 × 270 PIXEL</span>
+          <span>16:9 PRO CABINET</span>
+        </div>
+
+        <div className="format-grid">
+          {formats.map((format) => (
+            <article className="format-card reveal" key={format.name}>
+              <div className="format-card-top">
+                <span>{format.name}</span>
+                {format.featured && <strong>{format.featured}</strong>}
+              </div>
+
+              <div className="format-size">
+                <span>{format.width}</span>
+                <i>×</i>
+                <span>{format.height}</span>
+              </div>
+
+              <div className="format-meta">
+                <span>{format.inches}</span>
+                <span>{format.resolution}</span>
+                <span>{format.cabinets}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="formats-foot reveal">
+          <span>AB 3,60 M BILDBREITE</span>
+          <p>
+            Die native Auflösung wächst mit der Bildfläche. Bei 4,80 Metern
+            Breite erreicht das P1.25-System 3840 × 2160 Pixel — native 4K UHD.
+          </p>
         </div>
       </section>
 
