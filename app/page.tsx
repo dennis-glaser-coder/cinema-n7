@@ -79,12 +79,13 @@ export default function Home() {
 
       gsap.fromTo(
         ".delivery-row",
-        { opacity: 0.25, x: 18 },
+        { opacity: 0, x: 48 },
         {
           opacity: 1,
           x: 0,
+          duration: 1.05,
           stagger: 0.1,
-          ease: "power2.out",
+          ease: "power3.out",
           scrollTrigger: {
             trigger: ".delivery-list",
             start: "top 82%",
