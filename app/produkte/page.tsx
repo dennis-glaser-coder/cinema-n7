@@ -1,8 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import { cinemaModels, formatMeters } from "../../lib/cinema-products";
+
+const PERSON_HEIGHT_M = 1.75;
+const MAX_WALL_WIDTH_M = cinemaModels[cinemaModels.length - 1].widthM;
 
 export default function ProductsPage() {
   const defaultModel = cinemaModels[2];
@@ -14,8 +17,8 @@ export default function ProductsPage() {
     [selectedId]
   );
 
-  const maxDiagonal = cinemaModels[cinemaModels.length - 1].diagonalInches;
-  const previewScale = Math.max(0.48, selected.diagonalInches / maxDiagonal);
+  const wallWidthPercent = (selected.widthM / MAX_WALL_WIDTH_M) * 76;
+  const personHeightPercentOfMaxWallWidth = (PERSON_HEIGHT_M / MAX_WALL_WIDTH_M) * 76;
 
   useEffect(() => {
     if (!detailRef.current) return;
@@ -26,6 +29,12 @@ export default function ProductsPage() {
       { opacity: 1, y: 0, duration: 0.42, ease: "power2.out" }
     );
   }, [selectedId]);
+
+  const wallStyle = {
+    "--wall-width": `${wallWidthPercent}cqw`,
+    "--person-height": `${personHeightPercentOfMaxWallWidth}cqw`,
+    "--cab-count": selected.cabinetsWide,
+  } as CSSProperties;
 
   return (
     <main className="models-page models-page-v2">
@@ -50,21 +59,39 @@ export default function ProductsPage() {
       </section>
 
       <section className="model-configurator-v2">
-        <div className="model-preview-v2" aria-hidden="true">
-          <div className="preview-frame-v2">
-            <div
-              className="preview-screen-v2"
-              style={{
-                width: `${previewScale * 100}%`,
-                height: `${previewScale * 100}%`,
-              }}
-            >
-              <div className="preview-screen-image-v2" />
+        <div className="model-preview-scale" aria-label="Größenvergleich">
+          <div className="scale-stage" style={wallStyle}>
+            <div className="scale-baseline" />
+
+            <div className="scale-person-wrap">
+              <div className="scale-person-image" />
+              <span className="scale-person-label">1,75 m</span>
+            </div>
+
+            <div className="scale-wall">
+              <div className="scale-wall-image" />
+              <div
+                className="scale-wall-grid"
+                style={{
+                  gridTemplateColumns: `repeat(${selected.cabinetsWide}, 1fr)`,
+                  gridTemplateRows: `repeat(${selected.cabinetsHigh}, 1fr)`,
+                }}
+              >
+                {Array.from({ length: selected.cabinets }).map((_, index) => (
+                  <span key={index} />
+                ))}
+              </div>
             </div>
           </div>
-          <div className="preview-caption-v2">
+
+          <div className="scale-caption">
             <span>{selected.diagonalInches}&quot;</span>
-            <span>16:9</span>
+            <span>
+              {selected.cabinetsWide} × {selected.cabinetsHigh} Cabinets
+            </span>
+            <span>
+              {formatMeters(selected.widthM)} × {formatMeters(selected.heightM)} m
+            </span>
           </div>
         </div>
 
@@ -102,7 +129,10 @@ export default function ProductsPage() {
 
             <div className="selected-note-v2">
               <span>16:9 LED-Bildfläche</span>
-              <p>Weitere Größen können auf Anfrage konfiguriert werden.</p>
+              <p>
+                {selected.cabinetsWide} × {selected.cabinetsHigh} Cabinets ·
+                Referenzperson 1,75 m
+              </p>
             </div>
           </div>
         </div>
