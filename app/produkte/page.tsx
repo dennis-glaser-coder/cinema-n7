@@ -17,8 +17,9 @@ export default function ProductsPage() {
     [selectedId]
   );
 
-  const wallWidthPercent = (selected.widthM / MAX_WALL_WIDTH_M) * 76;
-  const personHeightPercentOfMaxWallWidth = (PERSON_HEIGHT_M / MAX_WALL_WIDTH_M) * 76;
+  const sceneScale = 84;
+  const wallWidthPercent = (selected.widthM / MAX_WALL_WIDTH_M) * sceneScale;
+  const personHeightPercentOfMaxWallWidth = (PERSON_HEIGHT_M / MAX_WALL_WIDTH_M) * sceneScale;
 
   useEffect(() => {
     if (!detailRef.current) return;
@@ -61,34 +62,30 @@ export default function ProductsPage() {
       <section className="model-configurator-v2">
         <div className="model-preview-scale" aria-label="Größenvergleich">
           <div className="scale-stage" style={wallStyle}>
+            <div className="scale-room-backdrop" />
             <div className="scale-baseline" />
 
-            <div className="scale-person-wrap">
-              <div className="scale-person-image" />
-              <span className="scale-person-label">1,75 m</span>
-            </div>
+            <div className="scale-composition">
+              <div className="scale-person-wrap">
+                <div className="scale-person-image" />
+                <span className="scale-person-label">1,75 m</span>
+              </div>
 
-            <div className="scale-wall">
-              <div className="scale-wall-image" />
-              <div
-                className="scale-wall-grid"
-                style={{
-                  gridTemplateColumns: `repeat(${selected.cabinetsWide}, 1fr)`,
-                  gridTemplateRows: `repeat(${selected.cabinetsHigh}, 1fr)`,
-                }}
-              >
-                {Array.from({ length: selected.cabinets }).map((_, index) => (
-                  <span key={index} />
-                ))}
+              <div className="scale-wall">
+                <div className="scale-wall-image" />
+                <div
+                  className="scale-wall-grid"
+                  style={{
+                    gridTemplateColumns: `repeat(${selected.cabinetsWide}, 1fr)`,
+                    gridTemplateRows: `repeat(${selected.cabinetsHigh}, 1fr)`,
+                  }}
+                >
+                  {Array.from({ length: selected.cabinets }).map((_, index) => (
+                    <span key={index} />
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="scale-caption">
-            <span>{selected.diagonalInches}&quot;</span>
-            <span>
-              {formatMeters(selected.widthM)} × {formatMeters(selected.heightM)} m
-            </span>
           </div>
         </div>
 
@@ -124,16 +121,16 @@ export default function ProductsPage() {
               </div>
             </div>
 
+            <div className="selected-price-v2">
+              <span>Panelkosten</span>
+              <strong>{formatEuro(selected.panelCostEur)}</strong>
+            </div>
+
             <div className="selected-note-v2">
               <span>Technische Konfiguration</span>
               <p>
                 {selected.cabinetsWide} × {selected.cabinetsHigh} Module
               </p>
-            </div>
-
-            <div className="selected-price-v2">
-              <span>Panelkosten</span>
-              <strong>{formatEuro(selected.panelCostEur)}</strong>
             </div>
           </div>
         </div>
