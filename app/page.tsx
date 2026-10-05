@@ -176,7 +176,7 @@ export default function Home() {
             CINEMA N°7
           </a>
           <nav aria-label="Hauptnavigation">
-            <a href="#system">Bildsystem</a>
+            <a href="#system">LED</a>
             <a href="/produkte">Modelle</a>
             <a href="#delivery">Leistung</a>
           </nav>
@@ -193,7 +193,7 @@ export default function Home() {
               LED-Heimkinos
             </h1>
             <p className="hero-sub">
-              Großformatige LED-Bildsysteme für private Heimkinos.
+              Großformatige LED-Flächen für Ihr privates Heimkino.
             </p>
             <a className="text-link-v5" href="/produkte">
               Modelle entdecken
@@ -256,7 +256,10 @@ export default function Home() {
       <section className="delivery-v5 delivery-v7" id="delivery">
         <div className="section-head-v5 reveal">
           <p className="overline-v5">WAS WIR LIEFERN</p>
-          <h2>Vom System zum fertigen Bild.</h2>
+          <h2>Von der Auswahl bis zum fertigen Bild.</h2>
+          <p className="delivery-trust-v7">
+            Ein Ansprechpartner begleitet Ihr Projekt – von der Auswahl bis zur Kalibrierung.
+          </p>
         </div>
 
         <div className="delivery-list">
