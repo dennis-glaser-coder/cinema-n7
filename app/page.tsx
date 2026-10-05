@@ -92,6 +92,23 @@ export default function Home() {
               </video>
             )}
             <div className="hero-ambient" />
+            <div className="hero-architecture">
+              <div className="hero-ceiling" />
+              <div className="hero-wall hero-wall-left" />
+              <div className="hero-wall hero-wall-right" />
+              <div className="hero-screen-shell">
+                <div className="hero-screen-image">
+                  <div className="hero-screen-flare" />
+                  <div className="hero-screen-scan" />
+                </div>
+              </div>
+              <div className="hero-floor" />
+              <div className="hero-seat-row">
+                <span />
+                <span />
+                <span />
+              </div>
+            </div>
           </div>
           <div className="hero-grain" />
           <div className="hero-vignette" />
@@ -121,7 +138,7 @@ export default function Home() {
 
         <div className="hero-index" aria-hidden="true">
           <span>THE SEVENTH ART</span>
-          <span>01 — 07</span>
+          <span>SCROLL TO ENTER</span>
         </div>
       </section>
 
