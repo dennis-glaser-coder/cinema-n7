@@ -5,14 +5,14 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const steps = [
-  ["01", "Anforderung", "Bildgröße, Betrachtungsabstand und Einbausituation."],
-  ["02", "Konfiguration", "Pixelpitch, native Auflösung und Cabinet-Raster."],
-  ["03", "Engineering", "Mechanik, Strom, Signal und Processing."],
-  ["04", "Installation", "Aufbau, Verkabelung und Inbetriebnahme."],
-  ["05", "Kalibrierung", "Farbe, Helligkeit, Gleichmäßigkeit und Signalweg."],
+  ["01", "Bildgröße", "Gewünschte Breite und 16:9-Bildfläche."],
+  ["02", "Auflösung", "Pixelpitch und native Pixelmatrix der Bildfläche."],
+  ["03", "System", "LED-Module, Processing, Strom und Steuerung."],
+  ["04", "Installation", "Mechanik, Verkabelung und Inbetriebnahme."],
+  ["05", "Kalibrierung", "Farbe, Helligkeit und Gleichmäßigkeit."],
 ];
 
-const disciplines = ["LED-FLÄCHE", "PROCESSING", "MECHANIK", "STEUERUNG", "KALIBRIERUNG"];
+const disciplines = ["LED-FLÄCHE", "PROCESSING", "SIGNAL", "STEUERUNG", "KALIBRIERUNG"];
 
 export default function Home() {
   const root = useRef<HTMLElement | null>(null);
@@ -307,27 +307,28 @@ export default function Home() {
           <p className="hero-wordmark">CINEMA N°7</p>
           <h1 className="hero-title" aria-label="Exklusive LED-Heimkinos">
             <span className="line-wrap">
-              <span className="line">Exklusive LED-Heimkinos</span>
+              <span className="line">Exklusive</span>
+            </span>
+            <span className="line-wrap">
+              <span className="line">LED-Heimkinos</span>
             </span>
           </h1>
 
           <div className="hero-meta">
             <p>
-              Direct View LED für private Heimkinos.
-              <br />
-              Großformatig. Modular. Präzise kalibriert.
+              Fine-Pitch LED. Großformatig. Modular. Präzise kalibriert.
             </p>
 
             <a className="hero-enter" href="#experience">
-              <span className="hero-enter-index">N°7</span>
-              <span className="hero-enter-label">N°7 entdecken</span>
+              <span className="hero-enter-index">01</span>
+              <span className="hero-enter-label">System entdecken</span>
               <span className="hero-enter-arrow">↘</span>
             </a>
           </div>
         </div>
 
         <div className="hero-index" aria-hidden="true">
-          <span>EXKLUSIVE LED-HEIMKINOS</span>
+          <span>FINE-PITCH LED</span>
           <span>01 / 06</span>
           <span>WEITER</span>
         </div>
@@ -345,27 +346,27 @@ export default function Home() {
           <span className="grid-index grid-index-b">BILD</span>
         </div>
 
-        <p className="eyebrow reveal">DAS BILD</p>
+        <p className="eyebrow reveal">FINE-PITCH LED</p>
 
         <h2 className="display manifesto-title reveal">
-          Direkt.
+          Bildfläche.
           <br />
-          <em>Pixel für Pixel.</em>
+          <em>Statt Projektion.</em>
         </h2>
 
         <div className="manifesto-graphic reveal" aria-hidden="true">
           <div className="display-matrix-art" />
           <div className="manifesto-coordinates">
-            <span>DIRECT VIEW / LED</span>
-            <span>16:9 / CABINET MATRIX</span>
+            <span>MODULAR / 16:9</span>
+            <span>CABINET / PIXELMATRIX</span>
           </div>
         </div>
 
         <div className="manifesto-foot reveal">
           <span>01</span>
           <p>
-            Kein Projektor, kein Objektiv, kein Lichtweg. Das Bild entsteht
-            direkt auf der LED-Fläche.
+            LED-Module bilden eine durchgehende 16:9-Bildfläche. Größe und
+            native Auflösung entstehen aus dem Cabinet-Raster.
           </p>
         </div>
       </section>
@@ -380,30 +381,30 @@ export default function Home() {
               ))}
             </div>
             <div className="screen-measure screen-measure-top">
-              <span>DIRECT VIEW / 16:9</span>
-              <span>RAUMBEZOGENE DIMENSIONIERUNG</span>
+              <span>FINE-PITCH LED / 16:9</span>
+              <span>MODULARES BILDSYSTEM</span>
             </div>
             <div className="screen-measure screen-measure-bottom">
-              <span>FINE PITCH</span>
-              <span>P1.2 — P1.9</span>
+              <span>NATIVE PIXELMATRIX</span>
+              <span>KALIBRIERT</span>
             </div>
           </div>
         </div>
 
         <div className="statement-content">
-          <p className="eyebrow">DIRECT VIEW LED</p>
+          <p className="eyebrow">DIE TECHNOLOGIE</p>
 
           <div className="statement-lines">
             <span>KEIN PROJEKTOR.</span>
-            <span>DIREKTES LICHT.</span>
+            <span>MODULAR.</span>
             <span>PRÄZISE KALIBRIERT.</span>
           </div>
 
           <div className="technology-foot reveal">
-            <span>1.2 / 1.9</span>
+            <span>16:9</span>
             <p>
-              Pixelpitch, Bildbreite und Betrachtungsabstand werden gemeinsam festgelegt.
-              Daraus ergibt sich die native Auflösung der Bildfläche.
+              Bildgröße, Pixelpitch und native Auflösung werden gemeinsam
+              definiert. Daraus entsteht die passende LED-Bildfläche.
             </p>
           </div>
         </div>
@@ -445,14 +446,14 @@ export default function Home() {
 
         <div className="room-copy reveal">
           <div className="room-copy-top">
-            <p className="eyebrow">DAS BILDSYSTEM</p>
-            <span className="room-index">03 / 07</span>
+            <p className="eyebrow">DAS SYSTEM</p>
+            <span className="room-index">03 / 06</span>
           </div>
 
           <h2 className="display">
-            Vom Modul
+            Eine Bildfläche.
             <br />
-            zum fertigen Bild.
+            Ein System.
           </h2>
 
           <div className="room-disciplines">
@@ -484,11 +485,11 @@ export default function Home() {
         </div>
 
         <div className="commission-head">
-          <p className="eyebrow reveal">DAS PROJEKT</p>
+          <p className="eyebrow reveal">IHR PROJEKT</p>
           <h2 className="display reveal">
-            Jede Bildfläche wird
+            Konfiguriert für
             <br />
-            individuell konfiguriert.
+            Ihr Heimkino.
           </h2>
         </div>
 
@@ -508,11 +509,10 @@ export default function Home() {
 
         <div className="commission-close reveal">
           <div className="commission-close-copy">
-            <span className="commission-close-index">PRIVAT / INDIVIDUELL / N°7</span>
+            <span className="commission-close-index">LED-BILDSYSTEM / N°7</span>
             <p>
-              Nennen Sie uns gewünschte Bildgröße und Einbausituation.
-              <br />
-              Wir konfigurieren das passende LED-System.
+              Wir liefern die LED-Bildfläche als abgestimmtes System —
+              von der Konfiguration bis zur finalen Kalibrierung.
             </p>
           </div>
 
@@ -525,10 +525,10 @@ export default function Home() {
 
       <footer className="footer">
         <div className="footer-brand">CINEMA N°7</div>
-        <div>EXKLUSIVE LED-HEIMKINOS</div>
+        <div>FINE-PITCH LED</div>
         <div>DEUTSCHLAND / EUROPA</div>
         <div className="footer-end">
-          <span>LED-BILDSYSTEME</span>
+          <span>EXKLUSIVE HEIMKINOS</span>
           <span>© 2026</span>
         </div>
       </footer>
