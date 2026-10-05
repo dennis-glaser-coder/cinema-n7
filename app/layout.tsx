@@ -3,15 +3,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "CINEMA N°7 — Private Theatres",
+    default: "CINEMA N°7 — Exklusive LED-Heimkinos",
     template: "%s — CINEMA N°7",
   },
   description:
-    "Private Kinos mit Direct View LED, Raumakustik und präziser architektonischer Integration.",
+    "Exklusive LED-Heimkinos mit großformatigen Fine-Pitch LED-Bildsystemen, individuell konfiguriert und präzise kalibriert.",
   openGraph: {
-    title: "CINEMA N°7 — Private Theatres",
+    title: "CINEMA N°7 — Exklusive LED-Heimkinos",
     description:
-      "Kino. Ohne Projektion. Private Kinos mit Direct View LED.",
+      "Exklusive LED-Heimkinos mit großformatigen Fine-Pitch LED-Bildsystemen.",
     type: "website",
   },
   robots: {
