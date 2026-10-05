@@ -179,6 +179,7 @@ export default function Home() {
             <a href="#system">LED</a>
             <a href="/produkte">Modelle</a>
             <a href="#delivery">Leistung</a>
+            <a href="/ueber-uns">Über uns</a>
           </nav>
           <a className="nav-cta-v5" href="#contact">
             Private Beratung
