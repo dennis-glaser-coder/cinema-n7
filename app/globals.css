@@ -1759,3 +1759,224 @@ a {
     radial-gradient(circle at 60% 44%,rgba(176,124,82,.08),transparent 26%);
   pointer-events: none;
 }
+
+
+/* V4 — product-led visual refinement */
+.hero-copy {
+  max-width: 980px;
+  padding: 15vh 0 7vh;
+}
+
+.hero-wordmark {
+  margin-bottom: 18px;
+  font-size: clamp(18px, 1.55vw, 27px);
+  letter-spacing: -.02em;
+}
+
+.hero-title {
+  max-width: 980px;
+  font-size: clamp(58px, 6.7vw, 112px);
+  line-height: .92;
+  letter-spacing: -.045em;
+}
+
+.hero-title .line {
+  white-space: nowrap;
+}
+
+.hero-meta {
+  margin-top: 34px;
+  max-width: 880px;
+  font-size: 12px;
+}
+
+.hero-enter {
+  min-width: 240px;
+}
+
+.hero-index {
+  color: rgba(255,255,255,.28);
+}
+
+.hero-screen-shell {
+  opacity: .96;
+}
+
+.display {
+  font-size: clamp(52px, 6.6vw, 108px);
+  line-height: .92;
+  letter-spacing: -.045em;
+}
+
+.manifesto {
+  min-height: 108svh;
+}
+
+.manifesto-title {
+  max-width: 900px;
+}
+
+.manifesto-graphic {
+  width: min(620px, 46vw);
+  margin-top: 6vh;
+}
+
+.manifesto-foot {
+  width: min(690px, 58vw);
+  margin-top: 50px;
+}
+
+.manifesto-foot p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(18px,1.6vw,25px);
+  line-height: 1.55;
+}
+
+.statement {
+  min-height: 138svh;
+}
+
+.statement-lines {
+  font-size: clamp(46px, 6.6vw, 108px);
+  line-height: .93;
+  letter-spacing: -.045em;
+  gap: 10px;
+}
+
+.technology-foot {
+  margin-top: 66px;
+}
+
+.room-scene {
+  min-height: 118svh;
+}
+
+.room-copy {
+  width: min(760px,66vw);
+}
+
+.room-copy .display {
+  font-size: clamp(50px, 6vw, 98px);
+}
+
+.room-disciplines {
+  margin-top: 34px;
+}
+
+.brand-field {
+  min-height: 62svh;
+}
+
+.brand-field-mark span {
+  letter-spacing: .34em;
+}
+
+.brand-field-mark strong {
+  font-size: clamp(72px, 8.5vw, 138px);
+}
+
+.commission {
+  min-height: 136svh;
+}
+
+.commission-head {
+  margin-bottom: 62px;
+}
+
+.commission-head .display {
+  max-width: 980px;
+}
+
+.step {
+  min-height: 112px;
+}
+
+.step strong {
+  font-size: clamp(24px, 2.55vw, 40px);
+}
+
+.step p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.commission-close {
+  padding-top: 11vh;
+}
+
+.commission-close p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(16px,1.45vw,22px);
+  line-height: 1.55;
+}
+
+.footer {
+  min-height: 30vh;
+}
+
+@media (max-width: 1100px) {
+  .hero-title {
+    font-size: clamp(54px, 8.4vw, 92px);
+  }
+
+  .hero-title .line {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 820px) {
+  .hero-copy {
+    padding-bottom: 11vh;
+  }
+
+  .hero-wordmark {
+    margin-bottom: 14px;
+    font-size: 18px;
+  }
+
+  .hero-title {
+    font-size: clamp(48px, 14vw, 76px);
+    line-height: .94;
+  }
+
+  .hero-title .line {
+    white-space: normal;
+  }
+
+  .hero-meta {
+    margin-top: 28px;
+  }
+
+  .display {
+    font-size: clamp(46px, 13vw, 72px);
+  }
+
+  .manifesto {
+    min-height: auto;
+  }
+
+  .manifesto-foot,
+  .technology-foot {
+    grid-template-columns: 38px 1fr;
+  }
+
+  .manifesto-foot p {
+    font-size: 18px;
+  }
+
+  .statement-lines {
+    font-size: clamp(40px, 11.5vw, 64px);
+  }
+
+  .room-copy .display {
+    font-size: clamp(46px, 12vw, 68px);
+  }
+
+  .brand-field {
+    min-height: 54svh;
+  }
+
+  .commission {
+    min-height: auto;
+  }
+}
