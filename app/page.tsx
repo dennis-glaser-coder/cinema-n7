@@ -18,6 +18,7 @@ export default function Home() {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
+      const isMobile = window.matchMedia("(max-width: 820px)").matches;
       const intro = gsap.timeline({ defaults: { ease: "power3.out" } });
 
       intro
@@ -36,8 +37,8 @@ export default function Home() {
         );
 
       gsap.to(".hero-cinema-image", {
-        scale: 1.13,
-        yPercent: 4,
+        scale: isMobile ? 1.045 : 1.13,
+        yPercent: isMobile ? 1.5 : 4,
         ease: "none",
         scrollTrigger: {
           trigger: ".hero-v5",
@@ -48,8 +49,8 @@ export default function Home() {
       });
 
       gsap.to(".hero-content", {
-        yPercent: -12,
-        opacity: 0.08,
+        yPercent: isMobile ? -4 : -12,
+        opacity: isMobile ? 0.65 : 0.08,
         ease: "none",
         scrollTrigger: {
           trigger: ".hero-v5",
@@ -62,7 +63,7 @@ export default function Home() {
       gsap.utils.toArray<HTMLElement>(".reveal").forEach((element) => {
         gsap.fromTo(
           element,
-          { opacity: 0, y: 48 },
+          { opacity: 0, y: isMobile ? 24 : 48 },
           {
             opacity: 1,
             y: 0,
@@ -79,7 +80,7 @@ export default function Home() {
 
       gsap.fromTo(
         ".delivery-row",
-        { opacity: 0, x: 48 },
+        { opacity: 0, x: isMobile ? 24 : 48 },
         {
           opacity: 1,
           x: 0,
@@ -96,10 +97,10 @@ export default function Home() {
 
       gsap.fromTo(
         ".system-visual-v6",
-        { scale: 0.965, yPercent: 5 },
+        { scale: isMobile ? 0.985 : 0.965, yPercent: isMobile ? 2 : 5 },
         {
-          scale: 1.025,
-          yPercent: -4,
+          scale: isMobile ? 1.01 : 1.025,
+          yPercent: isMobile ? -1.5 : -4,
           ease: "none",
           scrollTrigger: {
             trigger: ".system-v6",
@@ -112,9 +113,9 @@ export default function Home() {
 
       gsap.fromTo(
         ".system-screen-v6",
-        { scale: 1.02 },
+        { scale: isMobile ? 1.01 : 1.02 },
         {
-          scale: 1.12,
+          scale: isMobile ? 1.055 : 1.12,
           ease: "none",
           scrollTrigger: {
             trigger: ".system-v6",
@@ -126,8 +127,8 @@ export default function Home() {
       );
 
       gsap.to(".brand-interlude-art", {
-        scale: 1.12,
-        rotate: 1.2,
+        scale: isMobile ? 1.045 : 1.12,
+        rotate: isMobile ? 0.3 : 1.2,
         ease: "none",
         scrollTrigger: {
           trigger: ".brand-interlude-v6",
@@ -139,10 +140,10 @@ export default function Home() {
 
       gsap.fromTo(
         ".delivery-visual",
-        { scale: 0.97, yPercent: 5 },
+        { scale: isMobile ? 0.99 : 0.97, yPercent: isMobile ? 2 : 5 },
         {
-          scale: 1.035,
-          yPercent: -3,
+          scale: isMobile ? 1.01 : 1.035,
+          yPercent: isMobile ? -1 : -3,
           ease: "none",
           scrollTrigger: {
             trigger: ".delivery-v5",
@@ -154,7 +155,7 @@ export default function Home() {
       );
 
       gsap.to(".contact-mark", {
-        xPercent: -5,
+        xPercent: isMobile ? -1.5 : -5,
         ease: "none",
         scrollTrigger: {
           trigger: ".contact-v5",
@@ -202,7 +203,7 @@ export default function Home() {
               Großformatige LED-Bildsysteme für private Heimkinos.
             </p>
             <a className="text-link-v5" href="/produkte">
-              Modelle entdecken <span>↗</span>
+              Modelle entdecken
             </a>
           </div>
 
@@ -223,7 +224,7 @@ export default function Home() {
             als vollständiges System geliefert und präzise kalibriert.
           </p>
           <a href="/produkte" className="text-link-v5">
-            Modelle ansehen <span>↗</span>
+            Modelle ansehen
           </a>
         </div>
       </section>
@@ -273,11 +274,11 @@ export default function Home() {
           <div className="contact-links-v6">
             <a className="contact-action-v5" href="/produkte">
               <span>Modelle entdecken</span>
-              <span>↗</span>
+             
             </a>
             <a className="contact-action-v5" href="#contact">
               <span>Projekt besprechen</span>
-              <span>↗</span>
+             
             </a>
           </div>
         </div>
