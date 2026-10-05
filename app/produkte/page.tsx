@@ -23,7 +23,7 @@ export default function ProductsPage() {
     <main className="models-page">
       <header className="models-nav">
         <a href="/" className="brand-v5">CINEMA N°7</a>
-        <a href="/" className="models-back">← Zurück</a>
+        <a href="/" className="models-back">Zurück</a>
       </header>
 
       <section className="models-hero">
