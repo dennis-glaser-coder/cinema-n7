@@ -4110,3 +4110,60 @@ body {
     justify-self: start;
   }
 }
+
+
+/* Hero polish */
+.nav-cta-v5 {
+  color: rgba(255,255,255,.94);
+  font-weight: 500;
+  border-bottom-color: rgba(255,255,255,.46);
+  text-shadow: 0 1px 14px rgba(0,0,0,.35);
+  transition:
+    color .25s ease,
+    border-color .25s ease;
+}
+
+.nav-cta-v5:hover {
+  color: #fff;
+  border-bottom-color: rgba(255,255,255,.78);
+}
+
+.hero-v5 .text-link-v5 {
+  width: min(300px,100%);
+  color: rgba(255,255,255,.9);
+  font-weight: 600;
+  border-top-color: rgba(255,255,255,.28);
+  border-bottom-color: rgba(255,255,255,.28);
+  transition:
+    color .25s ease,
+    border-color .25s ease;
+}
+
+.hero-v5 .text-link-v5:hover {
+  color: #fff;
+  border-top-color: rgba(255,255,255,.5);
+  border-bottom-color: rgba(255,255,255,.5);
+}
+
+@media (max-width: 1320px) and (min-width: 821px) {
+  .hero-content {
+    max-width: 620px;
+  }
+
+  .hero-content h1 {
+    max-width: 650px;
+    font-size: clamp(58px, 6vw, 92px);
+    line-height: .93;
+  }
+
+  .hero-sub {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 821px) {
+  .hero-content h1 {
+    max-width: 580px;
+    font-size: clamp(54px, 5.8vw, 78px);
+  }
+}
