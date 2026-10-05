@@ -281,8 +281,8 @@ export default function Home() {
               <span>Modelle entdecken</span>
              
             </a>
-            <a className="contact-action-v5" href="#contact">
-              <span>Projekt besprechen</span>
+            <a className="contact-action-v5" href="/anfrage">
+              <span>Projekt anfragen</span>
              
             </a>
           </div>
