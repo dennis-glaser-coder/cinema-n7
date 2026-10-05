@@ -5,10 +5,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const delivery = [
-  ["01", "Konfiguration", "Bildgröße und passendes LED-System."],
-  ["02", "Integration", "Mechanik, Processing, Signal und Strom."],
-  ["03", "Installation", "Aufbau und Inbetriebnahme vor Ort."],
-  ["04", "Kalibrierung", "Das fertige Bild wird präzise abgestimmt."],
+  ["Konfiguration", "Bildgröße und passendes LED-System."],
+  ["Integration", "Mechanik, Processing, Signal und Strom."],
+  ["Installation", "Aufbau und Inbetriebnahme vor Ort."],
+  ["Kalibrierung", "Das fertige Bild wird präzise abgestimmt."],
 ];
 
 export default function Home() {
@@ -249,9 +249,8 @@ export default function Home() {
           </div>
 
           <div className="delivery-list">
-            {delivery.map(([number, title, description]) => (
-              <article className="delivery-row" key={number}>
-                <span>{number}</span>
+            {delivery.map(([title, description]) => (
+              <article className="delivery-row" key={title}>
                 <strong>{title}</strong>
                 <p>{description}</p>
               </article>
