@@ -4080,3 +4080,38 @@ body {
     font-size: clamp(38px, 11vw, 52px);
   }
 }
+
+
+.models-next-v2-clean {
+  align-items: center;
+}
+
+.models-next-link-v2 {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border: 1px solid rgba(255,255,255,.14);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  transition:
+    border-color .25s ease,
+    background .25s ease,
+    transform .25s ease;
+}
+
+.models-next-link-v2:hover {
+  border-color: rgba(255,255,255,.28);
+  background: rgba(255,255,255,.035);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1050px) {
+  .models-next-link-v2 {
+    justify-self: start;
+  }
+}
