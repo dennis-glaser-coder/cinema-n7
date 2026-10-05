@@ -46,8 +46,8 @@ export default async function ProductDetailPage({
             <span>zzgl. MwSt.</span>
           </div>
 
-          <a href="/#contact" className="product-detail-cta">
-            Private Beratung
+          <a href="/anfrage" className="product-detail-cta">
+            Projekt anfragen
           </a>
         </div>
 
@@ -112,7 +112,7 @@ export default async function ProductDetailPage({
       <section className="product-detail-scope">
         <div>
           <p className="overline-v5">SYSTEM</p>
-          <h2>Als vollständiges Bildsystem.</h2>
+          <h2>Als vollständiges LED-System.</h2>
         </div>
 
         <div className="product-detail-scope-list">
