@@ -236,7 +236,6 @@ export default function Home() {
         <div className="system-copy-v6 reveal">
           <p className="overline-v5">DAS BILD</p>
           <h2>LED statt Projektion.</h2>
-          <p>Eine großformatige Bildfläche, die selbst leuchtet.</p>
           <a href="/produkte" className="text-link-v5">
             Modelle ansehen
           </a>
