@@ -122,8 +122,8 @@ export default function ProductsPage() {
             </div>
 
             <div className="selected-price-v2">
-              <span>Panelkosten · zzgl. MwSt.</span>
               <strong>{formatEuro(selected.panelCostEur)}</strong>
+              <span>zzgl. MwSt.</span>
             </div>
 
             <div className="selected-note-v2">
