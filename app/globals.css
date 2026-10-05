@@ -4688,3 +4688,134 @@ body {
     margin-top: 28px;
   }
 }
+
+
+/* Homepage product focus */
+.home-models-v7 {
+  padding: clamp(92px, 8vw, 138px) 7vw;
+  background: #040404;
+  border-top: 1px solid rgba(255,255,255,.07);
+}
+
+.home-models-head h2 {
+  margin: 0 0 clamp(42px, 5vw, 70px);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(58px, 6vw, 96px);
+  line-height: .94;
+  font-weight: 400;
+  letter-spacing: -.045em;
+}
+
+.home-models-stage {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-models-room {
+  position: relative;
+  min-height: clamp(520px, 56vw, 760px);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  background:
+    radial-gradient(circle at 58% 38%, rgba(120,88,58,.10), transparent 30%),
+    linear-gradient(180deg, rgba(255,255,255,.012), transparent 34%),
+    #050505;
+}
+
+.home-models-room::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 9%;
+  height: 1px;
+  background: rgba(255,255,255,.07);
+}
+
+.home-models-person {
+  position: absolute;
+  left: 11%;
+  bottom: 9%;
+  width: clamp(76px, 8vw, 118px);
+  aspect-ratio: .66;
+  background:
+    url("https://raw.githubusercontent.com/dennis-glaser-coder/cinema-n7/main/Person.png")
+    center bottom / contain no-repeat;
+  filter: drop-shadow(0 18px 38px rgba(0,0,0,.5));
+  z-index: 2;
+}
+
+.home-models-wall {
+  position: absolute;
+  left: 58%;
+  bottom: 9%;
+  width: min(68%, 980px);
+  aspect-ratio: 16 / 9;
+  transform: translateX(-50%);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.14);
+  background: #080808;
+  box-shadow:
+    0 44px 120px rgba(0,0,0,.56),
+    0 0 0 1px rgba(255,255,255,.02) inset;
+  transition:
+    transform .6s cubic-bezier(.22,.8,.22,1),
+    border-color .35s ease;
+}
+
+.home-models-stage:hover .home-models-wall {
+  transform: translateX(-50%) scale(1.012);
+  border-color: rgba(255,255,255,.24);
+}
+
+.home-models-wall-image {
+  position: absolute;
+  inset: 5px;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.07)),
+    url("https://raw.githubusercontent.com/dennis-glaser-coder/cinema-n7/main/led-wall-fill.png")
+    center / cover no-repeat;
+}
+
+.home-models-wall-grid {
+  position: absolute;
+  inset: 5px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  pointer-events: none;
+}
+
+.home-models-wall-grid span {
+  border-right: 1px solid rgba(7,9,11,.84);
+  border-bottom: 1px solid rgba(7,9,11,.84);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.016);
+}
+
+@media (max-width: 820px) {
+  .home-models-v7 {
+    padding: 68px 20px;
+  }
+
+  .home-models-head h2 {
+    margin-bottom: 34px;
+    font-size: clamp(48px, 13vw, 66px);
+  }
+
+  .home-models-room {
+    min-height: 410px;
+  }
+
+  .home-models-person {
+    left: 7%;
+    bottom: 8%;
+    width: clamp(58px, 16vw, 78px);
+  }
+
+  .home-models-wall {
+    left: 62%;
+    bottom: 8%;
+    width: 78%;
+  }
+}
