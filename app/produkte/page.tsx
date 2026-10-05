@@ -150,8 +150,8 @@ export default function ProductsPage() {
           <p className="overline-v5">PRIVATE BERATUNG</p>
           <h2>Ihr LED-Heimkino.</h2>
         </div>
-        <a href="/#contact" className="models-next-link-v2">
-          Projekt besprechen
+        <a href="/anfrage" className="models-next-link-v2">
+          Projekt anfragen
         </a>
       </section>
     </main>
