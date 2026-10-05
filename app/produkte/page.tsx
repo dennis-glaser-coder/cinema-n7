@@ -123,7 +123,7 @@ export default function ProductsPage() {
 
             <div className="selected-price-v2">
               <strong>{formatEuro(selected.panelCostEur)}</strong>
-              <span>zzgl. MwSt.</span>
+              <p>zzgl. MwSt.</p>
             </div>
 
             <div className="selected-note-v2">
