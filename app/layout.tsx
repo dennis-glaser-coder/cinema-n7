@@ -7,11 +7,11 @@ export const metadata: Metadata = {
     template: "%s — CINEMA N°7",
   },
   description:
-    "Bespoke private theatres built around Direct View LED, immersive sound and architectural integration.",
+    "Private Kinos mit Direct View LED, Raumakustik und präziser architektonischer Integration.",
   openGraph: {
     title: "CINEMA N°7 — Private Theatres",
     description:
-      "Cinema, without projection. Bespoke private theatres built around Direct View LED.",
+      "Kino. Ohne Projektion. Private Kinos mit Direct View LED.",
     type: "website",
   },
   robots: {
@@ -24,7 +24,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body>{children}</body>
     </html>
   );
