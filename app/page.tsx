@@ -206,16 +206,22 @@ export default function Home() {
 
       <section className="home-models-v7" aria-labelledby="home-models-title">
         <div className="home-models-head reveal">
-          <h2 id="home-models-title">LED-Heimkino Modelle</h2>
-          <a href="/produkte">Modelle ansehen</a>
+          <h2 id="home-models-title">
+            LED-Heimkinos in
+            <br />
+            verschiedenen Größen
+          </h2>
+          <p>Wählen Sie die passende Bildgröße.</p>
         </div>
 
         <a
           className="home-models-stage reveal"
           href="/produkte"
-          aria-label="LED-Heimkino Modelle ansehen"
+          aria-label="LED-Heimkino Modelle entdecken"
         >
           <div className="home-models-room" aria-hidden="true">
+            <div className="home-models-ghost home-models-ghost-small" />
+            <div className="home-models-ghost home-models-ghost-large" />
             <div className="home-models-person" />
             <div className="home-models-wall">
               <div className="home-models-wall-image" />
@@ -227,6 +233,10 @@ export default function Home() {
             </div>
           </div>
         </a>
+
+        <div className="home-models-footer reveal">
+          <a href="/produkte">Alle Modelle entdecken</a>
+        </div>
       </section>
 
       <section className="system-v6" id="system">
