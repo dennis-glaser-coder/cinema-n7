@@ -87,9 +87,6 @@ export default function ProductsPage() {
           <div className="scale-caption">
             <span>{selected.diagonalInches}&quot;</span>
             <span>
-              {selected.cabinetsWide} × {selected.cabinetsHigh} Cabinets
-            </span>
-            <span>
               {formatMeters(selected.widthM)} × {formatMeters(selected.heightM)} m
             </span>
           </div>
@@ -128,17 +125,15 @@ export default function ProductsPage() {
             </div>
 
             <div className="selected-note-v2">
-              <span>16:9 LED-Bildfläche</span>
+              <span>Technische Konfiguration</span>
               <p>
-                {selected.cabinetsWide} × {selected.cabinetsHigh} Cabinets ·
-                Referenzperson 1,75 m
+                {selected.cabinetsWide} × {selected.cabinetsHigh} Module
               </p>
             </div>
 
             <div className="selected-price-v2">
-              <span>Vorläufige Panelkosten</span>
+              <span>Panelkosten</span>
               <strong>{formatEuro(selected.panelCostEur)}</strong>
-              <p>Berechnet mit 650 € pro Panel. Noch kein finaler Verkaufspreis.</p>
             </div>
           </div>
         </div>
