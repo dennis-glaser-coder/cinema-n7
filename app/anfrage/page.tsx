@@ -28,6 +28,11 @@ export default function InquiryPage() {
           <div className="inquiry-contact">
             <p>Ihr Ansprechpartner</p>
 
+            <div className="inquiry-person">
+              <strong>Dennis Glaser</strong>
+              <span>Persönliche Beratung</span>
+            </div>
+
             <a href={phoneHref} className="inquiry-contact-link">
               <span>Telefon</span>
               <strong>{phoneDisplay}</strong>
