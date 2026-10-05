@@ -1726,3 +1726,27 @@ a {
     letter-spacing: .34em;
   }
 }
+
+
+.display-matrix-art {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(255,255,255,.08);
+  overflow: hidden;
+  background:
+    url("/graphics/cabinet-matrix.svg") center/cover no-repeat,
+    #070707;
+  box-shadow:
+    inset 0 0 90px rgba(0,0,0,.35),
+    0 28px 90px rgba(0,0,0,.24);
+}
+
+.display-matrix-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.018),transparent 26%),
+    radial-gradient(circle at 60% 44%,rgba(176,124,82,.08),transparent 26%);
+  pointer-events: none;
+}
