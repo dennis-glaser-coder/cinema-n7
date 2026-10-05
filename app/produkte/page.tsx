@@ -1,93 +1,121 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import { cinemaModels, formatMeters } from "../../lib/cinema-products";
 
 export default function ProductsPage() {
-  const [selectedId, setSelectedId] = useState(cinemaModels[2].id);
+  const defaultModel = cinemaModels[2];
+  const [selectedId, setSelectedId] = useState(defaultModel.id);
   const detailRef = useRef<HTMLDivElement | null>(null);
-  const selected = cinemaModels.find((model) => model.id === selectedId) ?? cinemaModels[0];
+
+  const selected = useMemo(
+    () => cinemaModels.find((model) => model.id === selectedId) ?? cinemaModels[0],
+    [selectedId]
+  );
+
+  const maxDiagonal = cinemaModels[cinemaModels.length - 1].diagonalInches;
+  const previewScale = Math.max(0.48, selected.diagonalInches / maxDiagonal);
 
   useEffect(() => {
     if (!detailRef.current) return;
 
     gsap.fromTo(
       detailRef.current,
-      { opacity: 0.35, y: 12 },
-      { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }
+      { opacity: 0.4, y: 10 },
+      { opacity: 1, y: 0, duration: 0.42, ease: "power2.out" }
     );
   }, [selectedId]);
 
   return (
-    <main className="models-page">
+    <main className="models-page models-page-v2">
       <header className="models-nav">
-        <a href="/" className="brand-v5">CINEMA N°7</a>
-        <a href="/" className="models-back">Zurück</a>
+        <a href="/" className="brand-v5">
+          CINEMA N°7
+        </a>
+        <a href="/" className="models-back">
+          Zurück
+        </a>
       </header>
 
-      <section className="models-hero">
-        <div className="models-hero-copy">
+      <section className="models-intro-v2">
+        <div>
           <p className="overline-v5">MODELLE</p>
           <h1>Ihre Bildgröße.</h1>
-          <p>
-            Wählen Sie die gewünschte Bildschirmdiagonale. Die exakten
-            Außenmaße der 16:9-Bildfläche werden direkt angezeigt.
-          </p>
         </div>
-
-        <div className="models-stage" aria-hidden="true">
-          <div className="models-screen">
-            <div className="models-screen-art" />
-          </div>
-        </div>
-      </section>
-
-      <section className="model-selector">
-        <div className="inch-options" role="group" aria-label="Bildschirmdiagonale wählen">
-          {cinemaModels.map((model) => (
-            <button
-              key={model.id}
-              type="button"
-              className={model.id === selectedId ? "is-active" : ""}
-              onClick={() => setSelectedId(model.id)}
-            >
-              <strong>{model.diagonalInches}</strong>
-              <span>Zoll</span>
-            </button>
-          ))}
-        </div>
-
-        <div className="selected-model" ref={detailRef}>
-          <div className="selected-model-main">
-            <p className="overline-v5">GEWÄHLTE BILDGRÖSSE</p>
-            <h2>{selected.diagonalInches}&quot;</h2>
-          </div>
-
-          <div className="selected-dimensions">
-            <div>
-              <span>Breite</span>
-              <strong>{formatMeters(selected.widthM)} m</strong>
-            </div>
-            <div>
-              <span>Höhe</span>
-              <strong>{formatMeters(selected.heightM)} m</strong>
-            </div>
-          </div>
-
-          <div className="selected-actions">
-            <p>16:9 LED-Bildfläche</p>
-            <button type="button" disabled>
-              Produktdetails folgen
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section className="models-note">
         <p>
-          Preise und konkrete Produktseiten werden hier ergänzt, sobald die
-          finale Systemkalkulation feststeht.
+          Wählen Sie die Bildschirmdiagonale in Zoll. Die exakten Maße der
+          16:9-Bildfläche werden direkt angezeigt.
+        </p>
+      </section>
+
+      <section className="model-configurator-v2">
+        <div className="model-preview-v2" aria-hidden="true">
+          <div className="preview-frame-v2">
+            <div
+              className="preview-screen-v2"
+              style={{
+                width: `${previewScale * 100}%`,
+                height: `${previewScale * 100}%`,
+              }}
+            >
+              <div className="preview-screen-image-v2" />
+            </div>
+          </div>
+          <div className="preview-caption-v2">
+            <span>{selected.diagonalInches}&quot;</span>
+            <span>16:9</span>
+          </div>
+        </div>
+
+        <div className="model-controls-v2">
+          <div className="model-picker-v2" role="group" aria-label="Bildschirmdiagonale wählen">
+            {cinemaModels.map((model) => (
+              <button
+                key={model.id}
+                type="button"
+                className={model.id === selectedId ? "is-active" : ""}
+                onClick={() => setSelectedId(model.id)}
+              >
+                <span>{model.diagonalInches}</span>
+                <small>Zoll</small>
+              </button>
+            ))}
+          </div>
+
+          <div className="selected-model-v2" ref={detailRef}>
+            <div className="selected-model-heading-v2">
+              <p className="overline-v5">GEWÄHLTE BILDGRÖSSE</p>
+              <h2>{selected.diagonalInches}&quot;</h2>
+            </div>
+
+            <div className="selected-dimensions-v2">
+              <div>
+                <span>Breite</span>
+                <strong>{formatMeters(selected.widthM)} m</strong>
+              </div>
+              <div>
+                <span>Höhe</span>
+                <strong>{formatMeters(selected.heightM)} m</strong>
+              </div>
+            </div>
+
+            <div className="selected-note-v2">
+              <span>16:9 LED-Bildfläche</span>
+              <p>Weitere Größen können auf Anfrage konfiguriert werden.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="models-next-v2">
+        <div>
+          <p className="overline-v5">NÄCHSTER SCHRITT</p>
+          <h2>Produktdetails und Preis.</h2>
+        </div>
+        <p>
+          Im nächsten Schritt bekommt jede Größe eine eigene Produktseite mit
+          Systemumfang, technischen Details und Preis.
         </p>
       </section>
     </main>
