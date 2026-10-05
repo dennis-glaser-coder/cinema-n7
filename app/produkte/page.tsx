@@ -63,6 +63,11 @@ export default function ProductsPage() {
         <div className="model-preview-scale" aria-label="Größenvergleich">
           <div className="scale-stage" style={wallStyle}>
             <div className="scale-room-backdrop" />
+            <div className="scale-room-wall" />
+            <div className="scale-room-slat scale-room-slat-left" />
+            <div className="scale-room-slat scale-room-slat-right" />
+            <div className="scale-room-floor" />
+            <div className="scale-room-foreground" />
             <div className="scale-baseline" />
 
             <div className="scale-composition">
