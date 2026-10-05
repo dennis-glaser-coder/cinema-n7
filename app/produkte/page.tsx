@@ -132,6 +132,10 @@ export default function ProductsPage() {
                 {selected.cabinetsWide} × {selected.cabinetsHigh} Module
               </p>
             </div>
+
+            <a className="product-detail-link-v2" href={`/produkte/${selected.id}`}>
+              Produkt ansehen
+            </a>
           </div>
         </div>
       </section>
