@@ -136,15 +136,14 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <section className="models-next-v2">
+      <section className="models-next-v2 models-next-v2-clean">
         <div>
-          <p className="overline-v5">NÄCHSTER SCHRITT</p>
-          <h2>Produktdetails und Preis.</h2>
+          <p className="overline-v5">PRIVATE BERATUNG</p>
+          <h2>Ihr LED-Heimkino.</h2>
         </div>
-        <p>
-          Im nächsten Schritt bekommt jede Größe eine eigene Produktseite mit
-          Systemumfang, technischen Details und Preis.
-        </p>
+        <a href="/#contact" className="models-next-link-v2">
+          Projekt besprechen
+        </a>
       </section>
     </main>
   );
