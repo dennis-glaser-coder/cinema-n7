@@ -1,5 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import contactPhoto from "../../ChatGPT Image 8. Mai 2026, 13_02_39.png";
+
+export const metadata: Metadata = {
+  title: "Private Beratung für Ihr LED-Heimkino",
+  description:
+    "Sprechen Sie direkt mit CINEMA N°7 über Ihr LED-Heimkino. Persönliche Beratung per Telefon oder E-Mail.",
+  alternates: {
+    canonical: "/anfrage",
+  },
+  openGraph: {
+    title: "Private Beratung für Ihr LED-Heimkino",
+    description:
+      "Direkter Ansprechpartner für Ihr LED-Heimkino.",
+    url: "/anfrage",
+  },
+};
 
 const phoneDisplay = "+49 (0) 5251 5449191";
 const phoneHref = "tel:+4952515449191";
