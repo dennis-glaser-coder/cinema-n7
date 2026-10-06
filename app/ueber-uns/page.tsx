@@ -27,7 +27,7 @@ export default function AboutPage() {
             <span>Jahre LED-Erfahrung</span>
           </article>
           <article>
-            <strong>30+</strong>
+            <strong>300+</strong>
             <span>Kunden</span>
           </article>
         </div>
