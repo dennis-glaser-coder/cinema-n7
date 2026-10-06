@@ -7,11 +7,11 @@ export const metadata: Metadata = {
     template: "%s — CINEMA N°7",
   },
   description:
-    "Exklusive LED-Heimkinos mit großformatigen Fine-Pitch LED-Bildsystemen, individuell konfiguriert und präzise kalibriert.",
+    "Exklusive LED-Heimkinos mit großformatigen Fine-Pitch LED-Flächen, individuell konfiguriert und präzise kalibriert.",
   openGraph: {
     title: "CINEMA N°7 — Exklusive LED-Heimkinos",
     description:
-      "Exklusive LED-Heimkinos mit großformatigen Fine-Pitch LED-Bildsystemen.",
+      "Exklusive LED-Heimkinos mit großformatigen Fine-Pitch LED-Flächen.",
     type: "website",
   },
   robots: {
