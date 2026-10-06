@@ -254,6 +254,41 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="led-benefits-v8" aria-labelledby="led-benefits-title">
+        <div className="led-benefits-head reveal">
+          <p className="overline-v5">WARUM LED</p>
+          <h2 id="led-benefits-title">Was LED im Raum besser macht.</h2>
+
+          <div className="led-experience-v8">
+            <strong>10+</strong>
+            <span>Jahre LED-Erfahrung</span>
+            <a href="/ueber-uns">Über uns</a>
+          </div>
+        </div>
+
+        <div className="led-benefits-list">
+          <article className="led-benefit-row reveal">
+            <strong>Starkes Bild – auch bei vollem Raumlicht.</strong>
+            <p>Hohe Helligkeit und hoher Kontrast auch in hellen Räumen.</p>
+          </article>
+
+          <article className="led-benefit-row reveal">
+            <strong>Keine Projektion.</strong>
+            <p>Kein Beamer, keine Leinwand, kein Projektionsweg durch den Raum.</p>
+          </article>
+
+          <article className="led-benefit-row reveal">
+            <strong>Große Bildflächen ohne Projektionsabstand.</strong>
+            <p>Die LED-Fläche sitzt direkt an der Wand.</p>
+          </article>
+
+          <article className="led-benefit-row reveal">
+            <strong>Modular aufgebaut.</strong>
+            <p>Einzelne Module lassen sich gezielt warten.</p>
+          </article>
+        </div>
+      </section>
+
       <section className="delivery-v5 delivery-v7" id="delivery">
         <div className="section-head-v5 reveal">
           <p className="overline-v5">WAS WIR LIEFERN</p>
