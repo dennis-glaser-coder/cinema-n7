@@ -1,3 +1,20 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Über 10 Jahre LED-Erfahrung",
+  description:
+    "CINEMA N°7 steht für über zehn Jahre Erfahrung mit professioneller LED-Technik und mehr als 300 Kunden.",
+  alternates: {
+    canonical: "/ueber-uns",
+  },
+  openGraph: {
+    title: "Über 10 Jahre LED-Erfahrung",
+    description:
+      "Mehr als zehn Jahre Erfahrung mit professioneller LED-Technik.",
+    url: "/ueber-uns",
+  },
+};
+
 export default function AboutPage() {
   return (
     <main className="about-page">
