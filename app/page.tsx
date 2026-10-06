@@ -309,6 +309,11 @@ export default function Home() {
             <strong>Modular aufgebaut.</strong>
             <p>Einzelne Module lassen sich gezielt warten.</p>
           </article>
+
+          <div className="led-guide-links-v9">
+            <a href="/led-heimkino">Mehr zu LED-Heimkino</a>
+            <a href="/led-oder-beamer">LED oder Beamer?</a>
+          </div>
         </div>
       </section>
 
