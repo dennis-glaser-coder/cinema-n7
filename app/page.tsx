@@ -92,6 +92,23 @@ export default function Home() {
       });
 
       gsap.fromTo(
+        ".led-benefit-row",
+        { opacity: 0, x: isMobile ? 24 : 48 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1.05,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".led-benefits-list",
+            start: "top 82%",
+            once: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
         ".delivery-row",
         { opacity: 0, x: isMobile ? 24 : 48 },
         {
@@ -267,22 +284,22 @@ export default function Home() {
         </div>
 
         <div className="led-benefits-list">
-          <article className="led-benefit-row reveal">
+          <article className="led-benefit-row">
             <strong>Starkes Bild – auch bei vollem Raumlicht.</strong>
             <p>Hohe Helligkeit und hoher Kontrast auch in hellen Räumen.</p>
           </article>
 
-          <article className="led-benefit-row reveal">
+          <article className="led-benefit-row">
             <strong>Keine Projektion.</strong>
             <p>Kein Beamer, keine Leinwand, kein Projektionsweg durch den Raum.</p>
           </article>
 
-          <article className="led-benefit-row reveal">
+          <article className="led-benefit-row">
             <strong>Große Bildflächen ohne Projektionsabstand.</strong>
             <p>Kein zusätzlicher Raum für einen Projektionsweg erforderlich.</p>
           </article>
 
-          <article className="led-benefit-row reveal">
+          <article className="led-benefit-row">
             <strong>Modular aufgebaut.</strong>
             <p>Einzelne Module lassen sich gezielt warten.</p>
           </article>
