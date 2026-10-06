@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
   cabinet,
@@ -8,6 +9,37 @@ import {
 
 export function generateStaticParams() {
   return cinemaModels.map((model) => ({ id: model.id }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const model = cinemaModels.find((item) => item.id === id);
+
+  if (!model) {
+    return {};
+  }
+
+  const title = `${model.diagonalInches} Zoll LED-Heimkino`;
+  const description = `${model.diagonalInches} Zoll LED-Heimkino mit ${formatMeters(
+    model.widthM
+  )} × ${formatMeters(model.heightM)} m Bildfläche und ${model.resolutionX} × ${model.resolutionY} Pixeln.`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `/produkte/${model.id}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/produkte/${model.id}`,
+    },
+  };
 }
 
 export default async function ProductDetailPage({
