@@ -198,9 +198,15 @@ export default function Home() {
             <a href="#delivery">Leistung</a>
             <a href="/ueber-uns">Über uns</a>
           </nav>
-          <a className="nav-cta-v5" href="#contact">
+          <a className="nav-cta-v5" href="/anfrage">
             Private Beratung
           </a>
+
+          <nav className="mobile-nav-v9" aria-label="Mobile Navigation">
+            <a href="/produkte">Modelle</a>
+            <a href="/ueber-uns">Über uns</a>
+            <a href="/anfrage">Anfrage</a>
+          </nav>
         </header>
 
         <div className="hero-layout">
