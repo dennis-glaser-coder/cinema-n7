@@ -167,6 +167,36 @@ export default async function ProductDetailPage({
         </div>
       </section>
 
+      <section className="product-detail-related" aria-labelledby="related-models-title">
+        <div className="product-detail-related-head">
+          <p className="overline-v5">WEITER</p>
+          <h2 id="related-models-title">Weitere Größen.</h2>
+        </div>
+
+        <div className="product-detail-related-grid">
+          {cinemaModels.map((item) => (
+            <a
+              key={item.id}
+              href={`/produkte/${item.id}`}
+              className={item.id === model.id ? "is-current" : ""}
+              aria-current={item.id === model.id ? "page" : undefined}
+            >
+              <strong>{item.diagonalInches}&quot;</strong>
+              <span>
+                {formatMeters(item.widthM)} × {formatMeters(item.heightM)} m
+              </span>
+            </a>
+          ))}
+        </div>
+
+        <div className="product-detail-related-links">
+          <a href="/produkte">Alle Modelle</a>
+          <a href="/led-heimkino">Warum LED?</a>
+          <a href="/led-oder-beamer">LED oder Beamer?</a>
+          <a href="/anfrage">Projekt anfragen</a>
+        </div>
+      </section>
+
       <section className="product-detail-contact">
         <p className="overline-v5">PRIVATE BERATUNG</p>
         <h2>{model.diagonalInches}&quot; für Ihr Heimkino.</h2>
