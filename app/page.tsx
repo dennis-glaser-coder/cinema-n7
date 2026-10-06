@@ -360,7 +360,10 @@ export default function Home() {
         <span>CINEMA N°7</span>
         <span>LED-HEIMKINOS</span>
         <span>DEUTSCHLAND / EUROPA</span>
-        <span>© 2026</span>
+        <span className="footer-legal-v9">
+          <a href="/impressum">Impressum</a>
+          <span>© 2026</span>
+        </span>
       </footer>
     </main>
   );
