@@ -6395,3 +6395,203 @@ body {
     justify-content: flex-start;
   }
 }
+
+
+/* Product continuation + legal page */
+.product-detail-related {
+  padding: clamp(76px, 8vw, 124px) 7vw;
+  border-top: 1px solid rgba(170,143,112,.14);
+}
+
+.product-detail-related-head {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  gap: 32px;
+  align-items: end;
+  margin-bottom: 34px;
+}
+
+.product-detail-related-head h2 {
+  margin: 10px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 4.6vw, 74px);
+  line-height: .95;
+  font-weight: 400;
+  letter-spacing: -.045em;
+}
+
+.product-detail-related-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0,1fr));
+  border-top: 1px solid rgba(170,143,112,.16);
+  border-left: 1px solid rgba(170,143,112,.16);
+}
+
+.product-detail-related-grid a {
+  min-height: 112px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid rgba(170,143,112,.16);
+  border-bottom: 1px solid rgba(170,143,112,.16);
+  transition: background .25s ease, border-color .25s ease;
+}
+
+.product-detail-related-grid a:hover {
+  background: rgba(255,255,255,.025);
+}
+
+.product-detail-related-grid a.is-current {
+  background: rgba(170,143,112,.07);
+  border-color: rgba(190,158,120,.34);
+}
+
+.product-detail-related-grid strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -.03em;
+}
+
+.product-detail-related-grid span {
+  color: var(--warm-copy);
+  font-size: 9px;
+  letter-spacing: .08em;
+}
+
+.product-detail-related-links {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+}
+
+.product-detail-related-links a {
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(170,143,112,.28);
+  color: rgba(255,255,255,.74);
+  font-size: 9px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  transition: color .25s ease, border-color .25s ease;
+}
+
+.product-detail-related-links a:hover {
+  color: #fff;
+  border-color: rgba(190,158,120,.58);
+}
+
+.footer-legal-v9 {
+  display: flex;
+  gap: 18px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-legal-v9 a {
+  color: rgba(255,255,255,.48);
+  transition: color .25s ease;
+}
+
+.footer-legal-v9 a:hover {
+  color: var(--text);
+}
+
+.legal-page {
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(145,94,58,.055), transparent 24%),
+    #030303;
+  color: var(--text);
+}
+
+.legal-nav {
+  border-bottom: 1px solid rgba(170,143,112,.14);
+}
+
+.legal-content {
+  width: min(920px, 86vw);
+  padding: clamp(72px, 8vw, 126px) 0 clamp(90px, 10vw, 150px);
+  margin: 0 auto;
+}
+
+.legal-content > h1 {
+  margin: 10px 0 clamp(56px, 7vw, 92px);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(58px, 6vw, 96px);
+  line-height: .92;
+  font-weight: 400;
+  letter-spacing: -.05em;
+}
+
+.legal-block {
+  padding: 26px 0 30px;
+  display: grid;
+  grid-template-columns: minmax(180px,.45fr) minmax(0,1fr);
+  gap: clamp(28px, 5vw, 72px);
+  border-top: 1px solid rgba(170,143,112,.15);
+}
+
+.legal-block:last-child {
+  border-bottom: 1px solid rgba(170,143,112,.15);
+}
+
+.legal-block h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -.02em;
+}
+
+.legal-block p {
+  margin: 0;
+  color: rgba(232,228,220,.62);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.legal-block a {
+  color: rgba(255,255,255,.84);
+  border-bottom: 1px solid rgba(170,143,112,.28);
+}
+
+@media (max-width: 1050px) {
+  .product-detail-related-grid {
+    grid-template-columns: repeat(4, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .product-detail-related {
+    padding: 68px 20px 76px;
+  }
+
+  .product-detail-related-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+
+  .product-detail-related-grid a {
+    min-height: 96px;
+  }
+
+  .footer-legal-v9 {
+    justify-content: flex-start;
+  }
+
+  .legal-content {
+    width: auto;
+    padding: 58px 20px 86px;
+  }
+
+  .legal-block {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .legal-block h2 {
+    font-size: 22px;
+  }
+}
