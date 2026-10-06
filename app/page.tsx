@@ -362,6 +362,7 @@ export default function Home() {
         <span>DEUTSCHLAND / EUROPA</span>
         <span className="footer-legal-v9">
           <a href="/impressum">Impressum</a>
+          <a href="/datenschutz">Datenschutz</a>
           <span>© 2026</span>
         </span>
       </footer>
