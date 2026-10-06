@@ -279,7 +279,7 @@ export default function Home() {
 
           <article className="led-benefit-row reveal">
             <strong>Große Bildflächen ohne Projektionsabstand.</strong>
-            <p>Die LED-Fläche sitzt direkt an der Wand.</p>
+            <p>Kein zusätzlicher Raum für einen Projektionsweg erforderlich.</p>
           </article>
 
           <article className="led-benefit-row reveal">
