@@ -6047,3 +6047,13 @@ body {
     font-size: 12px;
   }
 }
+
+
+/* Slightly stronger desktop navigation presence */
+@media (min-width: 821px) {
+  .nav-v5 nav a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .15em;
+  }
+}
