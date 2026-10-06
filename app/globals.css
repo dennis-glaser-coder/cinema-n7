@@ -6062,7 +6062,7 @@ body {
 /* Warm premium detail pass */
 :root {
   --warm-soft: rgba(196, 164, 126, .64);
-  --warm-copy: rgba(222, 203, 178, .62);
+  --warm-copy: rgba(232, 228, 220, .58);
   --warm-line: rgba(170, 143, 112, .18);
 }
 
@@ -6129,6 +6129,6 @@ body {
   .about-intro > p:last-child,
   .about-principle > p,
   .inquiry-intro {
-    color: rgba(222, 203, 178, .66);
+    color: rgba(232, 228, 220, .62);
   }
 }
