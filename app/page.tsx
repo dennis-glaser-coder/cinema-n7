@@ -228,6 +228,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section
+        className="cinema-animation-v10"
+        aria-labelledby="cinema-animation-title"
+        data-animation-slot="cinema-n7-intro"
+      >
+        <div className="cinema-animation-copy-v10 reveal">
+          <p className="overline-v5">CINEMA N°7</p>
+          <h2 id="cinema-animation-title">Ein Bild, das zum Raum wird.</h2>
+          <p>
+            Modulare Fine-Pitch LED-Technologie, präzise in Ihren Raum integriert.
+          </p>
+        </div>
+
+        <div
+          className="cinema-animation-stage-v10 reveal"
+          aria-label="Animation CINEMA N°7"
+        >
+          <div className="cinema-animation-placeholder-v10" aria-hidden="true">
+            <span>N°7</span>
+          </div>
+        </div>
+      </section>
+
       <section className="home-models-v7" aria-labelledby="home-models-title">
         <div className="home-models-head reveal">
           <h2 id="home-models-title">
