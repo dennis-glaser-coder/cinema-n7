@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import heroCinemaImage from "../Luxuriöses Heimkino mit Erde im All.png";
+import heroCinemaImage from "../Luxuriöses Heimkino mit Leopardenbild.png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const delivery = [
