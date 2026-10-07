@@ -7252,3 +7252,82 @@ body {
     letter-spacing: .12em;
   }
 }
+
+
+/* Homepage typography refinement */
+.site-v5 .overline-v5 {
+  font-size: 10px;
+  line-height: 1.3;
+  letter-spacing: .20em;
+}
+
+.site-v5 .text-link-v5,
+.site-v5 .home-models-footer a,
+.site-v5 .led-guide-links-v9 a {
+  font-size: 10px;
+  letter-spacing: .13em;
+}
+
+.site-v5 .home-models-head p {
+  max-width: 300px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.site-v5 .cinema-animation-copy-v10 > p:last-child {
+  max-width: 400px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.site-v5 .delivery-v7 .delivery-row p,
+.site-v5 .delivery-v7 .delivery-trust-v7 {
+  font-size: 14px;
+}
+
+.site-v5 .contact-copy > p:not(.overline-v5) {
+  max-width: 560px;
+  line-height: 1.58;
+}
+
+.site-v5 .footer-v5 {
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: .13em;
+}
+
+@media (max-width: 820px) {
+  .site-v5 .overline-v5 {
+    font-size: 10px;
+    letter-spacing: .18em;
+  }
+
+  .site-v5 .cinema-animation-copy-v10 > p:last-child {
+    max-width: 32ch;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .site-v5 .home-models-head p {
+    max-width: 32ch;
+    font-size: 13px;
+  }
+
+  .site-v5 .text-link-v5,
+  .site-v5 .home-models-footer a,
+  .site-v5 .led-guide-links-v9 a,
+  .site-v5 .contact-action-v5 {
+    font-size: 10px;
+  }
+
+  .site-v5 .delivery-v7 .delivery-row p,
+  .site-v5 .delivery-v7 .delivery-trust-v7 {
+    font-size: 13px;
+  }
+
+  .site-v5 .footer-v5 {
+    font-size: 10px;
+    line-height: 1.45;
+    letter-spacing: .12em;
+  }
+}
