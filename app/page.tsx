@@ -217,7 +217,7 @@ export default function Home() {
               LED-Heimkinos
             </h1>
             <p className="hero-sub">
-              Großformatige LED-Flächen für Ihr privates Heimkino.
+              Großformatige LED-Systeme für private Räume. Geplant, installiert und kalibriert.
             </p>
             <a className="text-link-v5" href="/produkte">
               Modelle entdecken
@@ -340,9 +340,9 @@ export default function Home() {
       <section className="delivery-v5 delivery-v7" id="delivery">
         <div className="section-head-v5 reveal">
           <p className="overline-v5">WAS WIR LIEFERN</p>
-          <h2>Von der Auswahl bis zum fertigen Bild.</h2>
+          <h2>Von der Planung bis zum fertigen Bild.</h2>
           <p className="delivery-trust-v7">
-            Ein Ansprechpartner begleitet Ihr Projekt – von der Auswahl bis zur Kalibrierung.
+            Ein Ansprechpartner begleitet Ihr Projekt – von der Planung bis zur Kalibrierung.
           </p>
         </div>
 
