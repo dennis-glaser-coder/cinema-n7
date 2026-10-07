@@ -340,7 +340,7 @@ export default function Home() {
       <section className="delivery-v5 delivery-v7" id="delivery">
         <div className="section-head-v5 reveal">
           <p className="overline-v5">WAS WIR LIEFERN</p>
-          <h2>Von der Planung bis zum fertigen Bild.</h2>
+          <h2>Bis zum fertigen Bild.</h2>
           <p className="delivery-trust-v7">
             Ein Ansprechpartner begleitet Ihr Projekt – von der Planung bis zur Kalibrierung.
           </p>
