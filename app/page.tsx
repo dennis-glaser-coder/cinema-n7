@@ -235,10 +235,7 @@ export default function Home() {
       >
         <div className="cinema-animation-copy-v10 reveal">
           <p className="overline-v5">CINEMA N°7</p>
-          <h2 id="cinema-animation-title">Ein Bild, das zum Raum wird.</h2>
-          <p>
-            Modulare Fine-Pitch LED-Technologie, präzise in Ihren Raum integriert.
-          </p>
+          <h2 id="cinema-animation-title">Modulare Fine-Pitch LED-Technologie.</h2>
         </div>
 
         <div
