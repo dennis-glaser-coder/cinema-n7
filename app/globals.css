@@ -7176,3 +7176,79 @@ body {
     height: 260px;
   }
 }
+
+
+/* Desktop LED benefits editorial polish */
+@media (min-width: 1051px) {
+  .site-v5 .led-benefits-v8 {
+    grid-template-columns: minmax(330px, .76fr) minmax(0, 1.24fr);
+    gap: clamp(72px, 7.2vw, 116px);
+  }
+
+  .site-v5 .led-benefits-head h2 {
+    max-width: 520px;
+    font-size: clamp(48px, 4.45vw, 74px);
+    line-height: .95;
+  }
+
+  .site-v5 .led-experience-v8 {
+    margin-top: clamp(50px, 5vw, 70px);
+    padding-top: 24px;
+    max-width: 390px;
+  }
+
+  .site-v5 .led-experience-v8 strong {
+    font-size: clamp(66px, 5.2vw, 86px);
+  }
+
+  .site-v5 .led-experience-v8 span {
+    margin-top: 9px;
+    font-size: 9.5px;
+    letter-spacing: .15em;
+  }
+
+  .site-v5 .led-experience-v8 a {
+    margin-top: 20px;
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
+
+  .site-v5 .led-benefits-list {
+    border-top-color: rgba(170,143,112,.16);
+  }
+
+  .site-v5 .led-benefit-row {
+    min-height: 156px;
+    padding: 34px 0 36px;
+    grid-template-columns: minmax(300px, 390px) minmax(280px, 1fr);
+    gap: clamp(38px, 3.2vw, 58px);
+    align-items: start;
+    border-bottom-color: rgba(170,143,112,.16);
+  }
+
+  .site-v5 .led-benefit-row strong {
+    max-width: 390px;
+    font-size: clamp(30px, 2.15vw, 38px);
+    line-height: 1.06;
+    letter-spacing: -.03em;
+  }
+
+  .site-v5 .led-benefit-row p {
+    max-width: 460px;
+    padding-top: 4px;
+    color: rgba(232,228,220,.62);
+    font-size: 14px;
+    line-height: 1.58;
+  }
+
+  .site-v5 .led-guide-links-v9 {
+    padding-top: 24px;
+    gap: 30px;
+  }
+
+  .site-v5 .led-guide-links-v9 a {
+    color: rgba(255,255,255,.78);
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
+}
