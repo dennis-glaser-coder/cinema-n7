@@ -6752,3 +6752,85 @@ body {
     display: flex;
   }
 }
+
+
+/* Mobile LED benefits rhythm */
+@media (max-width: 820px) {
+  .led-benefits-v8 {
+    gap: 28px;
+  }
+
+  .led-benefits-head h2 {
+    max-width: 340px;
+    font-size: clamp(38px, 10vw, 50px);
+    line-height: .98;
+  }
+
+  .led-experience-v8 {
+    margin-top: 28px;
+    padding: 16px 0;
+    max-width: none;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 14px;
+    border-top: 1px solid var(--warm-line);
+    border-bottom: 1px solid var(--warm-line);
+  }
+
+  .led-experience-v8 strong,
+  .led-experience-v8 span,
+  .led-experience-v8 a {
+    display: block;
+    margin: 0;
+  }
+
+  .led-experience-v8 strong {
+    font-size: 42px;
+    line-height: .9;
+    white-space: nowrap;
+  }
+
+  .led-experience-v8 span {
+    font-size: 9px;
+    line-height: 1.25;
+    letter-spacing: .13em;
+  }
+
+  .led-experience-v8 a {
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: .11em;
+    white-space: nowrap;
+  }
+
+  .led-benefits-list {
+    margin-top: 0;
+  }
+
+  .led-benefit-row {
+    padding: 21px 0 23px;
+  }
+
+  .led-benefit-row strong {
+    font-size: 23px;
+    line-height: 1.08;
+  }
+
+  .led-benefit-row p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 390px) {
+  .led-experience-v8 {
+    grid-template-columns: auto 1fr;
+    row-gap: 10px;
+  }
+
+  .led-experience-v8 a {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
