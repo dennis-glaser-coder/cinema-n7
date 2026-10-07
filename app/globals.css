@@ -6723,3 +6723,32 @@ body {
     font-size: 22px;
   }
 }
+
+
+/* Final hero polish */
+@media (min-width: 821px) {
+  .nav-v5 .mobile-nav-v9 {
+    display: none !important;
+  }
+
+  .hero-content {
+    max-width: 720px;
+  }
+
+  .hero-content h1 {
+    max-width: 720px;
+    font-size: clamp(60px, 6.15vw, 102px);
+  }
+
+  .hero-cinema-overlay {
+    background:
+      linear-gradient(90deg, rgba(0,0,0,.84) 0%, rgba(0,0,0,.66) 28%, rgba(0,0,0,.28) 48%, rgba(0,0,0,.08) 67%, rgba(0,0,0,.04) 100%),
+      linear-gradient(180deg, rgba(0,0,0,.40) 0%, rgba(0,0,0,.07) 30%, rgba(0,0,0,.09) 58%, rgba(0,0,0,.56) 100%);
+  }
+}
+
+@media (max-width: 820px) {
+  .nav-v5 .mobile-nav-v9 {
+    display: flex;
+  }
+}
