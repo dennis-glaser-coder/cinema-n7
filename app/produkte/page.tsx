@@ -1,5 +1,6 @@
-import SiteHeader from "../../components/site-header";
 "use client";
+
+import SiteHeader from "../../components/site-header";
 
 import { CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
