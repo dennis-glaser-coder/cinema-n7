@@ -83,7 +83,7 @@ export default async function ProductDetailPage({
             alles im ausgewiesenen Komplettpreis enthalten.
           </p>
 
-          <a href="/anfrage" className="product-detail-cta">
+          <a href={`/anfrage?modell=${model.diagonalInches}`} className="product-detail-cta">
             Projekt anfragen
           </a>
         </div>
@@ -206,14 +206,14 @@ export default async function ProductDetailPage({
           <a href="/produkte">Alle Modelle</a>
           <a href="/led-heimkino">Warum LED?</a>
           <a href="/led-oder-beamer">LED oder Beamer?</a>
-          <a href="/anfrage">Projekt anfragen</a>
+          <a href={`/anfrage?modell=${model.diagonalInches}`}>Dieses Modell anfragen</a>
         </div>
       </section>
 
       <section className="product-detail-contact">
         <p className="overline-v5">PRIVATE BERATUNG</p>
         <h2>{model.diagonalInches}&quot; für Ihr Heimkino.</h2>
-        <a href="/anfrage" className="product-detail-cta">
+        <a href={`/anfrage?modell=${model.diagonalInches}`} className="product-detail-cta">
           Projekt anfragen
         </a>
       </section>
