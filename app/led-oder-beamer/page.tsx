@@ -18,19 +18,16 @@ export const metadata: Metadata = {
 
 const differences = [
   {
-    number: "01",
     topic: "Raumlicht",
     led: "Das Bild bleibt auch bei Tageslicht präsent. Der Raum muss nicht vollständig abgedunkelt werden.",
     beamer: "Für einen hohen Kontrast ist eine stärkere Abdunkelung des Raums wichtig.",
   },
   {
-    number: "02",
     topic: "Projektionsweg",
     led: "Das Bild entsteht direkt auf der LED-Fläche. Ein Projektor und ein freier Lichtweg entfallen.",
     beamer: "Projektor, Optik und Projektionsabstand müssen im Raum eingeplant werden.",
   },
   {
-    number: "03",
     topic: "Bildfläche",
     led: "Die Bildwand besteht aus einzelnen LED-Modulen. Ihre Größe wird passend zum Raum geplant.",
     beamer: "Das Bild wird auf eine separate Leinwand oder Projektionsfläche geworfen.",
@@ -85,22 +82,19 @@ export default function LedOrProjectorPage() {
             <h2 id="differences-title">Die Unterschiede.</h2>
           </div>
           <div className={styles.ledHeading}>
-            <span className={styles.headingNumber}>01 / UNSERE TECHNIK</span>
+            <span className={styles.headingNumber}>UNSERE TECHNIK</span>
             <strong>CINEMA N°7 LED</strong>
           </div>
           <div className={styles.beamerHeading}>
-            <span className={styles.headingNumber}>02 / ZUM VERGLEICH</span>
+            <span className={styles.headingNumber}>ZUM VERGLEICH</span>
             <strong>Klassischer Beamer</strong>
           </div>
         </div>
 
         <div className={styles.comparisonRows}>
           {differences.map((item) => (
-            <article className={styles.row} key={item.number}>
+            <article className={styles.row} key={item.topic}>
               <div className={styles.topicBlock}>
-                <span className={styles.index} aria-hidden="true">
-                  {item.number}
-                </span>
                 <h3>{item.topic}</h3>
               </div>
               <div className={`${styles.value} ${styles.ledValue}`}>
