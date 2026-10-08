@@ -76,7 +76,7 @@ export default async function InquiryPage({
               </a>
               <p className="cn7-inquiry-hint">Öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht.</p>
             </div>
-          )
+          )}
 
           <div className="inquiry-contact">
             <p>Ihr Ansprechpartner</p>
