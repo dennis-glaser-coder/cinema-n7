@@ -7422,19 +7422,19 @@ body {
     linear-gradient(180deg, #030303 0%, rgba(3,3,3,.45) 2%, rgba(3,3,3,.12) 5%, transparent 9%, transparent 72%, rgba(3,3,3,.12) 80%, rgba(3,3,3,.5) 88%, rgba(3,3,3,.92) 96%, #030303 100%);
 }
 
-/* Mobile animation: fill a compact frame without letterbox edges */
+/* Mobile animation: preserve the complete source frame */
 @media (max-width: 820px) {
   .site-v5 .cinema-animation-stage-v10 {
     height: auto;
     min-height: 0;
     max-height: none;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     background: #030303;
   }
 
   .site-v5 .cinema-animation-video-v10 {
-    object-fit: cover;
+    object-fit: contain;
     object-position: center center;
   }
 
