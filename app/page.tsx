@@ -330,7 +330,6 @@ export default function Home() {
           <a href="/led-oder-beamer" className="text-link-v5">
             LED und Beamer vergleichen
           </a>
-          <p className="cn7-compare-disclaimer">Illustrativer Bildvergleich. Die Darstellung ist keine technische Messung.</p>
         </div>
       </section>
 
