@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import FlowerImageCompare from "./flower-image-compare";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import heroCinemaImage from "../Luxuriöses Heimkino mit Leopardenbild.png";
@@ -137,21 +138,6 @@ export default function Home() {
             start: "top bottom",
             end: "bottom top",
             scrub: 1,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        ".system-screen-v6",
-        { scale: isMobile ? 1.01 : 1.02 },
-        {
-          scale: isMobile ? 1.055 : 1.12,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".system-v6",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1.15,
           },
         }
       );
@@ -360,8 +346,8 @@ export default function Home() {
       </section>
 
       <section className="system-v6" aria-labelledby="system-title">
-        <div className="system-visual-v6 reveal" aria-hidden="true">
-          <div className="system-screen-v6" />
+        <div className="system-visual-v6 reveal">
+          <FlowerImageCompare />
         </div>
 
         <div className="system-copy-v6 reveal">
