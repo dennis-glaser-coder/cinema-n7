@@ -254,6 +254,9 @@ export default function Home() {
               kleinsten bis zur größten CINEMA-N°7-Bildwand.
             </p>
           </div>
+          <a href="/warum-cinema-n7" className="text-link-v5">
+            Warum CINEMA N°7?
+          </a>
         </div>
 
         <div className="led-reasons-detail-v11">
@@ -270,9 +273,6 @@ export default function Home() {
               <strong>Modular aufgebaut.</strong>
               <p>Die Bildfläche entsteht aus einzelnen, gezielt wartbaren LED-Modulen.</p>
             </article>
-          </div>
-          <div className="led-guide-links-v9 reveal">
-            <a href="/warum-cinema-n7">Warum CINEMA N°7?</a>
           </div>
         </div>
       </section>
