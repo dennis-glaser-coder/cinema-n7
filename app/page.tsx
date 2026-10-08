@@ -134,7 +134,7 @@ export default function Home() {
               LED-Heimkinos
             </h1>
             <p className="hero-sub">
-              Filme, Konzerte und Sport auf großer Bildfläche. Bei Ihnen zu Hause.
+              Abgestimmt auf Ihren Raum. Und Ihren Anspruch.
             </p>
             <a className="text-link-v5" href="/produkte">
               Modelle entdecken
