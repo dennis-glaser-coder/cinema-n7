@@ -346,7 +346,7 @@ export default function Home() {
       </section>
 
       <section className="system-v6" aria-labelledby="system-title">
-        <div className="system-visual-v6 reveal" aria-hidden="true">
+        <div className="system-visual-v6 reveal">
           <FlowerImageCompare />
         </div>
 
