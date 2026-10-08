@@ -26,7 +26,7 @@ export async function generateMetadata({
   const title = `${model.diagonalInches} Zoll LED-Heimkino`;
   const description = `${model.diagonalInches} Zoll LED-Heimkino mit ${formatMeters(
     model.widthM
-  )} × ${formatMeters(model.heightM)} m Bildfläche und ${model.resolutionX} × ${model.resolutionY} Pixeln.`;
+  )} × ${formatMeters(model.heightM)} m Bildfläche und 1,25 mm Pixel Pitch.`;
 
   return {
     title,
@@ -72,6 +72,10 @@ export default async function ProductDetailPage({
           <p className="product-detail-size">
             {formatMeters(model.widthM)} × {formatMeters(model.heightM)} m
           </p>
+          <div className="product-detail-pitch-v12">
+            <span>PIXEL PITCH</span>
+            <strong>{cabinet.pixelPitchMm.toLocaleString("de-DE")} mm</strong>
+          </div>
 
           <div className="product-detail-price">
             <strong>{formatEuro(model.panelCostEur)}</strong>
@@ -119,14 +123,12 @@ export default async function ProductDetailPage({
             <strong>{model.diagonalInches}&quot;</strong>
           </article>
           <article>
-            <span>Auflösung</span>
-            <strong>
-              {model.resolutionX} × {model.resolutionY}
-            </strong>
-          </article>
-          <article>
             <span>Pixel Pitch</span>
             <strong>{cabinet.pixelPitchMm.toLocaleString("de-DE")} mm</strong>
+          </article>
+          <article>
+            <span>Bildformat</span>
+            <strong>16:9</strong>
           </article>
           <article>
             <span>Modulraster</span>
