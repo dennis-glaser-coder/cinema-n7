@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | CINEMA N°7",
   },
   description:
-    "Großformatige Fine-Pitch LED-Heimkinos für private Räume. Modelle von 108 bis 271 Zoll, Installation und Kalibrierung.",
+    "Großformatige Fine-Pitch LED-Heimkinos für private Räume. Modelle von 136 bis 271 Zoll, Installation und Kalibrierung.",
   keywords: [
     "LED Heimkino",
     "LED Wand Heimkino",
