@@ -149,14 +149,19 @@ export default function ProductsPage() {
               </p>
             </div>
 
-            <a className="product-detail-link-v2" href={`/produkte/${selected.id}`}>
-              Produkt ansehen
-            </a>
+            <div className="cn7-product-actions">
+              <a className="cn7-direct-inquiry" href={`/anfrage?modell=${selected.diagonalInches}`}>
+                Dieses Modell anfragen
+              </a>
+              <a className="product-detail-link-v2" href={`/produkte/${selected.id}`}>
+                Details ansehen
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="turnkey-scope-v13" aria-labelledby="turnkey-scope-heading">
+      <section className="turnkey-scope-v13" id="leistungen" aria-labelledby="turnkey-scope-heading">
         <div className="turnkey-scope-heading-v13">
           <p className="overline-v5">IM PREIS ENTHALTEN</p>
           <h2 id="turnkey-scope-heading">Schlüsselfertig. Bis zum fertigen Bild.</h2>
@@ -178,6 +183,29 @@ export default function ProductsPage() {
             und 3 Stunden je Richtung. Besondere Bau- und Elektroarbeiten
             sowie weiter entfernte Montageorte stimmen wir vorab mit Ihnen ab.
           </p>
+        </div>
+      </section>
+
+      <section className="cn7-faq-v15" aria-labelledby="cn7-faq-heading">
+        <p className="overline-v5">GUT ZU WISSEN</p>
+        <h2 id="cn7-faq-heading">Häufige Fragen.</h2>
+        <div className="cn7-faq-grid-v15">
+          <article>
+            <strong>Ist die Montage enthalten?</strong>
+            <p>Ja. Wir liefern das LED-Heimkino, bauen es vor Ort auf, nehmen es in Betrieb und stimmen das Bild ab.</p>
+          </article>
+          <article>
+            <strong>Was muss im Raum vorhanden sein?</strong>
+            <p>Eine geeignete Montagefläche sowie Strom- und Signalzuführung. Die konkreten Voraussetzungen klären wir gemeinsam vor der Installation.</p>
+          </article>
+          <article>
+            <strong>Welche Größe passt zu mir?</strong>
+            <p>Wir helfen Ihnen, Bildgröße und Raumverhältnisse aufeinander abzustimmen. Sie können uns auch ohne feste Modellwahl ansprechen.</p>
+          </article>
+        </div>
+        <div className="cn7-inline-actions">
+          <a href="/led-heimkino">Mehr über LED erfahren</a>
+          <a href="/anfrage">Persönliche Beratung anfragen</a>
         </div>
       </section>
 
