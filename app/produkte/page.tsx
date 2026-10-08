@@ -138,9 +138,9 @@ export default function ProductsPage() {
 
             <div className="selected-price-v2">
               <p className="turnkey-price-eyebrow-v13">SCHLÜSSELFERTIGER KOMPLETTPREIS</p>
-              <strong>{formatEuro(selected.grossPriceEur)}</strong>
-              <p className="turnkey-price-vat-v13">inkl. 19 % MwSt.</p>
-              <p className="turnkey-price-net-v13">{formatEuro(selected.netPriceEur)} netto</p>
+              <strong>{formatEuro(selected.netPriceEur)}</strong>
+              <p className="turnkey-price-vat-v13">netto zzgl. 19 % MwSt.</p>
+              <p className="turnkey-price-net-v13">Endpreis inkl. MwSt.: {formatEuro(selected.grossPriceEur)}</p>
             </div>
             <p className="turnkey-included-short-v13">
               Inklusive LED-System, Controller, Unterkonstruktion, Montage,
