@@ -7387,3 +7387,20 @@ body {
     #030303 100%
   );
 }
+
+/* Mobile animation: fill a compact frame without letterbox edges */
+@media (max-width: 820px) {
+  .site-v5 .cinema-animation-stage-v10 {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #030303;
+  }
+
+  .site-v5 .cinema-animation-video-v10 {
+    object-fit: cover;
+    object-position: center center;
+  }
+}
