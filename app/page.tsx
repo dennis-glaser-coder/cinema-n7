@@ -310,19 +310,42 @@ export default function Home() {
             Sieben 16:9-Formate. Der Größenvergleich zeigt die tatsächlichen
             Abmessungen jeder LED-Bildfläche.
           </p>
+
+          <div className="home-models-range-v11">
+            <p className="home-models-range-label-v11">VON 108 BIS 271 ZOLL</p>
+            <div className="home-models-range-values-v11" aria-label="Bildgrößen von 108 bis 271 Zoll">
+              <span>108<span className="inch-v11">″</span></span>
+              <span className="range-dash-v11" aria-hidden="true">—</span>
+              <span>271<span className="inch-v11">″</span></span>
+            </div>
+            <a href="/produkte" className="home-models-range-link-v11">
+              Bildgrößen vergleichen
+            </a>
+          </div>
         </div>
 
-        <div className="home-models-range-v11 reveal">
-          <p className="home-models-range-label-v11">VON 108 BIS 271 ZOLL</p>
-          <div className="home-models-range-values-v11" aria-label="Bildgrößen von 108 bis 271 Zoll">
-            <span>108<span className="inch-v11">″</span></span>
-            <span className="range-dash-v11" aria-hidden="true">—</span>
-            <span>271<span className="inch-v11">″</span></span>
+        <a
+          className="home-models-stage home-models-preview-v11 reveal"
+          href="/produkte"
+          aria-label="LED-Größenvergleich mit einer Person ansehen"
+        >
+          <div className="home-models-room" aria-hidden="true">
+            <div className="home-models-ghost home-models-ghost-small" />
+            <div className="home-models-ghost home-models-ghost-large" />
+            <div className="home-models-person" />
+            <div className="home-models-wall">
+              <div className="home-models-wall-image" />
+              <div className="home-models-wall-grid">
+                {Array.from({ length: 36 }).map((_, index) => (
+                  <span key={index} />
+                ))}
+              </div>
+            </div>
           </div>
-          <a href="/produkte" className="home-models-range-link-v11">
-            Bildgrößen vergleichen
-          </a>
-        </div>
+          <span className="home-models-preview-caption-v11">
+            Größenwirkung im Vergleich zum Menschen
+          </span>
+        </a>
       </section>
 
       <section className="system-v6" aria-labelledby="system-title">
