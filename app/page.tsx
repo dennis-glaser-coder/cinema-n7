@@ -242,9 +242,19 @@ export default function Home() {
           className="cinema-animation-stage-v10 reveal"
           aria-label="Animation CINEMA N°7"
         >
-          <div className="cinema-animation-placeholder-v10" aria-hidden="true">
-            <span>N°7</span>
-          </div>
+          <video
+            className="cinema-animation-video-v10"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          >
+            <source
+              src="https://raw.githubusercontent.com/dennis-glaser-coder/cinema-n7/main/Fabulux_T_COB_Cinema.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
       </section>
 
