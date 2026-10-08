@@ -7,8 +7,8 @@ export default function SiteFooter() {
       </div>
       <nav aria-label="Footernavigation" className="cn7-footer-links">
         <a href="/produkte">Modelle &amp; Preise</a>
-        <a href="/led-heimkino">Warum LED?</a>
-        <a href="/produkte#leistungen">Leistungen</a>
+        <a href="/warum-cinema-n7">Warum CINEMA N°7?</a>
+        <a href="/leistungen">Leistungen</a>
         <a href="/ueber-uns">Über uns</a>
         <a href="/anfrage">Beratung anfragen</a>
       </nav>
