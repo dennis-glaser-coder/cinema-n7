@@ -1,23 +1,45 @@
 import type { Metadata } from "next";
+import styles from "./comparison.module.css";
 
 export const metadata: Metadata = {
-  title: "LED oder Beamer im Heimkino?",
+  title: "LED statt Beamer – Unterschiede im Heimkino",
   description:
-    "LED oder Beamer im Heimkino: Unterschiede bei Raumlicht, Projektion, Bildgröße und Einbau kompakt erklärt.",
+    "Warum CINEMA N°7 auf Direct View LED setzt: LED und klassische Projektion im Vergleich bei Raumlicht, Projektionsweg und Bildfläche.",
   alternates: {
     canonical: "/led-oder-beamer",
   },
   openGraph: {
-    title: "LED oder Beamer im Heimkino?",
+    title: "LED statt Beamer | CINEMA N°7",
     description:
-      "Die wichtigsten Unterschiede zwischen Direct View LED und Projektion.",
+      "LED und klassische Projektion im Vergleich. CINEMA N°7 setzt ausschließlich auf LED-Heimkinos.",
     url: "/led-oder-beamer",
   },
 };
 
+const differences = [
+  {
+    number: "01",
+    topic: "Raumlicht",
+    led: "Das Bild bleibt auch bei Tageslicht präsent. Der Raum muss nicht vollständig abgedunkelt werden.",
+    beamer: "Für einen hohen Kontrast ist eine stärkere Abdunkelung des Raums wichtig.",
+  },
+  {
+    number: "02",
+    topic: "Projektionsweg",
+    led: "Das Bild entsteht direkt auf der LED-Fläche. Ein Projektor und ein freier Lichtweg entfallen.",
+    beamer: "Projektor, Optik und Projektionsabstand müssen im Raum eingeplant werden.",
+  },
+  {
+    number: "03",
+    topic: "Bildfläche",
+    led: "Die Bildwand besteht aus einzelnen LED-Modulen. Ihre Größe wird passend zum Raum geplant.",
+    beamer: "Das Bild wird auf eine separate Leinwand oder Projektionsfläche geworfen.",
+  },
+];
+
 export default function LedOrProjectorPage() {
   return (
-    <main className="seo-page">
+    <main className={`seo-page ${styles.page}`}>
       <header className="models-nav seo-nav">
         <a href="/" className="brand-v5" aria-label="CINEMA N°7 Startseite">
           CINEMA N°7
@@ -27,61 +49,86 @@ export default function LedOrProjectorPage() {
         </a>
       </header>
 
-      <section className="seo-hero">
-        <p className="overline-v5">LED ODER BEAMER</p>
-        <h1>Zwei Wege zum großen Bild.</h1>
-        <p>
-          Projektion und Direct View LED lösen dieselbe Aufgabe unterschiedlich.
-          Entscheidend sind Raum, Licht und der Anspruch an das Bild.
-        </p>
-      </section>
-
-      <section className="seo-compare">
-        <article>
-          <h2>Raumlicht</h2>
+      <section className={styles.hero} aria-labelledby="comparison-title">
+        <div className={styles.heroInner}>
           <div>
-            <strong>LED</strong>
-            <p>Das Bild bleibt auch bei vollem Raumlicht präsent.</p>
+            <p className={styles.eyebrow}>LED ODER BEAMER</p>
+            <h1 id="comparison-title" className={styles.heroTitle}>
+              LED statt
+              <br />
+              Beamer.
+            </h1>
           </div>
-          <div>
-            <strong>Beamer</strong>
-            <p>Für hohen Kontrast ist ein dunkler Raum deutlich wichtiger.</p>
+          <div className={styles.heroAside}>
+            <p className={styles.heroStatement}>
+              CINEMA N°7 setzt ausschließlich auf LED-Heimkinos.
+            </p>
+            <p className={styles.heroDescription}>
+              Hier zeigen wir, wie sich LED und klassische Projektion bei
+              Raumlicht, Bildfläche und Planung unterscheiden.
+            </p>
+            <a className={styles.jumpLink} href="#vergleich">
+              Unterschiede ansehen <span aria-hidden="true">↘</span>
+            </a>
           </div>
-        </article>
-
-        <article>
-          <h2>Projektionsweg</h2>
-          <div>
-            <strong>LED</strong>
-            <p>Kein Projektor und kein freier Lichtweg durch den Raum.</p>
-          </div>
-          <div>
-            <strong>Beamer</strong>
-            <p>Projektor, Optik und Projektionsdistanz müssen eingeplant werden.</p>
-          </div>
-        </article>
-
-        <article>
-          <h2>Bildfläche</h2>
-          <div>
-            <strong>LED</strong>
-            <p>Die Bildfläche selbst besteht aus modularer LED-Technik.</p>
-          </div>
-          <div>
-            <strong>Beamer</strong>
-            <p>Das Bild wird auf eine separate Leinwand projiziert.</p>
-          </div>
-        </article>
-      </section>
-
-      <section className="seo-choice">
-        <div>
-          <p className="overline-v5">CINEMA N°7</p>
-          <h2>Wir konzentrieren uns auf LED.</h2>
         </div>
-        <div className="seo-choice-actions">
-          <a href="/led-heimkino">Mehr zu LED</a>
-          <a href="/produkte">Modelle ansehen</a>
+      </section>
+
+      <section
+        className={styles.comparison}
+        id="vergleich"
+        aria-labelledby="differences-title"
+      >
+        <div className={styles.columnHeader}>
+          <div className={styles.headingBlock}>
+            <p className={styles.eyebrow}>DER VERGLEICH</p>
+            <h2 id="differences-title">Die Unterschiede.</h2>
+          </div>
+          <div className={styles.ledHeading}>
+            <span className={styles.headingNumber}>01 / UNSERE TECHNIK</span>
+            <strong>CINEMA N°7 LED</strong>
+          </div>
+          <div className={styles.beamerHeading}>
+            <span className={styles.headingNumber}>02 / ZUM VERGLEICH</span>
+            <strong>Klassischer Beamer</strong>
+          </div>
+        </div>
+
+        <div className={styles.comparisonRows}>
+          {differences.map((item) => (
+            <article className={styles.row} key={item.number}>
+              <div className={styles.topicBlock}>
+                <span className={styles.index} aria-hidden="true">
+                  {item.number}
+                </span>
+                <h3>{item.topic}</h3>
+              </div>
+              <div className={`${styles.value} ${styles.ledValue}`}>
+                <span className={styles.mobileLabel}>CINEMA N°7 LED</span>
+                <p>{item.led}</p>
+              </div>
+              <div className={`${styles.value} ${styles.beamerValue}`}>
+                <span className={styles.mobileLabel}>Klassischer Beamer</span>
+                <p>{item.beamer}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.nextStep} aria-labelledby="next-step-title">
+        <div className={styles.nextStepCopy}>
+          <p className={styles.eyebrow}>CINEMA N°7</p>
+          <h2 id="next-step-title">Unsere LED-Heimkinos.</h2>
+          <p>Alle Modelle und Bildgrößen im Überblick.</p>
+        </div>
+        <div className={styles.actions}>
+          <a className={styles.primaryAction} href="/produkte">
+            Modelle entdecken <span aria-hidden="true">↗</span>
+          </a>
+          <a className={styles.secondaryAction} href="/led-heimkino">
+            LED-Heimkino verstehen <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </section>
     </main>
