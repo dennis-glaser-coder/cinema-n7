@@ -72,8 +72,9 @@ export default function LedHomeCinemaPage() {
           <h2>136 bis 271 Zoll.</h2>
         </div>
         <div className="seo-choice-actions">
-          <a href="/produkte">Modelle ansehen</a>
-          <a href="/led-oder-beamer">LED oder Beamer?</a>
+          <a href="/produkte">Modelle &amp; Preise ansehen</a>
+          <a href="/anfrage">Persönlich beraten lassen</a>
+          <a href="/led-oder-beamer">LED und Beamer vergleichen</a>
         </div>
       </section>
     </main>
