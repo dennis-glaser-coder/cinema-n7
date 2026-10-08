@@ -60,7 +60,8 @@ export default function FlowerImageCompare() {
   }
 
   return (
-    <div
+    <div className="cn7-image-compare-block">
+      <div
       className="cn7-image-compare"
       role="slider"
       tabIndex={0}
@@ -110,6 +111,11 @@ export default function FlowerImageCompare() {
           </svg>
         </span>
       </div>
+      <div className="cn7-image-compare__labels" aria-hidden="true">
+        <span>KLASSISCHE PROJEKTION</span>
+        <span>CINEMA N°7 LED</span>
+      </div>
+    </div>
     </div>
   );
 }
