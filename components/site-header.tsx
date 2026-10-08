@@ -5,8 +5,8 @@ import { useState } from "react";
 
 const navigation = [
   { label: "Modelle & Preise", href: "/produkte" },
-  { label: "Warum LED?", href: "/led-heimkino" },
-  { label: "Leistungen", href: "/produkte#leistungen" },
+  { label: "Warum CINEMA N°7?", href: "/warum-cinema-n7" },
+  { label: "Leistungen", href: "/leistungen" },
   { label: "Über uns", href: "/ueber-uns" },
 ];
 
@@ -22,7 +22,7 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
           <a
             key={item.href}
             href={item.href}
-            aria-current={pathname === item.href.split("#")[0] && !item.href.includes("#") ? "page" : undefined}
+            aria-current={pathname === item.href ? "page" : undefined}
           >
             {item.label}
           </a>
