@@ -1,3 +1,4 @@
+import SiteHeader from "../../components/site-header";
 import type { Metadata } from "next";
 import styles from "./comparison.module.css";
 
@@ -37,14 +38,7 @@ const differences = [
 export default function LedOrProjectorPage() {
   return (
     <main className={`seo-page ${styles.page}`}>
-      <header className="models-nav seo-nav">
-        <a href="/" className="brand-v5" aria-label="CINEMA N°7 Startseite">
-          CINEMA N°7
-        </a>
-        <a href="/led-heimkino" className="models-back">
-          LED-Heimkino
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className={styles.hero} aria-labelledby="comparison-title">
         <div className={styles.heroInner}>
