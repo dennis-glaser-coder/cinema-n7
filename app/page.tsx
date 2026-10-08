@@ -6,6 +6,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import heroCinemaImage from "../Luxuriöses Heimkino mit Leopardenbild.png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SiteHeader from "../components/site-header";
+import SiteFooter from "../components/site-footer";
 
 const delivery = [
   ["Konfiguration", "Bildgröße und passendes LED-System."],
@@ -174,26 +176,7 @@ export default function Home() {
           <div className="hero-cinema-overlay" />
         </div>
 
-        <header className="nav-v5">
-          <a className="brand-v5" href="#top" aria-label="CINEMA N°7 Startseite">
-            CINEMA N°7
-          </a>
-          <nav aria-label="Hauptnavigation">
-            <a href="#system">LED</a>
-            <a href="/produkte">Modelle</a>
-            <a href="#delivery">Leistung</a>
-            <a href="/ueber-uns">Über uns</a>
-          </nav>
-          <a className="nav-cta-v5" href="/anfrage">
-            Private Beratung
-          </a>
-
-          <nav className="mobile-nav-v9" aria-label="Mobile Navigation">
-            <a href="/produkte">Modelle</a>
-            <a href="/ueber-uns">Über uns</a>
-            <a href="/anfrage">Anfrage</a>
-          </nav>
-        </header>
+        <SiteHeader home />
 
         <div className="hero-layout">
           <div className="hero-content">
@@ -353,14 +336,15 @@ export default function Home() {
 
         <div className="system-copy-v6 reveal">
           <p className="overline-v5">DAS BILD IM RAUM</p>
-          <h2 id="system-title">LED statt Beamer.</h2>
+          <h2 id="system-title">Der Unterschied ist sichtbar.</h2>
           <p>
-            Großformatige Bildwirkung, direkt aus der LED-Fläche. Ohne
-            Projektionsweg, geplant für die Architektur Ihres Raums.
+            Kräftige Farben, tiefe Schwarztöne und beeindruckender Kontrast.
+            Bewegen Sie den Regler und entdecken Sie den Unterschied.
           </p>
           <a href="/produkte" className="text-link-v5">
             Modelle ansehen
           </a>
+          <p className="cn7-compare-disclaimer">Illustrativer Bildvergleich. Die Darstellung ist keine technische Messung.</p>
         </div>
       </section>
 
@@ -422,16 +406,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="footer-v5">
-        <span>CINEMA N°7</span>
-        <span>LED-HEIMKINOS</span>
-        <span>DEUTSCHLAND / EUROPA</span>
-        <span className="footer-legal-v9">
-          <a href="/impressum">Impressum</a>
-          <a href="/datenschutz">Datenschutz</a>
-          <span>© 2026</span>
-        </span>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
