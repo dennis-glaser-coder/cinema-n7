@@ -23,7 +23,6 @@ export default function AboutPage() {
 
       <section className="about-hero">
         <div className="about-intro">
-          <p className="overline-v5">ÜBER UNS</p>
           <h1>Über zehn Jahre LED-Erfahrung.</h1>
           <p>
             Hinter CINEMA N°7 stehen mehr als zehn Jahre Erfahrung mit
