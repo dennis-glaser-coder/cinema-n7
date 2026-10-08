@@ -6,8 +6,8 @@ export default function ProductSoundDetails() {
         Klangerlebnis
       </summary>
       <p>
-        Auf Wunsch: ein maßgeschneidertes Soundsystem, abgestimmt auf Ihren Raum
-        und Ihr Heimkino.
+        Ein maßgeschneidertes Soundsystem mit immersivem Raumklang.
+        Individuell für Ihr Heimkino.
       </p>
     </details>
   );
