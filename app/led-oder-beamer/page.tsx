@@ -114,8 +114,8 @@ export default function LedOrProjectorPage() {
           <a className={styles.primaryAction} href="/produkte">
             Modelle entdecken <span aria-hidden="true">↗</span>
           </a>
-          <a className={styles.secondaryAction} href="/led-heimkino">
-            LED-Heimkino verstehen <span aria-hidden="true">↗</span>
+          <a className={styles.secondaryAction} href="/anfrage">
+            Persönliche Beratung <span aria-hidden="true">↗</span>
           </a>
         </div>
       </section>
