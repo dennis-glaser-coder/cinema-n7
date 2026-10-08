@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import heroCinemaImage from "../Luxuriöses Heimkino mit Leopardenbild.png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { cinemaModels, formatEuro } from "../lib/cinema-products";
 
 const delivery = [
   ["Konfiguration", "Bildgröße und passendes LED-System."],
@@ -203,7 +204,8 @@ export default function Home() {
               LED-Heimkinos
             </h1>
             <p className="hero-sub">
-              Großformatige LED-Systeme für private Räume. Geplant, installiert und kalibriert.
+              Schlüsselfertige LED-Heimkinos. Mit Montage, Inbetriebnahme und
+              Kalibrierung – alles im Komplettpreis.
             </p>
             <a className="text-link-v5" href="/produkte">
               Modelle entdecken
@@ -304,8 +306,8 @@ export default function Home() {
             für Ihren Raum.
           </h2>
           <p>
-            Sechs 16:9-Formate. Der Größenvergleich zeigt die tatsächlichen
-            Abmessungen jeder LED-Bildfläche.
+            Sechs 16:9-Formate. Jedes Modell kommt als schlüsselfertig
+            installiertes LED-Heimkino – inklusive Montage, Anreise und Kalibrierung.
           </p>
 
           <div className="home-models-range-v11">
@@ -315,8 +317,13 @@ export default function Home() {
               <span className="range-dash-v11" aria-hidden="true">—</span>
               <span>271<span className="inch-v11">″</span></span>
             </div>
+            <div className="home-models-price-v13">
+              <span>Schlüsselfertig ab</span>
+              <strong>{formatEuro(cinemaModels[0].grossPriceEur)}</strong>
+              <small>inkl. 19 % MwSt. · Montage, Anfahrt und Kalibrierung inklusive</small>
+            </div>
             <a href="/produkte" className="home-models-range-link-v11">
-              Bildgrößen vergleichen
+              Alle Komplettpreise ansehen
             </a>
           </div>
         </div>
@@ -386,8 +393,10 @@ export default function Home() {
 
         <div className="delivery-process-v11">
           <p className="delivery-promise-v11 reveal">
-            Ein Ansprechpartner begleitet Ihr Projekt – von der Auswahl der
-            Bildgröße bis zur Installation und Kalibrierung.
+            Schlüsselfertig bedeutet bei CINEMA N°7: LED-Wand,
+            Controller, Unterkonstruktion, Montage, Inbetriebnahme,
+            Kalibrierung und die kalkulierte Standardanreise
+            sind im Komplettpreis bereits enthalten.
           </p>
           <div className="delivery-steps-v11">
             {delivery.map(([title, description]) => (
