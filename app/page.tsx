@@ -205,7 +205,7 @@ export default function Home() {
             </h1>
             <p className="hero-sub">
               Schlüsselfertige LED-Heimkinos. Mit Montage, Inbetriebnahme und
-              Kalibrierung – alles im Komplettpreis.
+              Kalibrierung.
             </p>
             <a className="text-link-v5" href="/produkte">
               Modelle entdecken
