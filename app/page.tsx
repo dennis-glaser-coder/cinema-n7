@@ -233,15 +233,15 @@ export default function Home() {
         aria-labelledby="led-reasons-title"
       >
         <div className="led-reasons-intro-v11 reveal">
-          <p className="overline-v5">WARUM LED</p>
+          <p className="overline-v5">WARUM CINEMA N°7</p>
           <h2 id="led-reasons-title">
             Großes Bild.
             <br />
             Ohne Projektion.
           </h2>
           <p className="led-reasons-lede-v11">
-            Fine-Pitch LED leuchtet selbst. Das verändert, wie sich ein großes Bild
-            in einen privaten Raum integrieren lässt.
+            Fine-Pitch LED mit 1,25 mm Pixelabstand, sechs Bildgrößen und
+            persönlicher Begleitung bis zum fertigen Heimkino.
           </p>
           <div className="led-pitch-v12" aria-label="Pixel Pitch 1,25 Millimeter">
             <p className="overline-v5">EIN STANDARD. JEDE BILDGRÖSSE.</p>
@@ -272,8 +272,7 @@ export default function Home() {
             </article>
           </div>
           <div className="led-guide-links-v9 reveal">
-            <a href="/led-heimkino">LED-Heimkino verstehen</a>
-            <a href="/led-oder-beamer">LED oder Beamer?</a>
+            <a href="/warum-cinema-n7">Warum CINEMA N°7?</a>
           </div>
         </div>
       </section>
@@ -299,7 +298,7 @@ export default function Home() {
               <span>271<span className="inch-v11">″</span></span>
             </div>
             <a href="/produkte" className="home-models-range-link-v11">
-              Bildgrößen vergleichen
+              Modelle &amp; Preise ansehen
             </a>
           </div>
         </div>
@@ -340,8 +339,8 @@ export default function Home() {
             Kräftige Farben, tiefe Schwarztöne und beeindruckender Kontrast.
             Bewegen Sie den Regler und entdecken Sie den Unterschied.
           </p>
-          <a href="/produkte" className="text-link-v5">
-            Modelle ansehen
+          <a href="/led-oder-beamer" className="text-link-v5">
+            LED und Beamer vergleichen
           </a>
           <p className="cn7-compare-disclaimer">Illustrativer Bildvergleich. Die Darstellung ist keine technische Messung.</p>
         </div>
@@ -381,6 +380,9 @@ export default function Home() {
                 <p>{description}</p>
               </article>
             ))}
+          </div>
+          <div className="cn7-home-services-link">
+            <a className="text-link-v5" href="/leistungen">Unsere Leistungen ansehen</a>
           </div>
         </div>
       </section>
