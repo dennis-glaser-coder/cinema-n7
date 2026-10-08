@@ -285,7 +285,7 @@ export default function Home() {
               <span className="range-dash-v11" aria-hidden="true">—</span>
               <span>271<span className="inch-v11">″</span></span>
             </div>
-            <a href="/produkte" className="home-models-range-link-v11">
+            <a href="/produkte" className="text-link-v5">
               Modelle &amp; Preise ansehen
             </a>
           </div>
