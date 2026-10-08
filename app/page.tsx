@@ -356,7 +356,7 @@ export default function Home() {
 
         <div className="delivery-process-v11">
           <p className="delivery-promise-v11 reveal">
-            Schlüsselfertig heißt: LED-Wand, Controller,
+            Schlüsselfertig: LED-Wand, Controller,
             Unterkonstruktion, Anfahrt, Montage, Inbetriebnahme
             und Kalibrierung. Alles im Komplettpreis enthalten.
           </p>
