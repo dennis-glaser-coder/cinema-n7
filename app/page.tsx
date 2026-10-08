@@ -318,7 +318,7 @@ export default function Home() {
             für Ihren Raum.
           </h2>
           <p>
-            Sieben 16:9-Formate. Der Größenvergleich zeigt die tatsächlichen
+            Sechs 16:9-Formate. Der Größenvergleich zeigt die tatsächlichen
             Abmessungen jeder LED-Bildfläche.
           </p>
 
