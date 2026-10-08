@@ -7,7 +7,6 @@ import gsap from "gsap";
 import heroCinemaImage from "../Luxuriöses Heimkino mit Leopardenbild.png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SiteHeader from "../components/site-header";
-import SiteFooter from "../components/site-footer";
 
 const delivery = [
   ["Konfiguration", "Bildgröße und passendes LED-System."],
@@ -406,7 +405,6 @@ export default function Home() {
         </div>
       </section>
 
-      <SiteFooter />
     </main>
   );
 }
