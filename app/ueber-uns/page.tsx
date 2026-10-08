@@ -1,3 +1,4 @@
+import SiteHeader from "../../components/site-header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,14 +19,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="about-page">
-      <header className="models-nav about-nav">
-        <a href="/" className="brand-v5" aria-label="CINEMA N°7 Startseite">
-          CINEMA N°7
-        </a>
-        <a href="/" className="models-back">
-          Zurück
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="about-hero">
         <div className="about-intro">
