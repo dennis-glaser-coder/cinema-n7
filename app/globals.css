@@ -7361,3 +7361,27 @@ body {
     object-position: center center;
   }
 }
+
+
+/* Subtle homepage animation vignette */
+.site-v5 .cinema-animation-stage-v10::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0) 54%,
+      rgba(0, 0, 0, .08) 74%,
+      rgba(0, 0, 0, .22) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, .03) 0%,
+      rgba(0, 0, 0, 0) 22%,
+      rgba(0, 0, 0, 0) 72%,
+      rgba(0, 0, 0, .10) 100%
+    );
+}
