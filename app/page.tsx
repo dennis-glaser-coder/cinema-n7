@@ -321,7 +321,6 @@ export default function Home() {
         </div>
 
         <div className="system-copy-v6 reveal">
-          <p className="overline-v5">DAS BILD IM RAUM</p>
           <h2 id="system-title"><span>Brilliante Farben,</span><span>Perfekter Kontrast</span></h2>
           <p>
             Erleben Sie Farben in ihrer ganzen Pracht, tiefes Schwarz und die feinsten Details.
