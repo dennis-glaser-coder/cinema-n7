@@ -59,9 +59,10 @@ export default function AboutPage() {
       <section className="about-contact">
         <p className="overline-v5">PRIVATE BERATUNG</p>
         <h2>Ihr LED-Heimkino.</h2>
-        <a href="/anfrage" className="models-next-link-v2">
-          Projekt anfragen
-        </a>
+        <div className="cn7-inline-actions cn7-about-products">
+          <a href="/produkte">Modelle &amp; Preise entdecken</a>
+          <a href="/anfrage">Persönliche Beratung anfragen</a>
+        </div>
       </section>
     </main>
   );
