@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import SiteFooter from "../components/site-footer";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://cinema-n7.vercel.app";
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const publicDomainReady = !new URL(siteUrl).hostname.endsWith(".vercel.app");
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | CINEMA N°7",
   },
   description:
-    "Großformatige Fine-Pitch LED-Heimkinos für private Räume. Modelle von 136 bis 271 Zoll, Installation und Kalibrierung.",
+    "Schlüsselfertige P1.25 LED-Heimkinos von 136 bis 271 Zoll mit transparenten Komplettpreisen, Montage und Kalibrierung.",
   keywords: [
     "LED Heimkino",
     "LED Wand Heimkino",
@@ -40,11 +42,11 @@ export const metadata: Metadata = {
       "Großformatige Fine-Pitch LED-Heimkinos für private Räume.",
   },
   robots: {
-    index: false,
-    follow: false,
+    index: publicDomainReady,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
+      index: publicDomainReady,
+      follow: true,
     },
   },
   verification: googleVerification
@@ -87,6 +89,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );
