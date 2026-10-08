@@ -8278,3 +8278,23 @@ body {
   }
 }
 
+/* Net-first pricing with explicit gross consumer end totals v14 */
+.site-v5 .home-models-price-v13 > .home-models-price-gross-v14 {
+  color: rgba(255,255,255,.91);
+  font-size: clamp(15px, 1.3vw, 18px);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-transform: none;
+}
+.selected-price-v2 .turnkey-price-net-v13,
+.product-detail-price .turnkey-price-net-v13 {
+  color: rgba(255,255,255,.91);
+  font-size: clamp(15px, 1.4vw, 18px);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.45;
+  margin-top: 2px;
+  text-transform: none;
+}
+
