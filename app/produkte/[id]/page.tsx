@@ -23,10 +23,10 @@ export async function generateMetadata({
     return {};
   }
 
-  const title = `${model.diagonalInches} Zoll LED-Heimkino`;
+  const title = `${model.diagonalInches} Zoll LED-Heimkino – schlüsselfertig`;
   const description = `${model.diagonalInches} Zoll LED-Heimkino mit ${formatMeters(
     model.widthM
-  )} × ${formatMeters(model.heightM)} m Bildfläche und 1,25 mm Pixel Pitch.`;
+  )} × ${formatMeters(model.heightM)} m Bildfläche, 1,25 mm Pixel Pitch und schlüsselfertiger Montage inklusive Anfahrt und Kalibrierung.`;
 
   return {
     title,
@@ -78,9 +78,16 @@ export default async function ProductDetailPage({
           </div>
 
           <div className="product-detail-price">
-            <strong>{formatEuro(model.panelCostEur)}</strong>
-            <span>zzgl. MwSt.</span>
+            <span className="turnkey-price-eyebrow-v13">SCHLÜSSELFERTIGER KOMPLETTPREIS</span>
+            <strong>{formatEuro(model.grossPriceEur)}</strong>
+            <span className="turnkey-price-vat-v13">inkl. 19 % MwSt.</span>
+            <span className="turnkey-price-net-v13">{formatEuro(model.netPriceEur)} netto</span>
           </div>
+          <p className="turnkey-detail-summary-v13">
+            Alles für Ihr fertiges LED-Heimkino: LED-System, Steuerung,
+            Unterkonstruktion, Montage, Anfahrt, Inbetriebnahme und Kalibrierung.
+            Im Standardgebiet kommen keine separaten Montage- oder Reisekosten hinzu.
+          </p>
 
           <a href="/anfrage" className="product-detail-cta">
             Projekt anfragen
@@ -146,27 +153,38 @@ export default async function ProductDetailPage({
       <section className="product-detail-scope">
         <div>
           <p className="overline-v5">SYSTEM</p>
-          <h2>Als vollständiges LED-System.</h2>
+          <h2>Schlüsselfertig. Alles im Preis.</h2>
         </div>
 
         <div className="product-detail-scope-list">
           <article>
             <strong>LED-Bildfläche</strong>
-            <p>Konfiguriert für die gewählte Größe und das definierte Modulraster.</p>
+            <p>Die komplette P1.25-Bildwand mit den benötigten Modulen für Ihre gewählte Größe.</p>
           </article>
           <article>
             <strong>Integration</strong>
-            <p>Mechanik, Processing, Signal und Strom als abgestimmtes System.</p>
+            <p>Passender NovaStar-Controller, Unterkonstruktion und Verbindung der Systemkomponenten.</p>
           </article>
           <article>
             <strong>Installation</strong>
-            <p>Aufbau und Inbetriebnahme vor Ort.</p>
+            <p>Fachgerechter Aufbau, Ausrichtung, Anschluss und Inbetriebnahme am vereinbarten Montageort.</p>
           </article>
           <article>
             <strong>Kalibrierung</strong>
-            <p>Präzise Abstimmung des fertigen Bildes.</p>
+            <p>Bildabstimmung, Funktionstest und Übergabe des betriebsbereiten Systems.</p>
+          </article>
+          <article>
+            <strong>Anfahrt &amp; Übernachtung</strong>
+            <p>Reisezeit, Fahrtkosten und erforderliche Hotelnächte des Montageteams im Standardgebiet inklusive.</p>
           </article>
         </div>
+        <p className="turnkey-terms-v13 turnkey-detail-terms-v13">
+          Festpreis bei Standardinstallation auf geeigneter Montagefläche mit
+          vorhandener Strom- und Signalzuführung sowie Anfahrt bis 300 km und
+          3 Stunden je Richtung. Weitere Entfernungen, notwendige Elektro-
+          oder Bauarbeiten und Sondermontagen werden vor Beauftragung
+          gesondert vereinbart – keine nachträglichen Überraschungen.
+        </p>
       </section>
 
       <section className="product-detail-related" aria-labelledby="related-models-title">
