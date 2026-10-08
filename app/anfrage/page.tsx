@@ -108,6 +108,16 @@ export default async function InquiryPage({
           />
         </div>
       </section>
+      <section className="inquiry-showroom" id="showroom" aria-labelledby="showroom-title">
+        <div><h2 id="showroom-title">Ihr Termin in Paderborn.</h2>
+          <p>Erleben Sie unsere LED-Heimkinos persönlich im Showroom.
+            Für eine Vorführung vereinbaren Sie Ihren Termin direkt mit uns.
+            Nennen Sie uns gerne Ihren Wunschtermin und die Bildgröße, für die Sie sich interessieren.</p></div>
+        <div className="seo-choice-actions">
+          <a href={`mailto:${email}?subject=${encodeURIComponent("Vorführung im Showroom Paderborn – CINEMA N°7")}&body=${encodeURIComponent("Guten Tag,\n\nich möchte einen Termin für eine Vorführung in Ihrem Showroom in Paderborn vereinbaren.\n\nMein Wunschtermin:\nInteressante Bildgröße:\n\nMit freundlichen Grüßen")}`}>Vorführung per E-Mail anfragen</a>
+          <a href={phoneHref}>Termin telefonisch vereinbaren</a>
+        </div>
+      </section>
     </main>
   );
 }

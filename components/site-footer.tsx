@@ -10,6 +10,7 @@ export default function SiteFooter() {
         <a href="/warum-cinema-n7">Warum CINEMA N°7?</a>
         <a href="/leistungen">Leistungen</a>
         <a href="/ueber-uns">Über uns</a>
+        <a href="/faq">FAQ</a>
         <a href="/anfrage">Beratung anfragen</a>
       </nav>
       <div className="cn7-footer-legal">

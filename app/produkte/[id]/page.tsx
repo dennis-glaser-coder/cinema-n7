@@ -1,4 +1,5 @@
 import SiteHeader from "../../../components/site-header";
+import ProductSoundDetails from "../../../components/product-sound-details";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
@@ -82,6 +83,8 @@ export default async function ProductDetailPage({
             Montage, Inbetriebnahme und Kalibrierung –
             alles im ausgewiesenen Komplettpreis enthalten.
           </p>
+
+          <ProductSoundDetails />
 
           <a href={`/anfrage?modell=${model.diagonalInches}`} className="product-detail-cta">
             Projekt anfragen

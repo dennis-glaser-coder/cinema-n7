@@ -1,6 +1,7 @@
 "use client";
 
 import SiteHeader from "../../components/site-header";
+import ProductSoundDetails from "../../components/product-sound-details";
 
 import { CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
@@ -148,6 +149,8 @@ export default function ProductsPage() {
                 {selected.cabinetsWide} × {selected.cabinetsHigh} Module
               </p>
             </div>
+
+            <ProductSoundDetails key={selected.id} />
 
             <div className="cn7-product-actions">
               <a className="cn7-direct-inquiry" href={`/anfrage?modell=${selected.diagonalInches}`}>

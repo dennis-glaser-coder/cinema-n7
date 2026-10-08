@@ -11,6 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/led-heimkino",
     "/led-oder-beamer",
     "/ueber-uns",
+    "/warum-cinema-n7",
+    "/leistungen",
+    "/faq",
     "/anfrage",
   ];
 

@@ -57,11 +57,13 @@ export default function AboutPage() {
       </section>
 
       <section className="about-contact">
-        <p className="overline-v5">PRIVATE BERATUNG</p>
-        <h2>Ihr LED-Heimkino.</h2>
+        <h2>Persönlich in Paderborn.</h2>
+        <p className="editorial-showroom-copy">In unserem Showroom können Sie unsere LED-Heimkinos
+          vor Ihrer Entscheidung erleben. Wir sprechen über Ihre Vorstellungen
+          und die Möglichkeiten für Ihren Raum. Vereinbaren Sie einen Termin mit uns.</p>
         <div className="cn7-inline-actions cn7-about-products">
           <a href="/produkte">Modelle &amp; Preise entdecken</a>
-          <a href="/anfrage">Persönliche Beratung anfragen</a>
+          <a href="/anfrage#showroom">Vorführung vereinbaren</a>
         </div>
       </section>
     </main>

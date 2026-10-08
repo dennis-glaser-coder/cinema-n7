@@ -137,9 +137,8 @@ export default function Home() {
               Schlüsselfertige LED-Heimkinos. Mit Montage, Inbetriebnahme und
               Kalibrierung.
             </p>
-            <a className="home-primary-action" href="/produkte">
+            <a className="text-link-v5" href="/produkte">
               Modelle entdecken
-              <span aria-hidden="true">↗</span>
             </a>
           </div>
 
@@ -257,9 +256,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <span className="home-models-preview-caption-v11">
-            Größenwirkung im Vergleich zum Menschen
-          </span>
         </a>
       </section>
 
@@ -300,11 +296,12 @@ export default function Home() {
         </div>
 
         <div className="delivery-process-v11">
-          <p className="delivery-promise-v11 reveal">
-            Schlüsselfertig: LED-Wand, Controller,
-            Unterkonstruktion, Anfahrt, Montage, Inbetriebnahme
-            und Kalibrierung. Alles im Komplettpreis enthalten.
-          </p>
+          <div className="delivery-intro reveal">
+            <h3>Full-Service.</h3>
+            <p>
+              Von der LED-Wand bis zur Kalibrierung – alles im Komplettpreis.
+            </p>
+          </div>
           <div className="delivery-steps-v11">
             {delivery.map(([title, description]) => (
               <article className="delivery-step-v11" key={title}>
