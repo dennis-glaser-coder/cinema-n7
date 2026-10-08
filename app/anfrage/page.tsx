@@ -1,4 +1,6 @@
 import SiteHeader from "../../components/site-header";
+import InquiryForm from "../../components/inquiry-form";
+import { cinemaModels } from "../../lib/cinema-products";
 import type { Metadata } from "next";
 import Image from "next/image";
 import contactPhoto from "../../ChatGPT Image 8. Mai 2026, 13_02_39.png";
@@ -22,7 +24,30 @@ const phoneDisplay = "+49 (0) 5251 5449191";
 const phoneHref = "tel:+4952515449191";
 const email = "kontakt@cinema7.de";
 
-export default function InquiryPage() {
+export default async function InquiryPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ modell?: string }>;
+}) {
+  const query = await searchParams;
+  const selected = cinemaModels.find((item) => String(item.diagonalInches) === query.modell);
+  const model = selected ? String(selected.diagonalInches) : undefined;
+  const mailSubject = selected
+    ? `Anfrage CINEMA N°7 – ${selected.diagonalInches} Zoll`
+    : "Anfrage CINEMA N°7 LED-Heimkino";
+  const mailBody = [
+    "Guten Tag,",
+    "",
+    selected ? `ich interessiere mich für CINEMA N°7 in ${selected.diagonalInches} Zoll.` : "ich interessiere mich für ein CINEMA N°7 LED-Heimkino.",
+    "",
+    "Meine Fragen / mein Projekt:",
+    "",
+    "",
+    "Mit freundlichen Grüßen",
+  ].join("\n");
+  const mailHref = `mailto:${email}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+  const formEnabled = Boolean(process.env.RESEND_API_KEY && process.env.RESEND_FROM_EMAIL);
+
   return (
     <main className="inquiry-page">
       <SiteHeader />
@@ -32,8 +57,26 @@ export default function InquiryPage() {
           <p className="overline-v5">PRIVATE BERATUNG</p>
           <h1 id="inquiry-title">Projekt anfragen.</h1>
           <p className="inquiry-intro">
-            Sprechen Sie direkt mit Ihrem Ansprechpartner über Ihr LED-Heimkino.
+            Lassen Sie uns über Ihr LED-Heimkino sprechen. Wir beraten Sie persönlich
+            und finden die passende Lösung für Ihren Raum.
           </p>
+          {selected && (
+            <div className="cn7-inquiry-selected">
+              <strong>Ihre Auswahl: CINEMA N°7 {selected.diagonalInches} Zoll</strong>
+              <a href="/produkte">Andere Bildgröße wählen</a>
+            </div>
+          )}
+          {formEnabled ? (
+            <InquiryForm model={model} />
+          ) : (
+            <div className="cn7-inquiry-compose">
+              <p>Sie haben bereits eine Bildgröße im Blick? Wir helfen Ihnen bei allen nächsten Schritten.</p>
+              <a href={mailHref} className="cn7-inquiry-quick-link">
+                {selected ? `Anfrage für ${selected.diagonalInches} Zoll per E-Mail` : "E-Mail-Anfrage vorbereiten"} ↗
+              </a>
+              <p className="cn7-inquiry-hint">Öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht.</p>
+            </div>
+          )
 
           <div className="inquiry-contact">
             <p>Ihr Ansprechpartner</p>
@@ -48,7 +91,7 @@ export default function InquiryPage() {
               <strong>{phoneDisplay}</strong>
             </a>
 
-            <a href={`mailto:${email}`} className="inquiry-contact-link">
+            <a href={mailHref} className="inquiry-contact-link">
               <span>E-Mail</span>
               <strong>{email}</strong>
             </a>
