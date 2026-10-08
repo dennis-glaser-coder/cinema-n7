@@ -8,7 +8,7 @@ export const cabinet = {
 
 export const PANEL_PRICE_EUR = 650;
 
-const cabinetCounts = [4, 5, 6, 7, 8, 9, 10];
+const cabinetCounts = [5, 6, 7, 8, 9, 10];
 
 export const cinemaModels = cabinetCounts.map((count) => {
   const widthM = (cabinet.widthMm * count) / 1000;
