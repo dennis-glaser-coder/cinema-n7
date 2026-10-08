@@ -7344,3 +7344,20 @@ body {
   object-position: center;
   background: #020202;
 }
+
+
+/* Desktop animation framing */
+@media (min-width: 821px) {
+  .site-v5 .cinema-animation-stage-v10 {
+    width: min(100%, 1280px);
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .site-v5 .cinema-animation-video-v10 {
+    object-fit: contain;
+    object-position: center center;
+  }
+}
