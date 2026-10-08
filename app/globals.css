@@ -8298,6 +8298,60 @@ body {
   text-transform: none;
 }
 
+/* Mobile hero: show the room before the introduction. */
+@media (max-width: 820px) {
+  .site-v5 .hero-v5 {
+    min-height: 0;
+    padding: 0;
+    background: #050505;
+  }
+
+  .site-v5 .hero-backdrop {
+    position: relative;
+    inset: auto;
+    z-index: 0;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .site-v5 .hero-cinema-image {
+    inset: 0;
+  }
+
+  .site-v5 .hero-cinema-media {
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(.94) contrast(1.03) brightness(.96);
+  }
+
+  .site-v5 .hero-cinema-overlay {
+    background: linear-gradient(180deg, rgba(0,0,0,.6), transparent 38%, transparent 80%, #050505);
+  }
+
+  .site-v5 .hero-v5 .cn7-global-header-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 16px 20px;
+  }
+
+  .site-v5 .hero-layout {
+    flex: none;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding: 28px 20px 44px;
+  }
+
+  .site-v5 .hero-content {
+    padding: 0;
+  }
+
+  .site-v5 .hero-content h1 {
+    max-width: none;
+    text-shadow: none;
+  }
+}
+
 /* Unified navigation and conversion flow v15 */
 .cn7-global-header {
   position: relative;
