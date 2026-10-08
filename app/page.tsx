@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import heroCinemaImage from "../Luxuriöses Heimkino mit Leopardenbild.png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { cinemaModels, formatEuro } from "../lib/cinema-products";
 
 const delivery = [
   ["Konfiguration", "Bildgröße und passendes LED-System."],
@@ -317,15 +316,8 @@ export default function Home() {
               <span className="range-dash-v11" aria-hidden="true">—</span>
               <span>271<span className="inch-v11">″</span></span>
             </div>
-            <div className="home-models-price-v13">
-              <span>Schlüsselfertig ab</span>
-              <strong>{formatEuro(cinemaModels[0].netPriceEur)}</strong>
-              <small>netto zzgl. 19 % MwSt.</small>
-              <span className="home-models-price-gross-v14">Endpreis inkl. MwSt.: {formatEuro(cinemaModels[0].grossPriceEur)}</span>
-              <small>Montage, Anfahrt und Kalibrierung im Komplettpreis enthalten</small>
-            </div>
             <a href="/produkte" className="home-models-range-link-v11">
-              Alle Komplettpreise ansehen
+              Bildgrößen vergleichen
             </a>
           </div>
         </div>
