@@ -33,7 +33,6 @@ export default function LedHomeCinemaPage() {
 
       <section className="seo-facts">
         <article>
-          <span>01</span>
           <h2>Volles Raumlicht.</h2>
           <p>
             Hohe Helligkeit und hoher Kontrast machen eine vollständige
@@ -41,7 +40,6 @@ export default function LedHomeCinemaPage() {
           </p>
         </article>
         <article>
-          <span>02</span>
           <h2>Keine Projektion.</h2>
           <p>
             Kein Beamer, keine Leinwand und kein freier Projektionsweg vor dem
@@ -49,7 +47,6 @@ export default function LedHomeCinemaPage() {
           </p>
         </article>
         <article>
-          <span>03</span>
           <h2>Große Bildflächen.</h2>
           <p>
             Die Bildfläche wird aus einzelnen LED-Modulen aufgebaut und kann
@@ -57,7 +54,6 @@ export default function LedHomeCinemaPage() {
           </p>
         </article>
         <article>
-          <span>04</span>
           <h2>Modular aufgebaut.</h2>
           <p>
             Die Fläche besteht aus einzelnen Modulen, die gezielt gewartet

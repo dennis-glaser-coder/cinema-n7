@@ -6398,16 +6398,10 @@ body {
 .seo-facts article {
   min-height: 170px;
   display: grid;
-  grid-template-columns: 70px minmax(260px,.8fr) minmax(320px,1.2fr);
+  grid-template-columns: minmax(260px,.8fr) minmax(320px,1.2fr);
   gap: clamp(28px, 5vw, 78px);
   align-items: center;
   border-bottom: 1px solid rgba(170,143,112,.15);
-}
-
-.seo-facts article > span {
-  color: var(--warm-soft);
-  font-size: 9px;
-  letter-spacing: .16em;
 }
 
 .seo-facts h2,
@@ -6521,12 +6515,12 @@ body {
   .seo-facts article {
     padding: 28px 0 30px;
     min-height: auto;
-    grid-template-columns: 38px 1fr;
+    grid-template-columns: 1fr;
     gap: 10px 16px;
   }
 
   .seo-facts article p {
-    grid-column: 2;
+    grid-column: 1;
   }
 
   .seo-compare article {
@@ -8904,13 +8898,12 @@ body {
   border-bottom: 1px solid rgba(170,143,112,.2);
 }
 
-.editorial-service-grid li > span {
-  color: #c2a37e;
-  font-size: 12px;
+.editorial-service-aftercare {
+  grid-column: 1 / -1;
 }
 
 .editorial-service-grid h3 {
-  margin: 22px 0 16px;
+  margin: 0 0 16px;
   font: 400 clamp(26px,2.5vw,36px)/1.15 Georgia, "Times New Roman", serif;
   letter-spacing: -.025em;
 }

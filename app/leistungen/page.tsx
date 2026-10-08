@@ -26,20 +26,24 @@ export default function ServicesPage() {
       <section className="editorial-service" aria-labelledby="service-steps-title">
         <h2 id="service-steps-title">So entsteht Ihr Heimkino.</h2>
         <ol className="editorial-service-grid">
-          <li><span aria-hidden="true">01</span><h3>Beratung &amp; Auswahl.</h3>
+          <li><h3>Beratung &amp; Auswahl.</h3>
             <p>Wir sprechen über Ihren Raum, Ihre Sitzposition und die gewünschte
               Bildgröße. Im Showroom in Paderborn können Sie das Bild persönlich erleben.</p></li>
-          <li><span aria-hidden="true">02</span><h3>Technische Planung.</h3>
+          <li><h3>Technische Planung.</h3>
             <p>Unterkonstruktion, Befestigung, Anschlüsse und Kabelwege werden auf
               die Einbausituation abgestimmt. Stromversorgung und Wärmeabfuhr
               berücksichtigen wir dabei ebenfalls.</p></li>
-          <li><span aria-hidden="true">03</span><h3>Montage &amp; Einrichtung.</h3>
+          <li><h3>Montage &amp; Einrichtung.</h3>
             <p>Wir montieren die Unterkonstruktion und LED-Module, richten die
               Bildfläche aus und konfigurieren die Ansteuerung. Den Installationstermin
               vereinbaren wir mit Ihnen.</p></li>
-          <li><span aria-hidden="true">04</span><h3>Kalibrierung &amp; Übergabe.</h3>
+          <li><h3>Kalibrierung &amp; Übergabe.</h3>
             <p>Bei der Inbetriebnahme prüfen wir das System und stimmen die
               Bildwiedergabe ab. Anschließend zeigen wir Ihnen die Bedienung Ihrer Anlage.</p></li>
+          <li className="editorial-service-aftercare"><h3>Persönlicher Service.</h3>
+            <p>Auch nach der Installation bleiben wir Ihr Ansprechpartner.
+              Bei Fragen, Störungen oder gewünschten Anpassungen kümmern wir uns
+              persönlich um Ihre Anlage.</p></li>
         </ol>
       </section>
       <section className="editorial-inclusions" aria-labelledby="included-title">
