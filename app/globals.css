@@ -8530,11 +8530,48 @@ body {
 @media(max-width:700px){.cn7-inquiry-form-grid {grid-template-columns:1fr;}}
 
 
-/* Comparison: match the model section typography and align with the image top. */
+/* Shared homepage typography, with a larger comparison image. */
+.site-v5 {
+  --home-heading-size: clamp(48px, 5vw, 80px);
+  --home-intro-size: 16px;
+  --home-copy-gap: 28px;
+}
+
+.site-v5 .cinema-animation-copy-v10 h2,
+.site-v5 .led-reasons-intro-v11 h2,
+.site-v5 .home-models-copy-v11 h2,
+.site-v5 .system-copy-v6 h2#system-title,
+.site-v5 .delivery-proof-v11 h2,
+.site-v5 .contact-copy h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: var(--home-heading-size);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -.045em;
+  color: rgba(255,255,255,.96);
+}
+
+.site-v5 .hero-sub,
+.site-v5 .led-reasons-lede-v11,
+.site-v5 .home-models-copy-v11 > p:not(.overline-v5),
+.site-v5 .system-copy-v6 > p:not(.overline-v5) {
+  margin-top: var(--home-copy-gap);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--home-intro-size);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: normal;
+  color: rgba(232,228,220,.68);
+}
+
 @media (min-width: 1001px) {
   .site-v5 .system-v6 {
-    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
-    gap: clamp(30px, 4vw, 64px);
+    padding-inline: 7vw;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    gap: clamp(30px, 3vw, 48px);
+  }
+  .site-v5 .system-copy-v6 {
+    max-width: none;
   }
 }
 .site-v5 .system-v6 {
@@ -8543,7 +8580,6 @@ body {
 .site-v5 .system-copy-v6 h2#system-title {
   margin-top: 0;
   max-width: none;
-  font-size: clamp(46px, 4.5vw, 74px);
 }
 .site-v5 .system-copy-v6 h2#system-title span {
   display: block;
@@ -8551,16 +8587,103 @@ body {
 }
 .site-v5 .system-copy-v6 > p:not(.overline-v5) {
   max-width: 400px;
-  font-size: 14px;
-  line-height: 1.7;
 }
 @media (max-width: 820px) {
-  .site-v5 .system-copy-v6 h2#system-title {
-    font-size: clamp(39px, 9.8vw, 54px);
-    line-height: .98;
+  .site-v5 {
+    --home-heading-size: clamp(32px, 10.7vw, 46px);
+    --home-intro-size: 15px;
+    --home-copy-gap: 22px;
   }
-  .site-v5 .system-copy-v6 > p:not(.overline-v5) {
-    font-size: 13px;
-    line-height: 1.6;
+}
+
+/* Homepage polish: quiet imagery and one primary action. */
+.site-v5 .led-reasons-detail-v11 {
+  padding-top: 0;
+}
+
+.site-v5 .led-reasons-list-v11 {
+  border-top: 0;
+}
+
+.site-v5 .led-reason-v11:first-child {
+  padding-top: 0;
+}
+
+.site-v5 .led-reason-v11:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: 1001px) {
+  .site-v5 .led-reasons-intro-v11 .home-heading-line {
+    white-space: nowrap;
+  }
+}
+
+.site-v5 .cinema-animation-copy-v10 {
+  row-gap: 0;
+}
+
+.site-v5 .led-reasons-intro-v11 h2,
+.site-v5 .home-models-copy-v11 h2,
+.site-v5 .delivery-proof-v11 h2 {
+  margin-top: 0;
+}
+
+.site-v5 .system-v6 {
+  min-height: 0;
+  padding-block: clamp(72px, 8vw, 128px);
+}
+
+.site-v5 .system-visual-v6 {
+  will-change: auto;
+}
+
+.site-v5 .home-primary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  min-height: 52px;
+  margin-top: 32px;
+  padding: 16px 22px;
+  border: 1px solid rgba(194,163,126,.8);
+  border-radius: 3px;
+  background: rgba(194,163,126,.1);
+  color: #f7f1e8;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.site-v5 .home-primary-action span {
+  color: #d8b991;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.site-v5 .home-primary-action:hover {
+  border-color: #d8b991;
+  background: rgba(194,163,126,.22);
+}
+
+.site-v5 .home-primary-action:focus-visible,
+.site-v5 .home-models-preview-v11:focus-visible {
+  outline: 2px solid #d8b991;
+  outline-offset: 5px;
+}
+
+@media (max-width: 820px) {
+  .site-v5 .home-primary-action {
+    margin-top: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-v5 .home-primary-action {
+    transition: none;
   }
 }

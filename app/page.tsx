@@ -27,63 +27,38 @@ export default function Home() {
 
     const ctx = gsap.context(() => {
       const isMobile = window.matchMedia("(max-width: 820px)").matches;
-      const intro = gsap.timeline({ defaults: { ease: "power3.out" } });
+      const intro = gsap.timeline({ defaults: { ease: "power2.out" } });
 
       intro
-        .fromTo(".nav-v5", { opacity: 0 }, { opacity: 1, duration: 0.8 })
+        .fromTo(".nav-v5", { opacity: 0 }, { opacity: 1, duration: 0.45 })
         .fromTo(
           ".hero-content > *",
-          { opacity: 0, y: 26 },
-          { opacity: 1, y: 0, duration: 1, stagger: 0.09 },
-          "-=.35"
+          { opacity: 0, y: 12 },
+          { opacity: 1, y: 0, duration: 0.65, stagger: 0.06 },
+          "-=.2"
         )
         .fromTo(
           ".hero-cinema-image",
           {
             opacity: isMobile ? 1 : 0,
-            scale: isMobile ? 1.01 : 1.035,
           },
           {
             opacity: 1,
             scale: 1,
-            duration: isMobile ? 0.3 : 1.2,
+            duration: isMobile ? 0.3 : 0.7,
           },
-          "-=1"
+          "-=.6"
         );
-
-      gsap.to(".hero-cinema-image", {
-        scale: isMobile ? 1.045 : 1.13,
-        yPercent: isMobile ? 1.5 : 4,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".hero-v5",
-          start: "top top",
-          end: "bottom top",
-          scrub: 1,
-        },
-      });
-
-      gsap.to(".hero-content", {
-        yPercent: isMobile ? -4 : -12,
-        opacity: isMobile ? 0.65 : 0.08,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".hero-v5",
-          start: "32% top",
-          end: "bottom top",
-          scrub: 0.85,
-        },
-      });
 
       gsap.utils.toArray<HTMLElement>(".reveal").forEach((element) => {
         gsap.fromTo(
           element,
-          { opacity: 0, y: isMobile ? 24 : 48 },
+          { opacity: 0, y: isMobile ? 10 : 16 },
           {
             opacity: 1,
             y: 0,
-            duration: 1.1,
-            ease: "power3.out",
+            duration: 0.65,
+            ease: "power2.out",
             scrollTrigger: {
               trigger: element,
               start: "top 86%",
@@ -95,13 +70,13 @@ export default function Home() {
 
       gsap.fromTo(
         ".led-reason-v11",
-        { opacity: 0, x: isMobile ? 24 : 48 },
+        { opacity: 0, y: 10 },
         {
           opacity: 1,
-          x: 0,
-          duration: 1.05,
-          stagger: 0.1,
-          ease: "power3.out",
+          y: 0,
+          duration: 0.55,
+          stagger: 0.07,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: ".led-reasons-list-v11",
             start: "top 82%",
@@ -112,13 +87,13 @@ export default function Home() {
 
       gsap.fromTo(
         ".delivery-step-v11",
-        { opacity: 0, x: isMobile ? 24 : 48 },
+        { opacity: 0, y: 10 },
         {
           opacity: 1,
-          x: 0,
-          duration: 1.05,
-          stagger: 0.1,
-          ease: "power3.out",
+          y: 0,
+          duration: 0.55,
+          stagger: 0.07,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: ".delivery-steps-v11",
             start: "top 82%",
@@ -127,32 +102,6 @@ export default function Home() {
         }
       );
 
-      gsap.fromTo(
-        ".system-visual-v6",
-        { scale: isMobile ? 0.985 : 0.965, yPercent: isMobile ? 2 : 5 },
-        {
-          scale: isMobile ? 1.01 : 1.025,
-          yPercent: isMobile ? -1.5 : -4,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".system-v6",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1,
-          },
-        }
-      );
-
-      gsap.to(".contact-mark", {
-        xPercent: isMobile ? -1.5 : -5,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".contact-v5",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1.4,
-        },
-      });
     }, root);
 
     return () => ctx.revert();
@@ -188,8 +137,9 @@ export default function Home() {
               Schlüsselfertige LED-Heimkinos. Mit Montage, Inbetriebnahme und
               Kalibrierung.
             </p>
-            <a className="text-link-v5" href="/produkte">
+            <a className="home-primary-action" href="/produkte">
               Modelle entdecken
+              <span aria-hidden="true">↗</span>
             </a>
           </div>
 
@@ -203,7 +153,6 @@ export default function Home() {
         data-animation-slot="cinema-n7-intro"
       >
         <div className="cinema-animation-copy-v10 reveal">
-          <p className="overline-v5">CINEMA N°7</p>
           <h2 id="cinema-animation-title">Modulare Fine-Pitch LED-Technologie.</h2>
         </div>
 
@@ -234,9 +183,9 @@ export default function Home() {
       >
         <div className="led-reasons-intro-v11 reveal">
           <h2 id="led-reasons-title">
-            Großes Kino
+            Heimkino.
             <br />
-            Ohne Projektion
+            <span className="home-heading-line">Ohne Kompromisse.</span>
           </h2>
           <p className="led-reasons-lede-v11">
             Fine-Pitch LED mit 1,25 mm Pixelabstand, sechs Bildgrößen und
@@ -267,7 +216,6 @@ export default function Home() {
 
       <section className="home-models-v11" aria-labelledby="home-models-title">
         <div className="home-models-copy-v11 reveal">
-          <p className="overline-v5">DIE BILDGRÖSSEN</p>
           <h2 id="home-models-title">
             Die passende Größe
             <br />
@@ -275,7 +223,7 @@ export default function Home() {
           </h2>
           <p>
             Modulare Bauweise im 16:9 Format. Jedes Modell kommt als schlüsselfertig
-            installiertes LED-Heimkino – inklusive Montage, Anreise und Kalibrierung.
+            installiertes LED-Heimkino – inklusive Montage, Einrichtung und Kalibrierung.
           </p>
 
           <div className="home-models-range-v11">
@@ -321,7 +269,7 @@ export default function Home() {
         </div>
 
         <div className="system-copy-v6 reveal">
-          <h2 id="system-title"><span>Brilliante Farben,</span><span>Perfekter Kontrast</span></h2>
+          <h2 id="system-title"><span>Brillante Farben,</span><span>perfekter Kontrast</span></h2>
           <p>
             Erleben Sie Farben in ihrer ganzen Pracht, tiefes Schwarz und die feinsten Details.
           </p>
@@ -337,11 +285,10 @@ export default function Home() {
         aria-labelledby="delivery-title"
       >
         <div className="delivery-proof-v11 reveal">
-          <p className="overline-v5">ERFAHRUNG &amp; UMSETZUNG</p>
           <h2 id="delivery-title">
-            Bis zum
+            Großes Kino.
             <br />
-            fertigen Bild.
+            Ganz privat.
           </h2>
           <div className="delivery-experience-v11">
             <strong>10+</strong>
@@ -377,7 +324,6 @@ export default function Home() {
           N°7
         </div>
         <div className="contact-copy reveal">
-          <p className="overline-v5">PRIVATE BERATUNG</p>
           <h2>Ihr LED-Heimkino.</h2>
           <div className="contact-links-v6">
             <a className="contact-action-v5" href="/produkte">
