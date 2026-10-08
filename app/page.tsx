@@ -274,6 +274,17 @@ export default function Home() {
             Fine-Pitch LED leuchtet selbst. Das verändert, wie sich ein großes Bild
             in einen privaten Raum integrieren lässt.
           </p>
+          <div className="led-pitch-v12" aria-label="Pixel Pitch 1,25 Millimeter">
+            <p className="overline-v5">EIN STANDARD. JEDE BILDGRÖSSE.</p>
+            <div className="led-pitch-value-v12">
+              <strong>1,25</strong>
+              <span>mm</span>
+            </div>
+            <p className="led-pitch-label-v12">
+              <strong>Pixel Pitch.</strong> Derselbe feine Pixelabstand – von der
+              kleinsten bis zur größten CINEMA-N°7-Bildwand.
+            </p>
+          </div>
         </div>
 
         <div className="led-reasons-detail-v11">
@@ -312,9 +323,9 @@ export default function Home() {
           </p>
 
           <div className="home-models-range-v11">
-            <p className="home-models-range-label-v11">VON 108 BIS 271 ZOLL</p>
-            <div className="home-models-range-values-v11" aria-label="Bildgrößen von 108 bis 271 Zoll">
-              <span>108<span className="inch-v11">″</span></span>
+            <p className="home-models-range-label-v11">VON 136 BIS 271 ZOLL</p>
+            <div className="home-models-range-values-v11" aria-label="Bildgrößen von 136 bis 271 Zoll">
+              <span>136<span className="inch-v11">″</span></span>
               <span className="range-dash-v11" aria-hidden="true">—</span>
               <span>271<span className="inch-v11">″</span></span>
             </div>
