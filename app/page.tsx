@@ -395,10 +395,9 @@ export default function Home() {
 
         <div className="delivery-process-v11">
           <p className="delivery-promise-v11 reveal">
-            Schlüsselfertig bedeutet bei CINEMA N°7: LED-Wand,
-            Controller, Unterkonstruktion, Montage, Inbetriebnahme,
-            Kalibrierung und die kalkulierte Standardanreise
-            sind im Komplettpreis bereits enthalten.
+            Schlüsselfertig heißt: LED-Wand, Controller,
+            Unterkonstruktion, Anfahrt, Montage, Inbetriebnahme
+            und Kalibrierung. Alles im Komplettpreis enthalten.
           </p>
           <div className="delivery-steps-v11">
             {delivery.map(([title, description]) => (
