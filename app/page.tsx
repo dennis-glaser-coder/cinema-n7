@@ -274,7 +274,7 @@ export default function Home() {
             für Ihren Raum.
           </h2>
           <p>
-            Sechs 16:9-Formate. Jedes Modell kommt als schlüsselfertig
+            Modulare Bauweise im 16:9 Format. Jedes Modell kommt als schlüsselfertig
             installiertes LED-Heimkino – inklusive Montage, Anreise und Kalibrierung.
           </p>
 
