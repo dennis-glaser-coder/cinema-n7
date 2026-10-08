@@ -8320,7 +8320,10 @@ body {
 
   .site-v5 .hero-cinema-media {
     object-fit: cover;
-    object-position: center;
+    inset: 0 0 auto auto;
+    width: 125%;
+    height: 125%;
+    object-position: right top;
     filter: saturate(.94) contrast(1.03) brightness(.96);
   }
 
