@@ -6849,7 +6849,7 @@ body {
     gap: 16px;
   }
 
-  .site-v5 .nav-v5 > nav:not(.mobile-nav-v9),
+  .site-v5 .nav-v5 > nav:not(.mobile-nav-v9):not(.cn7-global-mobile-menu),
   .site-v5 .nav-v5 .mobile-nav-v9 {
     display: none !important;
   }
