@@ -8529,3 +8529,18 @@ body {
 .cn7-inquiry-hp {position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;}
 @media(max-width:700px){.cn7-inquiry-form-grid {grid-template-columns:1fr;}}
 
+
+/* Keep both parts of the homepage comparison headline on exactly two lines. */
+.site-v5 .system-copy-v6 h2#system-title {
+  max-width: none;
+  font-size: clamp(29px, 3vw, 46px);
+}
+.site-v5 .system-copy-v6 h2#system-title span {
+  display: block;
+  white-space: nowrap;
+}
+@media (max-width: 820px) {
+  .site-v5 .system-copy-v6 h2#system-title {
+    font-size: clamp(27px, 7.2vw, 38px);
+  }
+}
