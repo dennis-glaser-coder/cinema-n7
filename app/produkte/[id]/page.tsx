@@ -84,9 +84,9 @@ export default async function ProductDetailPage({
             <span className="turnkey-price-net-v13">Endpreis inkl. MwSt.: {formatEuro(model.grossPriceEur)}</span>
           </div>
           <p className="turnkey-detail-summary-v13">
-            Alles für Ihr fertiges LED-Heimkino: LED-System, Steuerung,
-            Unterkonstruktion, Montage, Anfahrt, Inbetriebnahme und Kalibrierung.
-            Im Standardgebiet kommen keine separaten Montage- oder Reisekosten hinzu.
+            LED-Wand, Steuerung, Unterkonstruktion, Anfahrt,
+            Montage, Inbetriebnahme und Kalibrierung –
+            alles im ausgewiesenen Komplettpreis enthalten.
           </p>
 
           <a href="/anfrage" className="product-detail-cta">
@@ -175,15 +175,14 @@ export default async function ProductDetailPage({
           </article>
           <article>
             <strong>Anfahrt &amp; Übernachtung</strong>
-            <p>Reisezeit, Fahrtkosten und erforderliche Hotelnächte des Montageteams im Standardgebiet inklusive.</p>
+            <p>Anfahrt und erforderliche Übernachtungen unseres Montageteams sind enthalten.</p>
           </article>
         </div>
         <p className="turnkey-terms-v13 turnkey-detail-terms-v13">
-          Festpreis bei Standardinstallation auf geeigneter Montagefläche mit
-          vorhandener Strom- und Signalzuführung sowie Anfahrt bis 300 km und
-          3 Stunden je Richtung. Weitere Entfernungen, notwendige Elektro-
-          oder Bauarbeiten und Sondermontagen werden vor Beauftragung
-          gesondert vereinbart – keine nachträglichen Überraschungen.
+          Der Preis gilt bei geeigneter Montagefläche und vorhandener
+          Strom- und Signalzuführung, einschließlich Anfahrt bis 300 km
+          und 3 Stunden je Richtung. Besondere Bau- oder Elektroarbeiten
+          und weiter entfernte Montageorte stimmen wir vorab mit Ihnen ab.
         </p>
       </section>
 
