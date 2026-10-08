@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "LED-Heimkino für private Räume | CINEMA N°7",
+    title: "CINEMA N°7 | LED-Heimkinos",
     description:
       "Großformatige Fine-Pitch LED-Heimkinos für private Räume.",
     url: "/",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LED-Heimkino für private Räume | CINEMA N°7",
+    title: "CINEMA N°7 | LED-Heimkinos",
     description:
       "Großformatige Fine-Pitch LED-Heimkinos für private Räume.",
   },
