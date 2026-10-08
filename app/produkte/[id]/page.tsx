@@ -1,5 +1,6 @@
 import SiteHeader from "../../../components/site-header";
 import ProductSoundDetails from "../../../components/product-sound-details";
+import ProductUhdLabel from "../../../components/product-uhd-label";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
@@ -94,6 +95,7 @@ export default async function ProductDetailPage({
         <div className="product-detail-visual" aria-hidden="true">
           <div className="product-detail-screen">
             <div className="product-detail-screen-image" />
+            <ProductUhdLabel resolutionX={model.resolutionX} resolutionY={model.resolutionY} />
             <div
               className="product-detail-grid"
               style={{

@@ -2,6 +2,7 @@
 
 import SiteHeader from "../../components/site-header";
 import ProductSoundDetails from "../../components/product-sound-details";
+import ProductUhdLabel from "../../components/product-uhd-label";
 
 import { CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
@@ -79,6 +80,7 @@ export default function ProductsPage() {
 
               <div className="scale-wall">
                 <div className="scale-wall-image" />
+                <ProductUhdLabel resolutionX={selected.resolutionX} resolutionY={selected.resolutionY} />
                 <div
                   className="scale-wall-grid"
                   style={{
