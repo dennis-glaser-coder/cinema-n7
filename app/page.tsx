@@ -92,7 +92,7 @@ export default function Home() {
       });
 
       gsap.fromTo(
-        ".led-benefit-row",
+        ".led-reason-v11",
         { opacity: 0, x: isMobile ? 24 : 48 },
         {
           opacity: 1,
@@ -101,7 +101,7 @@ export default function Home() {
           stagger: 0.1,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: ".led-benefits-list",
+            trigger: ".led-reasons-list-v11",
             start: "top 82%",
             once: true,
           },
@@ -109,7 +109,7 @@ export default function Home() {
       );
 
       gsap.fromTo(
-        ".delivery-row",
+        ".delivery-step-v11",
         { opacity: 0, x: isMobile ? 24 : 48 },
         {
           opacity: 1,
@@ -118,7 +118,7 @@ export default function Home() {
           stagger: 0.1,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: ".delivery-list",
+            trigger: ".delivery-steps-v11",
             start: "top 82%",
             once: true,
           },
@@ -258,111 +258,125 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-models-v7" aria-labelledby="home-models-title">
-        <div className="home-models-head reveal">
-          <h2 id="home-models-title">
-            LED-Heimkinos in
+      <section
+        className="led-reasons-v11"
+        id="system"
+        aria-labelledby="led-reasons-title"
+      >
+        <div className="led-reasons-intro-v11 reveal">
+          <p className="overline-v5">WARUM LED</p>
+          <h2 id="led-reasons-title">
+            Großes Bild.
             <br />
-            verschiedenen Größen
+            Ohne Projektion.
           </h2>
-          <p>Wählen Sie die passende Bildgröße.</p>
+          <p className="led-reasons-lede-v11">
+            Fine-Pitch LED leuchtet selbst. Das verändert, wie sich ein großes Bild
+            in einen privaten Raum integrieren lässt.
+          </p>
         </div>
 
-        <a
-          className="home-models-stage reveal"
-          href="/produkte"
-          aria-label="LED-Heimkino Modelle entdecken"
-        >
-          <div className="home-models-room" aria-hidden="true">
-            <div className="home-models-ghost home-models-ghost-small" />
-            <div className="home-models-ghost home-models-ghost-large" />
-            <div className="home-models-person" />
-            <div className="home-models-wall">
-              <div className="home-models-wall-image" />
-              <div className="home-models-wall-grid">
-                {Array.from({ length: 36 }).map((_, index) => (
-                  <span key={index} />
-                ))}
-              </div>
-            </div>
+        <div className="led-reasons-detail-v11">
+          <div className="led-reasons-list-v11">
+            <article className="led-reason-v11">
+              <strong>Präsent, auch bei Tageslicht.</strong>
+              <p>Hohe Helligkeit und Kontrast, ohne den Raum vollständig abdunkeln zu müssen.</p>
+            </article>
+            <article className="led-reason-v11">
+              <strong>Kein Projektionsweg.</strong>
+              <p>Kein Beamer, keine Leinwand und kein Projektionsabstand im Raum.</p>
+            </article>
+            <article className="led-reason-v11">
+              <strong>Modular aufgebaut.</strong>
+              <p>Die Bildfläche entsteht aus einzelnen, gezielt wartbaren LED-Modulen.</p>
+            </article>
           </div>
-        </a>
-
-        <div className="home-models-footer reveal">
-          <a href="/produkte">Alle Modelle entdecken</a>
+          <div className="led-guide-links-v9 reveal">
+            <a href="/led-heimkino">LED-Heimkino verstehen</a>
+            <a href="/led-oder-beamer">LED oder Beamer?</a>
+          </div>
         </div>
       </section>
 
-      <section className="system-v6" id="system">
+      <section className="home-models-v11" aria-labelledby="home-models-title">
+        <div className="home-models-copy-v11 reveal">
+          <p className="overline-v5">DIE BILDGRÖSSEN</p>
+          <h2 id="home-models-title">
+            Die passende Größe
+            <br />
+            für Ihren Raum.
+          </h2>
+          <p>
+            Sieben 16:9-Formate. Der Größenvergleich zeigt die tatsächlichen
+            Abmessungen jeder LED-Bildfläche.
+          </p>
+        </div>
+
+        <div className="home-models-range-v11 reveal">
+          <p className="home-models-range-label-v11">VON 108 BIS 271 ZOLL</p>
+          <div className="home-models-range-values-v11" aria-label="Bildgrößen von 108 bis 271 Zoll">
+            <span>108<span className="inch-v11">″</span></span>
+            <span className="range-dash-v11" aria-hidden="true">—</span>
+            <span>271<span className="inch-v11">″</span></span>
+          </div>
+          <a href="/produkte" className="home-models-range-link-v11">
+            Bildgrößen vergleichen
+          </a>
+        </div>
+      </section>
+
+      <section className="system-v6" aria-labelledby="system-title">
         <div className="system-visual-v6 reveal" aria-hidden="true">
           <div className="system-screen-v6" />
         </div>
 
         <div className="system-copy-v6 reveal">
-          <p className="overline-v5">DAS BILD</p>
-          <h2>LED statt Projektion.</h2>
+          <p className="overline-v5">DAS BILD IM RAUM</p>
+          <h2 id="system-title">LED statt Projektion.</h2>
+          <p>
+            Großformatige Bildwirkung, direkt aus der LED-Fläche. Ohne
+            Projektionsweg, geplant für die Architektur Ihres Raums.
+          </p>
           <a href="/produkte" className="text-link-v5">
             Modelle ansehen
           </a>
         </div>
       </section>
 
-      <section className="led-benefits-v8" aria-labelledby="led-benefits-title">
-        <div className="led-benefits-head reveal">
-          <p className="overline-v5">WARUM LED</p>
-          <h2 id="led-benefits-title">Was LED im Raum besser macht.</h2>
-
-          <div className="led-experience-v8">
+      <section
+        className="delivery-v11"
+        id="delivery"
+        aria-labelledby="delivery-title"
+      >
+        <div className="delivery-proof-v11 reveal">
+          <p className="overline-v5">ERFAHRUNG &amp; UMSETZUNG</p>
+          <h2 id="delivery-title">
+            Bis zum
+            <br />
+            fertigen Bild.
+          </h2>
+          <div className="delivery-experience-v11">
             <strong>10+</strong>
-            <span>Jahre LED-Erfahrung</span>
-            <a href="/ueber-uns">Über uns</a>
+            <div>
+              <span>Jahre LED-Erfahrung</span>
+              <a href="/ueber-uns">Mehr über uns</a>
+            </div>
           </div>
         </div>
 
-        <div className="led-benefits-list">
-          <article className="led-benefit-row">
-            <strong>Starkes Bild – auch bei vollem Raumlicht.</strong>
-            <p>Hohe Helligkeit und hoher Kontrast auch in hellen Räumen.</p>
-          </article>
-
-          <article className="led-benefit-row">
-            <strong>Keine Projektion.</strong>
-            <p>Kein Beamer, keine Leinwand, kein Projektionsweg durch den Raum.</p>
-          </article>
-
-          <article className="led-benefit-row">
-            <strong>Große Bildflächen ohne Projektionsabstand.</strong>
-            <p>Kein zusätzlicher Raum für einen Projektionsweg erforderlich.</p>
-          </article>
-
-          <article className="led-benefit-row">
-            <strong>Modular aufgebaut.</strong>
-            <p>Einzelne Module lassen sich gezielt warten.</p>
-          </article>
-
-          <div className="led-guide-links-v9">
-            <a href="/led-heimkino">Mehr zu LED-Heimkino</a>
-            <a href="/led-oder-beamer">LED oder Beamer?</a>
-          </div>
-        </div>
-      </section>
-
-      <section className="delivery-v5 delivery-v7" id="delivery">
-        <div className="section-head-v5 reveal">
-          <p className="overline-v5">WAS WIR LIEFERN</p>
-          <h2>Bis zum fertigen Bild.</h2>
-          <p className="delivery-trust-v7">
-            Ein Ansprechpartner begleitet Ihr Projekt – von der Planung bis zur Kalibrierung.
+        <div className="delivery-process-v11">
+          <p className="delivery-promise-v11 reveal">
+            Ein Ansprechpartner begleitet Ihr Projekt – von der Auswahl der
+            Bildgröße bis zur Installation und Kalibrierung.
           </p>
-        </div>
-
-        <div className="delivery-list">
-          {delivery.map(([title, description]) => (
-            <article className="delivery-row" key={title}>
-              <strong>{title}</strong>
-              <p>{description}</p>
-            </article>
-          ))}
+          <div className="delivery-steps-v11">
+            {delivery.map(([title, description]) => (
+              <article className="delivery-step-v11" key={title}>
+                <strong>{title}</strong>
+                <p>{description}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
