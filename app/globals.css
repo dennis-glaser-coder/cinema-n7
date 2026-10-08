@@ -7387,15 +7387,16 @@ body {
 
   .site-v5 .cinema-animation-stage-v10 {
     width: min(100%, 1280px);
-    height: clamp(360px, calc(100svh - 300px), 640px);
+    height: auto;
     min-height: 0;
-    aspect-ratio: auto;
+    max-height: none;
+    aspect-ratio: 16 / 9;
     margin-left: auto;
     margin-right: auto;
   }
 
   .site-v5 .cinema-animation-video-v10 {
-    object-fit: cover;
+    object-fit: contain;
     object-position: center center;
   }
 }
@@ -7418,7 +7419,7 @@ body {
   pointer-events: none;
   background:
     linear-gradient(90deg, #030303 0%, rgba(3,3,3,.78) 4%, rgba(3,3,3,.32) 9%, rgba(3,3,3,.08) 14%, transparent 19%, transparent 81%, rgba(3,3,3,.08) 86%, rgba(3,3,3,.32) 91%, rgba(3,3,3,.78) 96%, #030303 100%),
-    linear-gradient(180deg, #030303 0%, rgba(3,3,3,.7) 5%, rgba(3,3,3,.2) 12%, transparent 21%, transparent 72%, rgba(3,3,3,.12) 80%, rgba(3,3,3,.5) 88%, rgba(3,3,3,.92) 96%, #030303 100%);
+    linear-gradient(180deg, #030303 0%, rgba(3,3,3,.45) 2%, rgba(3,3,3,.12) 5%, transparent 9%, transparent 72%, rgba(3,3,3,.12) 80%, rgba(3,3,3,.5) 88%, rgba(3,3,3,.92) 96%, #030303 100%);
 }
 
 /* Mobile animation: fill a compact frame without letterbox edges */
