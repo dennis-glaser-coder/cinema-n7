@@ -143,9 +143,8 @@ export default function ProductsPage() {
               <p className="turnkey-price-net-v13">Endpreis inkl. MwSt.: {formatEuro(selected.grossPriceEur)}</p>
             </div>
             <p className="turnkey-included-short-v13">
-              Inklusive LED-System, Controller, Unterkonstruktion, Montage,
-              Anfahrt, Inbetriebnahme und Kalibrierung. Keine zusätzlichen
-              Montage- oder Reisekosten im Standardgebiet.
+              LED-System, Controller, Unterkonstruktion, Anfahrt,
+              Montage, Inbetriebnahme und Kalibrierung – alles im Preis enthalten.
             </p>
 
             <div className="selected-note-v2">
@@ -176,14 +175,13 @@ export default function ProductsPage() {
             <article><strong>LED-System &amp; Steuerung</strong><p>P1.25 LED-Wand, passender NovaStar-Controller und Unterkonstruktion.</p></article>
             <article><strong>Montage vor Ort</strong><p>Fachgerechter Aufbau, Ausrichtung und Verbindung der LED-Wand.</p></article>
             <article><strong>Inbetriebnahme &amp; Kalibrierung</strong><p>Systemkonfiguration, Funktionstest und präzise Bildabstimmung.</p></article>
-            <article><strong>Anfahrt &amp; Übernachtung</strong><p>Techniker-Reisezeit, Fahrtkosten und erforderliche Hotelnächte im Standardgebiet sind bereits eingerechnet.</p></article>
+            <article><strong>Anfahrt &amp; Übernachtung</strong><p>Auch die Anfahrt und erforderliche Übernachtungen unseres Montageteams sind enthalten.</p></article>
           </div>
           <p className="turnkey-terms-v13">
-            Der angezeigte Komplettpreis gilt für eine Standardinstallation an
-            geeigneter Montagefläche mit vorhandener Strom- und Signalzuführung
-            sowie Anfahrt bis 300 km und 3 Stunden je Richtung.
-            Darüber hinausgehende Entfernungen, Elektro- oder Bauarbeiten
-            und Sondermontagen werden vor Beauftragung separat vereinbart.
+            Die Preise gelten bei geeigneter Montagefläche und vorhandener
+            Strom- und Signalzuführung, einschließlich Anfahrt bis 300 km
+            und 3 Stunden je Richtung. Besondere Bau- und Elektroarbeiten
+            sowie weiter entfernte Montageorte stimmen wir vorab mit Ihnen ab.
           </p>
         </div>
       </section>
