@@ -2,13 +2,13 @@
 
 import { CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
-import { cinemaModels, formatEuro, formatMeters } from "../../lib/cinema-products";
+import { cabinet, cinemaModels, formatEuro, formatMeters } from "../../lib/cinema-products";
 
 const PERSON_HEIGHT_M = 1.75;
 const MAX_WALL_WIDTH_M = cinemaModels[cinemaModels.length - 1].widthM;
 
 export default function ProductsPage() {
-  const defaultModel = cinemaModels[2];
+  const defaultModel = cinemaModels[3];
   const [selectedId, setSelectedId] = useState(defaultModel.id);
   const detailRef = useRef<HTMLDivElement | null>(null);
 
@@ -52,6 +52,11 @@ export default function ProductsPage() {
         <div>
           <p className="overline-v5">MODELLE</p>
           <h1>Ihre Bildgröße.</h1>
+          <div className="models-pitch-v12">
+            <span>Gleicher Pixel Pitch bei jeder Größe</span>
+            <strong>{cabinet.pixelPitchMm.toLocaleString("de-DE")} <small>mm</small></strong>
+            <span>Fine-Pitch LED</span>
+          </div>
         </div>
         <p>
           Wählen Sie die Bildgröße für Ihren Raum. Die exakten Maße der
@@ -124,6 +129,11 @@ export default function ProductsPage() {
                 <span>Höhe</span>
                 <strong>{formatMeters(selected.heightM)} m</strong>
               </div>
+            </div>
+
+            <div className="selected-pitch-v12">
+              <span>PIXEL PITCH</span>
+              <strong>{cabinet.pixelPitchMm.toLocaleString("de-DE")} mm</strong>
             </div>
 
             <div className="selected-price-v2">
