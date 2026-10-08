@@ -322,10 +322,9 @@ export default function Home() {
 
         <div className="system-copy-v6 reveal">
           <p className="overline-v5">DAS BILD IM RAUM</p>
-          <h2 id="system-title">Kontrast. Farbe. Präzision.</h2>
+          <h2 id="system-title">Brilliante Farben, Perfekter Kontrast</h2>
           <p>
-            Kräftige Farben, tiefe Schwarztöne und beeindruckender Kontrast.
-            Bewegen Sie den Regler und entdecken Sie den Unterschied.
+            Erleben Sie Farben in ihrer ganzen Pracht, tiefes Schwarz und die feinsten Details.
           </p>
           <a href="/led-oder-beamer" className="text-link-v5">
             LED und Beamer vergleichen
