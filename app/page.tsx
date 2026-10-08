@@ -233,27 +233,15 @@ export default function Home() {
         aria-labelledby="led-reasons-title"
       >
         <div className="led-reasons-intro-v11 reveal">
-          <p className="overline-v5">WARUM CINEMA N°7</p>
           <h2 id="led-reasons-title">
-            Großes Bild.
+            Großes Kino
             <br />
-            Ohne Projektion.
+            Ohne Projektion
           </h2>
           <p className="led-reasons-lede-v11">
             Fine-Pitch LED mit 1,25 mm Pixelabstand, sechs Bildgrößen und
             persönlicher Begleitung bis zum fertigen Heimkino.
           </p>
-          <div className="led-pitch-v12" aria-label="Pixel Pitch 1,25 Millimeter">
-            <p className="overline-v5">EIN STANDARD. JEDE BILDGRÖSSE.</p>
-            <div className="led-pitch-value-v12">
-              <strong>1,25</strong>
-              <span>mm</span>
-            </div>
-            <p className="led-pitch-label-v12">
-              <strong>Pixel Pitch.</strong> Derselbe feine Pixelabstand – von der
-              kleinsten bis zur größten CINEMA-N°7-Bildwand.
-            </p>
-          </div>
           <a href="/warum-cinema-n7" className="text-link-v5">
             Warum CINEMA N°7?
           </a>
