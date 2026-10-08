@@ -7331,3 +7331,16 @@ body {
     letter-spacing: .12em;
   }
 }
+
+
+/* Homepage animation video */
+.site-v5 .cinema-animation-video-v10 {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  background: #020202;
+}
