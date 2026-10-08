@@ -75,7 +75,7 @@ export default function LedHomeCinemaPage() {
       <section className="seo-choice">
         <div>
           <p className="overline-v5">MODELLE</p>
-          <h2>108 bis 271 Zoll.</h2>
+          <h2>136 bis 271 Zoll.</h2>
         </div>
         <div className="seo-choice-actions">
           <a href="/produkte">Modelle ansehen</a>
