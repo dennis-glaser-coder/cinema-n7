@@ -7348,8 +7348,17 @@ body {
 
 /* Desktop animation framing */
 @media (min-width: 821px) {
+  .site-v5 .cinema-animation-v10 {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .site-v5 .cinema-animation-copy-v10 {
+    margin-bottom: 36px;
+  }
+
   .site-v5 .cinema-animation-stage-v10 {
-    width: min(100%, 1280px);
+    width: min(100%, 1100px, max(440px, calc((100svh - 320px) * 16 / 9)));
     min-height: 0;
     aspect-ratio: 16 / 9;
     margin-left: auto;

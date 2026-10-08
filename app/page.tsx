@@ -134,8 +134,7 @@ export default function Home() {
               LED-Heimkinos
             </h1>
             <p className="hero-sub">
-              Schlüsselfertige LED-Heimkinos. Mit Montage, Inbetriebnahme und
-              Kalibrierung.
+              Filme, Konzerte und Sport auf großer Bildfläche. Bei Ihnen zu Hause.
             </p>
             <a className="text-link-v5" href="/produkte">
               Modelle entdecken
