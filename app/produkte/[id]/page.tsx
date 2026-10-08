@@ -1,3 +1,4 @@
+import SiteHeader from "../../../components/site-header";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
@@ -56,14 +57,7 @@ export default async function ProductDetailPage({
 
   return (
     <main className="product-detail-page">
-      <header className="models-nav product-detail-nav">
-        <a href="/" className="brand-v5">
-          CINEMA N°7
-        </a>
-        <a href="/produkte" className="models-back">
-          Modelle
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="product-detail-hero">
         <div className="product-detail-copy">
