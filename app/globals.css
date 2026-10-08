@@ -7363,6 +7363,13 @@ body {
 }
 
 
+/* No visible box outline around the animation */
+.site-v5 .cinema-animation-stage-v10 {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
 /* Homepage animation vignette: soft fade to full black at the edges */
 .site-v5 .cinema-animation-stage-v10::after {
   content: "";
