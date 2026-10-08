@@ -319,8 +319,9 @@ export default function Home() {
             </div>
             <div className="home-models-price-v13">
               <span>Schlüsselfertig ab</span>
-              <strong>{formatEuro(cinemaModels[0].grossPriceEur)}</strong>
-              <small>inkl. 19 % MwSt. · Montage, Anfahrt und Kalibrierung inklusive</small>
+              <strong>{formatEuro(cinemaModels[0].netPriceEur)}</strong>
+              <small>netto zzgl. 19 % MwSt. · Endpreis inkl. MwSt.: {formatEuro(cinemaModels[0].grossPriceEur)}</small>
+              <small>Montage, Anfahrt und Kalibrierung im Komplettpreis enthalten</small>
             </div>
             <a href="/produkte" className="home-models-range-link-v11">
               Alle Komplettpreise ansehen
