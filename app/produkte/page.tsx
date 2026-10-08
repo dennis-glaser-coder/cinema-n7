@@ -53,7 +53,7 @@ export default function ProductsPage() {
           <p className="overline-v5">MODELLE</p>
           <h1>Ihre Bildgröße.</h1>
           <div className="models-pitch-v12">
-            <span>Gleicher Pixel Pitch bei jeder Größe</span>
+            
             <strong>{cabinet.pixelPitchMm.toLocaleString("de-DE")} <small>mm</small></strong>
             <span>Fine-Pitch LED</span>
           </div>
