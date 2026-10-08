@@ -8,7 +8,7 @@ const PERSON_HEIGHT_M = 1.75;
 const MAX_WALL_WIDTH_M = cinemaModels[cinemaModels.length - 1].widthM;
 
 export default function ProductsPage() {
-  const defaultModel = cinemaModels[3];
+  const defaultModel = cinemaModels[0];
   const [selectedId, setSelectedId] = useState(defaultModel.id);
   const detailRef = useRef<HTMLDivElement | null>(null);
 
@@ -59,8 +59,8 @@ export default function ProductsPage() {
           </div>
         </div>
         <p>
-          Wählen Sie die Bildgröße für Ihren Raum. Die exakten Maße der
-          16:9-Bildfläche werden direkt angezeigt.
+          Sechs Größen von 136 bis 271 Zoll. Jeder Preis ist ein
+          schlüsselfertiger Komplettpreis – inklusive Aufbau, Anreise und Kalibrierung.
         </p>
       </section>
 
@@ -137,9 +137,16 @@ export default function ProductsPage() {
             </div>
 
             <div className="selected-price-v2">
-              <strong>{formatEuro(selected.panelCostEur)}</strong>
-              <p>zzgl. MwSt.</p>
+              <p className="turnkey-price-eyebrow-v13">SCHLÜSSELFERTIGER KOMPLETTPREIS</p>
+              <strong>{formatEuro(selected.grossPriceEur)}</strong>
+              <p className="turnkey-price-vat-v13">inkl. 19 % MwSt.</p>
+              <p className="turnkey-price-net-v13">{formatEuro(selected.netPriceEur)} netto</p>
             </div>
+            <p className="turnkey-included-short-v13">
+              Inklusive LED-System, Controller, Unterkonstruktion, Montage,
+              Anfahrt, Inbetriebnahme und Kalibrierung. Keine zusätzlichen
+              Montage- oder Reisekosten im Standardgebiet.
+            </p>
 
             <div className="selected-note-v2">
               <span>Technische Konfiguration</span>
@@ -152,6 +159,32 @@ export default function ProductsPage() {
               Produkt ansehen
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="turnkey-scope-v13" aria-labelledby="turnkey-scope-heading">
+        <div className="turnkey-scope-heading-v13">
+          <p className="overline-v5">IM PREIS ENTHALTEN</p>
+          <h2 id="turnkey-scope-heading">Schlüsselfertig. Bis zum fertigen Bild.</h2>
+          <p>
+            Sie wählen die Größe. Wir liefern ein vollständig aufgebautes,
+            angeschlossenes und kalibriertes LED-Heimkino – nicht nur einzelne Panels.
+          </p>
+        </div>
+        <div className="turnkey-scope-right-v13">
+          <div className="turnkey-scope-list-v13">
+            <article><strong>LED-System &amp; Steuerung</strong><p>P1.25 LED-Wand, passender NovaStar-Controller und Unterkonstruktion.</p></article>
+            <article><strong>Montage vor Ort</strong><p>Fachgerechter Aufbau, Ausrichtung und Verbindung der LED-Wand.</p></article>
+            <article><strong>Inbetriebnahme &amp; Kalibrierung</strong><p>Systemkonfiguration, Funktionstest und präzise Bildabstimmung.</p></article>
+            <article><strong>Anfahrt &amp; Übernachtung</strong><p>Techniker-Reisezeit, Fahrtkosten und erforderliche Hotelnächte im Standardgebiet sind bereits eingerechnet.</p></article>
+          </div>
+          <p className="turnkey-terms-v13">
+            Der angezeigte Komplettpreis gilt für eine Standardinstallation an
+            geeigneter Montagefläche mit vorhandener Strom- und Signalzuführung
+            sowie Anfahrt bis 300 km und 3 Stunden je Richtung.
+            Darüber hinausgehende Entfernungen, Elektro- oder Bauarbeiten
+            und Sondermontagen werden vor Beauftragung separat vereinbart.
+          </p>
         </div>
       </section>
 
