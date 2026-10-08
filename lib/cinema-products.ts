@@ -6,7 +6,16 @@ export const cabinet = {
   pixelsY: 270,
 } as const;
 
-export const PANEL_PRICE_EUR = 650;
+// Freigegebene Netto-Komplettpreise; keine reinen Cabinet-Preise.
+export const VAT_RATE = 0.19;
+const publishedNetPricesByCabinetCount: Record<number, number> = {
+  5: 26900,
+  6: 41400,
+  7: 52300,
+  8: 63900,
+  9: 77600,
+  10: 92400,
+};
 
 const cabinetCounts = [5, 6, 7, 8, 9, 10];
 
@@ -27,7 +36,8 @@ export const cinemaModels = cabinetCounts.map((count) => {
     cabinetsHigh: count,
     resolutionX: count * cabinet.pixelsX,
     resolutionY: count * cabinet.pixelsY,
-    panelCostEur: count * count * PANEL_PRICE_EUR,
+    netPriceEur: publishedNetPricesByCabinetCount[count],
+    grossPriceEur: Math.round(publishedNetPricesByCabinetCount[count] * (1 + VAT_RATE)),
   };
 });
 
