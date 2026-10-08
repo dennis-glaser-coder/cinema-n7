@@ -170,17 +170,7 @@ export default async function ProductDetailPage({
             <strong>Kalibrierung</strong>
             <p>Bildabstimmung, Funktionstest und Übergabe des betriebsbereiten Systems.</p>
           </article>
-          <article>
-            <strong>Anfahrt &amp; Übernachtung</strong>
-            <p>Anfahrt und erforderliche Übernachtungen unseres Montageteams sind enthalten.</p>
-          </article>
         </div>
-        <p className="turnkey-terms-v13 turnkey-detail-terms-v13">
-          Der Preis gilt bei geeigneter Montagefläche und vorhandener
-          Strom- und Signalzuführung, einschließlich Anfahrt bis 300 km
-          und 3 Stunden je Richtung. Besondere Bau- oder Elektroarbeiten
-          und weiter entfernte Montageorte stimmen wir vorab mit Ihnen ab.
-        </p>
       </section>
 
       <section className="product-detail-related" aria-labelledby="related-models-title">

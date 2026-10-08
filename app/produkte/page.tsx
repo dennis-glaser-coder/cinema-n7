@@ -178,14 +178,7 @@ export default function ProductsPage() {
             <article><strong>LED-System &amp; Steuerung</strong><p>P1.25 LED-Wand, passender NovaStar-Controller und Unterkonstruktion.</p></article>
             <article><strong>Montage vor Ort</strong><p>Fachgerechter Aufbau, Ausrichtung und Verbindung der LED-Wand.</p></article>
             <article><strong>Inbetriebnahme &amp; Kalibrierung</strong><p>Systemkonfiguration, Funktionstest und präzise Bildabstimmung.</p></article>
-            <article><strong>Anfahrt &amp; Übernachtung</strong><p>Auch die Anfahrt und erforderliche Übernachtungen unseres Montageteams sind enthalten.</p></article>
           </div>
-          <p className="turnkey-terms-v13">
-            Die Preise gelten bei geeigneter Montagefläche und vorhandener
-            Strom- und Signalzuführung, einschließlich Anfahrt bis 300 km
-            und 3 Stunden je Richtung. Besondere Bau- und Elektroarbeiten
-            sowie weiter entfernte Montageorte stimmen wir vorab mit Ihnen ab.
-          </p>
         </div>
       </section>
 
