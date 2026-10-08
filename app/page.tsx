@@ -352,7 +352,7 @@ export default function Home() {
 
         <div className="system-copy-v6 reveal">
           <p className="overline-v5">DAS BILD IM RAUM</p>
-          <h2 id="system-title">LED statt Projektion.</h2>
+          <h2 id="system-title">LED statt Beamer.</h2>
           <p>
             Großformatige Bildwirkung, direkt aus der LED-Fläche. Ohne
             Projektionsweg, geplant für die Architektur Ihres Raums.
