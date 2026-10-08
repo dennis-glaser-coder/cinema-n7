@@ -79,9 +79,9 @@ export default async function ProductDetailPage({
 
           <div className="product-detail-price">
             <span className="turnkey-price-eyebrow-v13">SCHLÜSSELFERTIGER KOMPLETTPREIS</span>
-            <strong>{formatEuro(model.grossPriceEur)}</strong>
-            <span className="turnkey-price-vat-v13">inkl. 19 % MwSt.</span>
-            <span className="turnkey-price-net-v13">{formatEuro(model.netPriceEur)} netto</span>
+            <strong>{formatEuro(model.netPriceEur)}</strong>
+            <span className="turnkey-price-vat-v13">netto zzgl. 19 % MwSt.</span>
+            <span className="turnkey-price-net-v13">Endpreis inkl. MwSt.: {formatEuro(model.grossPriceEur)}</span>
           </div>
           <p className="turnkey-detail-summary-v13">
             Alles für Ihr fertiges LED-Heimkino: LED-System, Steuerung,
