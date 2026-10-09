@@ -8691,16 +8691,21 @@ body {
 .cn7-inquiry-form h2 {color:rgba(255,255,255,.94);font:400 clamp(28px,2.8vw,40px)/1.2 Georgia,"Times New Roman",serif;letter-spacing:-.035em;margin:0;}
 .cn7-inquiry-form-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;}
 .cn7-inquiry-form label:not(.cn7-inquiry-privacy) {display:flex;flex-direction:column;gap:9px;color:rgba(255,255,255,.82);font-size:12px;}
-.cn7-inquiry-form input:not([type=checkbox]),.cn7-inquiry-form textarea {
+.cn7-inquiry-form input:not([type=checkbox]),.cn7-inquiry-form textarea,.cn7-inquiry-form select {
   font:inherit;font-size:14px;letter-spacing:0;line-height:1.4;color:#fff;
   background:rgba(255,255,255,.035);padding:14px;
   border:1px solid rgba(255,255,255,.2);border-radius:0;
   width:100%;box-sizing:border-box;
 }
-.cn7-inquiry-form input:focus-visible,.cn7-inquiry-form textarea:focus-visible {outline:2px solid rgba(194,163,126,.9);outline-offset:2px;}
+.cn7-inquiry-form input:focus-visible,.cn7-inquiry-form textarea:focus-visible,.cn7-inquiry-form select:focus-visible {outline:2px solid rgba(194,163,126,.9);outline-offset:2px;}
+.cn7-inquiry-form select {color-scheme:dark;}
+.cn7-inquiry-form-intro {margin:0;color:var(--muted);font-size:13px;line-height:1.65;}
+.cn7-field-optional {display:inline;color:var(--muted);font-size:11px;}
+.cn7-inquiry-form .cn7-inquiry-privacy input {flex:0 0 auto;margin-top:3px;}
+.cn7-inquiry-success a,.cn7-inquiry-error a {color:inherit;text-decoration:underline;}
 .cn7-inquiry-form .cn7-inquiry-privacy {display:flex;gap:11px;align-items:flex-start;font-size:12px;line-height:1.55;color:rgba(255,255,255,.72);}
 .cn7-inquiry-privacy a {color:#e4cab0;text-decoration:underline;}
-.cn7-inquiry-form button[type=submit] {min-height:51px;padding:13px 24px;border:1px solid rgba(194,163,126,.65);color:#faf6ed;background:rgba(194,163,126,.09);font:500 11px/1.2 inherit;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;}
+.cn7-inquiry-form button[type=submit] {min-height:51px;padding:16px 0;border:0;border-top:1px solid rgba(194,163,126,.65);border-bottom:1px solid rgba(194,163,126,.65);color:#faf6ed;background:transparent;font-family:inherit;font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;}
 .cn7-inquiry-form button[disabled] {opacity:.6;cursor:wait;}
 .cn7-inquiry-success {color:#c8dfcc;font-size:13px;}
 .cn7-inquiry-error {color:#edb5ac;font-size:13px;}

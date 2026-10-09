@@ -66,17 +66,7 @@ export default async function InquiryPage({
               <a href="/produkte">Andere Bildgröße wählen</a>
             </div>
           )}
-          {formEnabled ? (
-            <InquiryForm model={model} />
-          ) : (
-            <div className="cn7-inquiry-compose">
-              <p>Sie haben bereits eine Bildgröße im Blick? Wir helfen Ihnen bei allen nächsten Schritten.</p>
-              <a href={mailHref} className="cn7-inquiry-quick-link">
-                {selected ? `Anfrage für ${selected.diagonalInches} Zoll per E-Mail` : "E-Mail-Anfrage vorbereiten"} ↗
-              </a>
-              <p className="cn7-inquiry-hint">Öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht.</p>
-            </div>
-          )}
+          <InquiryForm model={model} directDelivery={formEnabled} />
 
           <div className="inquiry-contact">
             <p>Ihr Ansprechpartner</p>

@@ -15,13 +15,19 @@ export async function POST(request: Request) {
 
   const origin = request.headers.get("origin");
   const host = request.headers.get("host");
-  if (origin && host && new URL(origin).host !== host) {
-    return NextResponse.json({ error: "Ungültige Anfrage." }, { status: 403 });
+  try {
+    if (origin && host && new URL(origin).host !== host) {
+      return NextResponse.json({ error: "Ungültige Anfrage." }, { status: 403 });
+    }
+  } catch {
+    return NextResponse.json({ error: "Ungültige Anfrage." }, { status: 400 });
   }
 
   let payload: Record<string, unknown>;
   try {
-    payload = (await request.json()) as Record<string, unknown>;
+    const data: unknown = await request.json();
+    if (!data || typeof data !== "object" || Array.isArray(data)) throw new Error("Invalid payload");
+    payload = data as Record<string, unknown>;
   } catch {
     return NextResponse.json({ error: "Ungültige Anfrage." }, { status: 400 });
   }
@@ -34,14 +40,17 @@ export async function POST(request: Request) {
   const email = text(payload.email, 200);
   const message = text(payload.message, 4000);
   const model = text(payload.model, 8);
+  const phone = text(payload.phone, 60);
+  const intent = text(payload.intent, 30) || "beratung";
   const privacy = payload.privacy === "yes";
   const validModel = /^(136|163|190|217|244|271)$/.test(model);
 
-  if (name.length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || message.length < 8 || !privacy) {
+  if (name.length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !privacy || !["beratung", "showroom"].includes(intent)) {
     return NextResponse.json({ error: "Bitte prüfen Sie Ihre Angaben." }, { status: 400 });
   }
-  const subject = validModel ? `CINEMA N°7 Anfrage – ${model} Zoll` : "CINEMA N°7 Projektanfrage";
-  const body = [`Name: ${name}`, `E-Mail: ${email}`, validModel ? `Modell: ${model} Zoll` : "Modell: offen", "", message].join("\n");
+  const topic = intent === "showroom" ? "Vorführung im Showroom" : "Persönliche Beratung";
+  const subject = `CINEMA N°7 – ${topic}${validModel ? ` – ${model} Zoll` : ""}`;
+  const body = [`Anliegen: ${topic}`, `Name: ${name}`, `E-Mail: ${email}`, `Telefon: ${phone || "nicht angegeben"}`, validModel ? `Modell: ${model} Zoll` : "Modell: offen", "", message || "Keine weitere Nachricht angegeben."].join("\n");
 
   try {
     const response = await fetch("https://api.resend.com/emails", {
@@ -58,6 +67,7 @@ export async function POST(request: Request) {
         text: body,
       }),
       cache: "no-store",
+      signal: AbortSignal.timeout(15000),
     });
     if (!response.ok) {
       return NextResponse.json({ error: "Übermittlung fehlgeschlagen." }, { status: 502 });
