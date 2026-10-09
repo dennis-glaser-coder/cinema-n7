@@ -56,8 +56,7 @@ export default function ProductsPage() {
           </div>
         </div>
         <p>
-          Sechs Größen von 136 bis 271 Zoll. Jeder Preis ist ein
-          schlüsselfertiger Komplettpreis – inklusive Aufbau, Anreise und Kalibrierung.
+          Ihr Heimkino. In der passenden Dimension.
         </p>
       </section>
 
