@@ -8406,6 +8406,16 @@ body {
   background: #050505;
 }
 .cn7-global-header .cn7-global-logo { white-space: nowrap; text-decoration: none; }
+.cn7-wordmark {
+  display: block;
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+}
+.cn7-footer-brand .cn7-wordmark { width: 210px; }
+@media (max-width: 480px) {
+  .cn7-global-header .cn7-wordmark { width: 160px; }
+}
 .cn7-global-header .cn7-global-links {
   display: flex;
   justify-content: center;

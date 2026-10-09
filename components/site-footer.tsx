@@ -1,9 +1,13 @@
+import Image from "next/image";
+
 export default function SiteFooter() {
   return (
     <footer className="footer-v5 cn7-global-footer">
       <div className="cn7-footer-brand">
-        <a href="/" aria-label="CINEMA N°7 – Startseite">CINEMA N°7</a>
-        <span>Exklusive LED-Heimkinos · Deutschland &amp; Europa</span>
+        <a href="/" aria-label="CINEMA N°7 – Startseite">
+          <Image src="/cinema-n7-logo.svg" alt="CINEMA N°7" width={1268} height={136} className="cn7-wordmark" />
+        </a>
+        <span>Exklusive LED-Heimkinos</span>
       </div>
       <nav aria-label="Footernavigation" className="cn7-footer-links">
         <a href="/produkte">Modelle &amp; Preise</a>
