@@ -8699,6 +8699,7 @@ body {
 }
 .cn7-inquiry-form input:focus-visible,.cn7-inquiry-form textarea:focus-visible,.cn7-inquiry-form select:focus-visible {outline:2px solid rgba(194,163,126,.9);outline-offset:2px;}
 .cn7-inquiry-form select {color-scheme:dark;}
+.cn7-inquiry-form select option {background:#111;color:#fff;}
 .cn7-inquiry-form-intro {margin:0;color:var(--muted);font-size:13px;line-height:1.65;}
 .cn7-field-optional {display:inline;color:var(--muted);font-size:11px;}
 .cn7-inquiry-form .cn7-inquiry-privacy input {flex:0 0 auto;margin-top:3px;}
