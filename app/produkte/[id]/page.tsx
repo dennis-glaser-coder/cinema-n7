@@ -26,10 +26,10 @@ export async function generateMetadata({
     return {};
   }
 
-  const title = `${model.diagonalInches} Zoll LED-Heimkino – schlüsselfertig`;
-  const description = `${model.diagonalInches} Zoll LED-Heimkino mit ${formatMeters(
+  const title = `${model.diagonalInches} Zoll LED-Wand fürs Heimkino`;
+  const description = `${model.diagonalInches} Zoll LED-Wand fürs Heimkino mit ${formatMeters(
     model.widthM
-  )} × ${formatMeters(model.heightM)} m Bildfläche, 1,25 mm Pixel Pitch und schlüsselfertiger Montage inklusive Anfahrt und Kalibrierung.`;
+  )} × ${formatMeters(model.heightM)} m Bildfläche und 1,25 mm Pixelabstand. Komplettpreis inklusive Planung, Installation und Kalibrierung.`;
 
   return {
     title,

@@ -2,14 +2,14 @@ import SiteHeader from "../../components/site-header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "LED-Heimkino für private Räume",
+  title: "LED-Wand für Zuhause: Technik und Vorteile",
   description:
-    "LED-Heimkino ohne Projektor: hohe Helligkeit, hoher Kontrast, große Bildflächen und modularer Aufbau für private Räume.",
+    "LED-Wand fürs Wohnzimmer und private Heimkino: Direct View LED ohne Projektor. Erfahren Sie mehr über Tageslicht, Bildgröße und modulare Technik.",
   alternates: {
     canonical: "/led-heimkino",
   },
   openGraph: {
-    title: "LED-Heimkino für private Räume",
+    title: "LED-Wand für Zuhause: Technik und Vorteile",
     description:
       "Was Direct View LED im privaten Heimkino anders macht.",
     url: "/led-heimkino",

@@ -10,11 +10,11 @@ const publicDomainReady = !new URL(siteUrl).hostname.endsWith(".vercel.app");
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "LED-Heimkino für private Räume | CINEMA N°7",
+    default: "LED-Wand fürs Heimkino | CINEMA N°7",
     template: "%s | CINEMA N°7",
   },
   description:
-    "Schlüsselfertige P1.25 LED-Heimkinos von 136 bis 271 Zoll mit transparenten Komplettpreisen, Montage und Kalibrierung.",
+    "Exklusive LED-Wände fürs Heimkino von 136 bis 271 Zoll. Modelle und Komplettpreise inklusive Planung, Installation und Kalibrierung. Showroom in Paderborn.",
   keywords: [
     "LED Heimkino",
     "LED Wand Heimkino",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "CINEMA N°7 | LED-Heimkinos",
+    title: "LED-Wand fürs Heimkino | CINEMA N°7",
     description:
-      "Großformatige Fine-Pitch LED-Heimkinos für private Räume.",
+      "Exklusive LED-Heimkinos für Zuhause. Entdecken Sie Modelle, Komplettpreise und unseren Showroom in Paderborn.",
     url: "/",
     siteName: "CINEMA N°7",
     locale: "de_DE",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CINEMA N°7 | LED-Heimkinos",
+    title: "LED-Wand fürs Heimkino | CINEMA N°7",
     description:
-      "Großformatige Fine-Pitch LED-Heimkinos für private Räume.",
+      "Exklusive LED-Heimkinos für Zuhause. Entdecken Sie Modelle, Komplettpreise und unseren Showroom in Paderborn.",
   },
   robots: {
     index: publicDomainReady,

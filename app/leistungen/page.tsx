@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import SiteHeader from "../../components/site-header";
 
 export const metadata: Metadata = {
-  title: "Leistungen",
-  description: "Persönliche Beratung, Planung, Montage und Kalibrierung für schlüsselfertige LED-Heimkinos von CINEMA N°7.",
+  title: "LED-Heimkino: Planung und Installation",
+  description: "Ihr LED-Heimkino professionell planen und installieren lassen. Persönliche Beratung, Montage, Einrichtung und Kalibrierung durch CINEMA N°7.",
   alternates: { canonical: "/leistungen" },
   openGraph: {
     title: "Full-Service für Ihr LED-Heimkino",

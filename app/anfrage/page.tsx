@@ -6,14 +6,14 @@ import Image from "next/image";
 import contactPhoto from "../../ChatGPT Image 8. Mai 2026, 13_02_39.png";
 
 export const metadata: Metadata = {
-  title: "Private Beratung für Ihr LED-Heimkino",
+  title: "LED-Heimkino Showroom in Paderborn & Beratung",
   description:
-    "Sprechen Sie direkt mit CINEMA N°7 über Ihr LED-Heimkino. Persönliche Beratung per Telefon oder E-Mail.",
+    "Erleben Sie das LED-Heimkino im Showroom in Paderborn. Vereinbaren Sie Ihre persönliche Vorführung und Beratung zu Bildgröße, Raumplanung und Installation.",
   alternates: {
     canonical: "/anfrage",
   },
   openGraph: {
-    title: "Private Beratung für Ihr LED-Heimkino",
+    title: "LED-Heimkino Showroom in Paderborn & Beratung",
     description:
       "Direkter Ansprechpartner für Ihr LED-Heimkino.",
     url: "/anfrage",

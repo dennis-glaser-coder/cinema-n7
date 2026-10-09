@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import styles from "./comparison.module.css";
 
 export const metadata: Metadata = {
-  title: "LED statt Beamer – Unterschiede im Heimkino",
+  title: "LED-Wand oder Beamer? Heimkino im Vergleich",
   description:
-    "Warum CINEMA N°7 auf Direct View LED setzt: LED und klassische Projektion im Vergleich bei Raumlicht, Projektionsweg und Bildfläche.",
+    "LED-Wand oder Beamer fürs Heimkino? Vergleichen Sie Bildwirkung bei Tageslicht, Projektionsweg und Bildgröße und finden Sie die passende Technik für Ihren Raum.",
   alternates: {
     canonical: "/led-oder-beamer",
   },
