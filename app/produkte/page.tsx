@@ -167,11 +167,9 @@ export default function ProductsPage() {
 
       <section className="turnkey-scope-v13" id="leistungen" aria-labelledby="turnkey-scope-heading">
         <div className="turnkey-scope-heading-v13">
-          <p className="overline-v5">IM PREIS ENTHALTEN</p>
-          <h2 id="turnkey-scope-heading">Schlüsselfertig. Bis zum fertigen Bild.</h2>
+          <h2 id="turnkey-scope-heading">Full-Service.</h2>
           <p>
-            Sie wählen die Größe. Wir liefern ein vollständig aufgebautes,
-            angeschlossenes und kalibriertes LED-Heimkino – nicht nur einzelne Panels.
+            Wir planen, installieren und kalibrieren Ihr LED-Heimkino. Alles im Komplettpreis enthalten.
           </p>
         </div>
         <div className="turnkey-scope-right-v13">
