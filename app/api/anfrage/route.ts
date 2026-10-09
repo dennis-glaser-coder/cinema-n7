@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
-const recipient = process.env.RESEND_TO_EMAIL || "kontakt@cinema7.de";
+const recipient = process.env.RESEND_TO_EMAIL || "info@cinema7.de";
 
 function text(value: unknown, limit: number) {
   return typeof value === "string" ? value.trim().slice(0, limit) : "";

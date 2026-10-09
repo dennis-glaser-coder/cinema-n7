@@ -69,7 +69,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "CINEMA N°7",
   url: siteUrl,
-  email: "kontakt@cinema7.de",
+  email: "info@cinema7.de",
   telephone: "+49 5251 5449191",
   areaServed: ["DE", "EU"],
 };

@@ -39,7 +39,7 @@ export default function PrivacyPage() {
           <p>
             Telefon: <a href="tel:+4952515449191">+49 (0) 5251 5449191</a>
             <br />
-            E-Mail: <a href="mailto:kontakt@cinema7.de">kontakt@cinema7.de</a>
+            E-Mail: <a href="mailto:info@cinema7.de">info@cinema7.de</a>
           </p>
         </div>
 
@@ -131,7 +131,7 @@ export default function PrivacyPage() {
           </p>
           <p>
             Zur Ausübung Ihrer Rechte genügt eine Nachricht an{" "}
-            <a href="mailto:kontakt@cinema7.de">kontakt@cinema7.de</a>.
+            <a href="mailto:info@cinema7.de">info@cinema7.de</a>.
           </p>
         </div>
 

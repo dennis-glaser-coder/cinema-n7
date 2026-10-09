@@ -14,7 +14,7 @@ export default function InquiryForm({ model, directDelivery = true }: { model?: 
     if (!directDelivery) {
       const subject = data.intent === "showroom" ? "Vorführung im Showroom Paderborn" : "Persönliche Beratung";
       const body = [`Name: ${data.name}`, `E-Mail: ${data.email}`, `Telefon: ${data.phone || "nicht angegeben"}`, model ? `Modell: ${model} Zoll` : "Modell: noch offen", "", data.message || "Ich möchte Sie persönlich kennenlernen und mein Heimkino mit Ihnen besprechen."].join("\n");
-      window.location.href = `mailto:kontakt@cinema7.de?subject=${encodeURIComponent(`CINEMA N°7 – ${subject}`)}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:info@cinema7.de?subject=${encodeURIComponent(`CINEMA N°7 – ${subject}`)}&body=${encodeURIComponent(body)}`;
       setResult("prepared");
       return;
     }
@@ -54,9 +54,9 @@ export default function InquiryForm({ model, directDelivery = true }: { model?: 
       <label className="cn7-inquiry-privacy"><input type="checkbox" name="privacy" value="yes" required disabled={sending} /> <span>Ich habe die <a href="/datenschutz">Datenschutzhinweise</a> zur Kenntnis genommen.</span></label>
       {!directDelivery && <p className="cn7-inquiry-form-intro">Wir öffnen Ihre Anfrage als Entwurf in Ihrem E-Mail-Programm. Dort können Sie sie versenden.</p>}
       <button type="submit" disabled={sending}>{sending ? "Wird gesendet …" : directDelivery ? "Anfrage senden" : "E-Mail-Anfrage vorbereiten"}</button>
-      {result === "prepared" && <p role="status" className="cn7-inquiry-success">Bitte versenden Sie den Entwurf in Ihrem E-Mail-Programm. Falls es sich nicht geöffnet hat, erreichen Sie uns unter <a href="mailto:kontakt@cinema7.de">kontakt@cinema7.de</a>.</p>}
+      {result === "prepared" && <p role="status" className="cn7-inquiry-success">Bitte versenden Sie den Entwurf in Ihrem E-Mail-Programm. Falls es sich nicht geöffnet hat, erreichen Sie uns unter <a href="mailto:info@cinema7.de">info@cinema7.de</a>.</p>}
       {result === "sent" && <p role="status" className="cn7-inquiry-success">Vielen Dank für Ihre Anfrage. Wir melden uns persönlich bei Ihnen.</p>}
-      {result === "error" && <p role="alert" className="cn7-inquiry-error">Ihre Anfrage wurde nicht übermittelt. Ihre Angaben bleiben erhalten. Versuchen Sie es erneut oder schreiben Sie an <a href="mailto:kontakt@cinema7.de">kontakt@cinema7.de</a>.</p>}
+      {result === "error" && <p role="alert" className="cn7-inquiry-error">Ihre Anfrage wurde nicht übermittelt. Ihre Angaben bleiben erhalten. Versuchen Sie es erneut oder schreiben Sie an <a href="mailto:info@cinema7.de">info@cinema7.de</a>.</p>}
     </form>
   );
 }

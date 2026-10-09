@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 const phoneDisplay = "+49 (0) 5251 5449191";
 const phoneHref = "tel:+4952515449191";
-const email = "kontakt@cinema7.de";
+const email = "info@cinema7.de";
 
 export default async function InquiryPage({
   searchParams,

@@ -40,7 +40,7 @@ export default function ImprintPage() {
             <br />
             Telefax: +49 (0) 521 92271026
             <br />
-            E-Mail: <a href="mailto:kontakt@cinema7.de">kontakt@cinema7.de</a>
+            E-Mail: <a href="mailto:info@cinema7.de">info@cinema7.de</a>
           </p>
         </div>
 
