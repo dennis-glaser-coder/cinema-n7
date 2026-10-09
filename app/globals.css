@@ -5563,11 +5563,11 @@ body {
   }
 
   .scale-baseline {
-    bottom: 16px;
+    bottom: 32px;
   }
 
   .scale-composition {
-    bottom: 16px;
+    bottom: 32px;
     width: 96%;
     height: 94%;
   }
