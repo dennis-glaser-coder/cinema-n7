@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SiteHeader from "../../components/site-header";
+import hdrImage from "../../fire-hdr.webp";
 
 export const metadata: Metadata = {
   title: "Warum CINEMA N°7?",
-  description: "LED-Heimkino auch bei Tageslicht. Über zehn Jahre LED-Erfahrung, persönliche Planung, Full-Service und Betreuung nach der Installation.",
+  description: "Warum Direct View LED für Ihr Heimkino: HDR, brillante Farben, hohe Helligkeit bei Tageslicht und eine modulare Bildfläche ohne Projektion.",
   alternates: { canonical: "/warum-cinema-n7" },
   openGraph: {
     title: "Warum CINEMA N°7?",
-    description: "Persönliche Planung, professionelle LED-Ansteuerung und Full-Service für Ihr privates Heimkino.",
+    description: "Große Bildfläche, HDR und brillante Farben auch bei Tageslicht. Entdecken Sie die Vorteile unserer LED-Heimkinos.",
     url: "/warum-cinema-n7",
   },
 };
@@ -19,61 +21,69 @@ export default function WhyCinemaN7Page() {
       <section className="seo-hero">
         <h1>Ihr Kino.<br />Unser Anspruch.</h1>
         <p>
-          Großes Kino, auch bei Tageslicht. Ohne Beamer und Leinwand.
-          Persönlich geplant, von uns installiert und präzise eingestellt.
-          Mit über zehn Jahren LED-Erfahrung und einem Ansprechpartner,
-          der auch danach für Sie da ist.
+          Für Kino müssen Sie Ihr Zuhause nicht vollständig abdunkeln.
+          Unsere LED-Heimkinos verbinden eine große Bildfläche mit hoher
+          Helligkeit, präziser Farbwiedergabe und HDR.
         </p>
       </section>
-      <section className="editorial-rows" aria-label="Warum unser LED-Heimkino und warum CINEMA N°7">
+      <section className="why-hdr-feature" aria-labelledby="why-hdr-title">
+        <div className="why-hdr-image">
+          <Image src={hdrImage} alt="Leuchtende Flammen und feine Funken vor dunklem Hintergrund" sizes="(max-width: 820px) 100vw, 60vw" />
+          <span className="why-hdr-label">HDR</span>
+        </div>
+        <div className="why-hdr-copy">
+          <h2 id="why-hdr-title">Mehr Tiefe.<br />Mehr Details.</h2>
+          <p>Ein Lichtreflex, die Glut eines Feuers, feine Schatten.
+            HDR bietet einen erweiterten Dynamikumfang für die Abstufungen
+            zwischen hellen und dunklen Bildbereichen. Unsere LED-Heimkinos
+            unterstützen die Wiedergabe von HDR-Inhalten.</p>
+        </div>
+      </section>
+      <section className="editorial-rows" aria-label="Die Vorteile unseres LED-Heimkinos">
         <article>
-          <h2>Das Bild.</h2>
+          <h2>Kino bei Tageslicht.</h2>
           <div>
-            <p>Brillante Farben, hoher Kontrast und eine große Bildfläche, die auch
-              bei Tageslicht überzeugt. Die LEDs erzeugen das Bild direkt.
-              Sie brauchen keinen Beamer, keine Leinwand und keinen Projektionsweg
-              durch den Raum.</p>
+            <p>Die hohe Helligkeit der LED-Bildfläche macht Filme, Konzerte und
+              Sport auch bei Tageslicht sichtbar. Ihr Wohnzimmer kann ein
+              Wohnzimmer bleiben. Für den Filmabend müssen Sie es nicht
+              vollständig abdunkeln.</p>
+          </div>
+        </article>
+        <article>
+          <h2>Das Bild entsteht direkt.</h2>
+          <div>
+            <p>Jeder Bildpunkt leuchtet auf der LED-Wand selbst. Es gibt keinen
+              Lichtstrahl durch den Raum, keinen Projektionsabstand und keine
+              Leinwand. Wer vor dem Bild vorbeigeht, wirft keinen
+              Projektionsschatten darauf.</p>
             <a href="/led-oder-beamer">LED und Projektion vergleichen</a>
           </div>
         </article>
         <article>
-          <h2>Ihr Heimkino.</h2>
+          <h2>Groß. Und modular.</h2>
           <div>
-            <p>Wir planen Bildgröße, Sitzabstand und Lichtverhältnisse gemeinsam
-              mit Ihnen. So passt Ihr LED-Heimkino zu Ihrem Zuhause und zu der Art,
-              wie Sie Kino erleben möchten. Dazu planen wir ein maßgeschneidertes
-              Soundsystem mit immersivem Raumklang. Individuell für Ihr Heimkino.</p>
-            <a href="/produkte">Ihr Modell entdecken</a>
+            <p>Aus einzelnen LED-Modulen entsteht eine zusammenhängende Bildfläche
+              im 16:9-Format. So lassen sich große Bildgrößen realisieren und
+              einzelne Module bei Bedarf gezielt warten oder austauschen.</p>
+            <a href="/produkte">Die passende Bildgröße entdecken</a>
           </div>
         </article>
         <article>
-          <h2>Unsere Erfahrung.</h2>
+          <h2>Mittendrin.</h2>
           <div>
-            <p>Seit über zehn Jahren arbeiten wir mit professioneller LED-Technik.
-              Diese Erfahrung fließt in die Auswahl Ihres Systems, den präzisen
-              Aufbau und die Kalibrierung ein. Wir stimmen die Bildwiedergabe
-              vor Ort ab und zeigen Ihnen, wie Sie Ihr Heimkino bedienen.</p>
-            <a href="/ueber-uns">Lernen Sie uns kennen</a>
-          </div>
-        </article>
-        <article>
-          <h2>Ihre Sicherheit.</h2>
-          <div>
-            <p>Ein klarer Komplettpreis für LED-Wand, Controller, Unterkonstruktion,
-              Montage, Inbetriebnahme und Kalibrierung. Ihr persönlicher
-              Ansprechpartner begleitet die Umsetzung und bleibt auch nach der
-              Installation für Sie da. Bei Fragen, Störungen oder gewünschten
-              Anpassungen kümmern wir uns persönlich um Ihre Anlage.</p>
-            <a href="/leistungen">Unseren Full-Service ansehen</a>
+            <p>Die große Bildfläche nimmt mehr von Ihrem Blickfeld ein.
+              Ein maßgeschneidertes Soundsystem mit immersivem Raumklang
+              ergänzt das Bild. Wir stimmen Bildgröße, Sitzposition und
+              Soundsystem auf Ihr Heimkino ab.</p>
           </div>
         </article>
       </section>
       <section className="seo-choice">
         <div>
           <h2>Selbst erleben.</h2>
-          <p>Sehen Sie sich das Bild in unserem Showroom in Paderborn an.
-            Bei einer persönlichen Vorführung besprechen wir Ihre Vorstellungen
-            und die Möglichkeiten für Ihr Zuhause.</p>
+          <p>Über zehn Jahre LED-Erfahrung stehen hinter der Auswahl und
+            Abstimmung unserer Systeme. Erleben Sie das Ergebnis bei einer
+            persönlichen Vorführung in unserem Showroom in Paderborn.</p>
         </div>
         <div className="seo-choice-actions">
           <a href="/anfrage#showroom">Vorführung vereinbaren</a>

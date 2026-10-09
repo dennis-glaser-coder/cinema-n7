@@ -11,6 +11,14 @@ const navigation = [
   { label: "Über uns", href: "/ueber-uns" },
 ];
 
+function CtaArrow() {
+  return (
+    <svg className="cn7-cta-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+      <path d="M5 15 15 5M5 5h10v10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export default function SiteHeader({ home = false }: { home?: boolean }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,7 +40,7 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
         ))}
       </nav>
       <a className="cn7-global-cta" href="/anfrage">
-        Beratung anfragen <span aria-hidden="true">↗</span>
+        Beratung anfragen <CtaArrow />
       </a>
       <button
         className="cn7-global-menu-toggle"
@@ -48,7 +56,7 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
         {navigation.map((item) => (
           <a href={item.href} key={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>
         ))}
-        <a href="/anfrage" className="cn7-mobile-cta" onClick={() => setMenuOpen(false)}>Beratung anfragen ↗</a>
+        <a href="/anfrage" className="cn7-mobile-cta" onClick={() => setMenuOpen(false)}>Beratung anfragen <CtaArrow /></a>
       </nav>
     </header>
   );
