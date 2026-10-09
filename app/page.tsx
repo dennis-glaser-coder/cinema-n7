@@ -317,7 +317,7 @@ export default function Home() {
 
       <section className="contact-v5" id="contact">
         <div className="contact-mark" aria-hidden="true">
-          N°7
+          <Image src="/cinema-n7-logo.svg" alt="" width={1268} height={136} />
         </div>
         <div className="contact-copy reveal">
           <h2>Ihr LED-Heimkino.</h2>
