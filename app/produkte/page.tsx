@@ -45,19 +45,12 @@ export default function ProductsPage() {
     <main className="models-page models-page-v2">
       <SiteHeader />
 
-      <section className="models-intro-v2">
+      <section className="models-intro-v2 models-intro-focused">
         <div>
           <p className="overline-v5">MODELLE</p>
           <h1>Ihre Bildgröße.</h1>
-          <div className="models-pitch-v12">
-            
-            <strong>{cabinet.pixelPitchMm.toLocaleString("de-DE")} <small>mm</small></strong>
-            <span>Fine-Pitch LED</span>
-          </div>
+          <p className="models-intro-description">Ihr Heimkino. In der passenden Dimension.</p>
         </div>
-        <p>
-          Ihr Heimkino. In der passenden Dimension.
-        </p>
       </section>
 
       <section className="model-configurator-v2">
@@ -97,6 +90,10 @@ export default function ProductsPage() {
         </div>
 
         <div className="model-controls-v2">
+          <p className="model-picker-spec">
+            <span>Fine-Pitch LED</span>
+            <span>{cabinet.pixelPitchMm.toLocaleString("de-DE")} mm Pixelabstand</span>
+          </p>
           <div className="model-picker-v2" role="group" aria-label="Bildschirmdiagonale wählen">
             {cinemaModels.map((model) => (
               <button

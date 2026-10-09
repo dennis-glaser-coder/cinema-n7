@@ -3481,6 +3481,28 @@ body {
   line-height: .94;
 }
 
+.models-intro-v2.models-intro-focused { display: block; }
+.models-intro-description {
+  margin: 26px 0 0;
+  max-width: 620px;
+  color: var(--warm-copy);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.model-picker-spec {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 0 0 18px;
+  color: var(--warm-soft);
+  font-size: 12px;
+  line-height: 1.6;
+}
+@media (max-width: 820px) {
+  .models-intro-description { margin-top: 20px; font-size: 14px; }
+}
+
 .models-intro-v2 > p {
   max-width: 520px;
   margin: 0 0 8px;
