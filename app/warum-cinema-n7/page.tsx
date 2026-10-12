@@ -42,10 +42,10 @@ export default function WhyCinemaN7Page() {
         <article>
           <h2>Kino bei Tageslicht.</h2>
           <div>
-            <p>Die hohe Helligkeit der LED-Bildfläche macht Filme, Konzerte und
-              Sport auch bei Tageslicht sichtbar. Ihr Wohnzimmer kann ein
-              Wohnzimmer bleiben. Für den Filmabend müssen Sie es nicht
-              vollständig abdunkeln.</p>
+            <p>Genießen Sie beeindruckende Bildqualität – auch in hellen Räumen.
+              Dank der hohen Leuchtkraft unserer LED-Technologie erleben Sie
+              intensive Farben und klare Kontraste, ohne den Raum vollständig
+              abdunkeln zu müssen.</p>
           </div>
         </article>
         <article>
