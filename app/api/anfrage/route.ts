@@ -11,9 +11,9 @@ function text(value: unknown, limit: number) {
 }
 
 export async function POST(request: Request) {
-  const tenant = process.env.MS365_TENANT_ID;
-  const client = process.env.MS365_CLIENT_ID;
-  const secret = process.env.MS365_CLIENT_SECRET;
+  const tenant = process.env.M365_TENANT_ID;
+  const client = process.env.M365_CLIENT_ID;
+  const secret = process.env.M365_CLIENT_SECRET;
   if (!tenant || !client || !secret) {
     return NextResponse.json({ error: "Kontaktformular ist nicht eingerichtet." }, { status: 503 });
   }
