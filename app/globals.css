@@ -9415,3 +9415,28 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .cn7-scroll-header.cn7-global-header { animation: none; }
 }
+
+/* Consistent CINEMA N7 navigation alignment across home, inner pages and scroll header */
+.site-v5 .hero-v5 .cn7-global-header-home {
+  box-sizing: border-box;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 26px 7vw;
+}
+.cn7-scroll-header.cn7-global-header {
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  column-gap: clamp(24px, 3vw, 58px);
+}
+.cn7-scroll-header .cn7-wordmark { width: 190px; }
+.cn7-scroll-header .cn7-global-cta { padding: 12px 0; }
+@media (max-width: 1100px) {
+  .cn7-scroll-header.cn7-global-header {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    column-gap: 16px;
+  }
+}
+@media (max-width: 700px) {
+  .site-v5 .hero-v5 .cn7-global-header-home { padding: 18px 20px; }
+  .cn7-scroll-header .cn7-wordmark { width: 160px; }
+}
