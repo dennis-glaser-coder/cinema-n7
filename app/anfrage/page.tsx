@@ -46,7 +46,7 @@ export default async function InquiryPage({
     "Mit freundlichen Grüßen",
   ].join("\n");
   const mailHref = `mailto:${email}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
-  const formEnabled = Boolean(process.env.MS365_TENANT_ID && process.env.MS365_CLIENT_ID && process.env.MS365_CLIENT_SECRET);
+  const formEnabled = Boolean(process.env.M365_TENANT_ID && process.env.M365_CLIENT_ID && process.env.M365_CLIENT_SECRET);
 
   return (
     <main className="inquiry-page">
