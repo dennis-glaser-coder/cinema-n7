@@ -15,7 +15,16 @@ export async function POST(request: Request) {
   const client = process.env.M365_CLIENT_ID;
   const secret = process.env.M365_CLIENT_SECRET;
   if (!tenant || !client || !secret) {
-    return NextResponse.json({ error: "Kontaktformular ist nicht eingerichtet." }, { status: 503 });
+    const missing = [
+      !tenant ? "M365_TENANT_ID" : "",
+      !client ? "M365_CLIENT_ID" : "",
+      !secret ? "M365_CLIENT_SECRET" : "",
+    ].filter(Boolean);
+    console.error("CINEMA N7 mail config missing keys:", missing.join(", "));
+    return NextResponse.json(
+      { error: "Kontaktformular ist vorübergehend nicht verfügbar.", code: "MAIL_CONFIG_MISSING" },
+      { status: 503 }
+    );
   }
 
   const origin = request.headers.get("origin");
