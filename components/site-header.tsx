@@ -41,8 +41,8 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
 
   return (
     <>
-    <header className={home ? "cn7-global-header cn7-global-header-home" : "cn7-global-header cn7-global-header-inner"}>
-      <a className="brand-v5 cn7-global-logo" href="/" aria-label="CINEMA N°7 – Startseite">
+    <header className={home ? "cn7-global-header cn7-global-header-inner cn7-global-header-home" : "cn7-global-header cn7-global-header-inner"}>
+      <a className="cn7-global-logo" href="/" aria-label="CINEMA N°7 – Startseite">
         <Image src="/cinema-n7-logo.svg" alt="CINEMA N°7" width={1268} height={136} className="cn7-wordmark" priority />
       </a>
       <nav className="cn7-global-links" aria-label="Hauptnavigation">
