@@ -9440,3 +9440,34 @@ body {
   .site-v5 .hero-v5 .cn7-global-header-home { padding: 18px 20px; }
   .cn7-scroll-header .cn7-wordmark { width: 160px; }
 }
+
+/* Keep the original and scroll navigation at the same desktop coordinates. */
+@media (min-width: 1101px) {
+  .cn7-global-header.cn7-global-header-inner,
+  .site-v5 .hero-v5 .cn7-global-header-home,
+  .cn7-scroll-header.cn7-global-header {
+    min-height: 76px;
+    padding: 16px 7vw;
+    grid-template-columns: max-content minmax(0, 1fr) max-content;
+    column-gap: clamp(24px, 3vw, 58px);
+    align-items: center;
+  }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  .cn7-global-header.cn7-global-header-inner,
+  .site-v5 .hero-v5 .cn7-global-header-home,
+  .cn7-scroll-header.cn7-global-header {
+    min-height: 72px;
+    padding: 16px 7vw;
+    align-items: center;
+  }
+}
+@media (max-width: 700px) {
+  .cn7-global-header.cn7-global-header-inner,
+  .site-v5 .hero-v5 .cn7-global-header-home,
+  .cn7-scroll-header.cn7-global-header {
+    min-height: 72px;
+    padding: 18px 20px;
+    align-items: center;
+  }
+}
