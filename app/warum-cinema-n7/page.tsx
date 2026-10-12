@@ -33,10 +33,9 @@ export default function WhyCinemaN7Page() {
         </div>
         <div className="why-hdr-copy">
           <h2 id="why-hdr-title">Mehr Tiefe.<br />Mehr Details.</h2>
-          <p>Ein Lichtreflex, die Glut eines Feuers, feine Schatten.
-            HDR bietet einen erweiterten Dynamikumfang für die Abstufungen
-            zwischen hellen und dunklen Bildbereichen. Unsere LED-Heimkinos
-            unterstützen die Wiedergabe von HDR-Inhalten.</p>
+          <p>Erleben Sie beeindruckende Kontraste, intensive Farben und feinste Bilddetails.
+            Dank HDR entfalten helle und dunkle Bildbereiche ihre volle Wirkung –
+            für ein außergewöhnlich realistisches Filmerlebnis auf einer großformatigen LED-Wand.</p>
         </div>
       </section>
       <section className="editorial-rows" aria-label="Die Vorteile unseres LED-Heimkinos">
