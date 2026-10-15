@@ -8395,7 +8395,8 @@ body {
   }
 
   .site-v5 .hero-v5 .cn7-global-header-home {
-    position: absolute;
+    position: relative;
+    order: -1;
     top: 0;
     left: 0;
     padding: 16px 20px;
