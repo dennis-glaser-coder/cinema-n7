@@ -3,7 +3,7 @@ import InquiryForm from "../../components/inquiry-form";
 import { cinemaModels } from "../../lib/cinema-products";
 import type { Metadata } from "next";
 import Image from "next/image";
-import contactPhoto from "../../ChatGPT Image 8. Mai 2026, 13_02_39.png";
+import contactPhoto from "../../ansprechpartner-dennis-glaser.png";
 
 export const metadata: Metadata = {
   title: "LED-Heimkino Showroom in Paderborn & Beratung",
